@@ -21,21 +21,19 @@ main_mostra_ajuda (void)
 	exit (EXIT_SUCCESS);
 }
 
-// TODO, quan inicialitzi fins a les funcions de sistema i part del lèxic.
-void
+void // ✓
 main_mostra_ajuda_funcions (void)
 {
-	printf ("TODO, pendent per a ser fet -hf!\n");
+	inicialitza_mostra_sistema ();
 	exit (EXIT_SUCCESS);
 }
 
 void // ✓
 main_error (char *m, char *n)
 {
-	printf ("Error:\n%s.\n", m);
-	if (n) printf ("Instrucció entrada: '%s'.\n", n);
-	printf ("Per a més informació premi '-h'.\n");
-	exit (EXIT_FAILURE);
+	if (n) fprintf (stderr, "Instrucció entrada: '%s'.\n", n);
+	fprintf (stderr, "Per a més informació premi '-h'.\n");
+	basic_error (m);
 }
 
 // Cridat al prémer '-f'
@@ -108,9 +106,9 @@ main (int argc, char *argv[])
 	if (verbos_main)
 	{
 		printf ("Interpretat:\n");
-		printf ("-Verbós lèxic:\t\t%s\n", depurar_cert_fals (verbos_lexic) );
-		printf ("-Verbós sintàctic:\t%s\n", depurar_cert_fals (verbos_sintactic) );
-		printf ("-Verbós execució:\t%s\n", depurar_cert_fals (verbos_execucio) );
+		printf ("-Verbós lèxic:\t\t%s\n", basic_depurar_cert_fals (verbos_lexic) );
+		printf ("-Verbós sintàctic:\t%s\n", basic_depurar_cert_fals (verbos_sintactic) );
+		printf ("-Verbós execució:\t%s\n", basic_depurar_cert_fals (verbos_execucio) );
 		printf ("-Nom fitxer:\t\t\"%s\"\n", nom);
 		printf ("-Sortida: %d\n", out);
 		printf ("-Nombre d'arguments: %d\n", nombre_arguments);
