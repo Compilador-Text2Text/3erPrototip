@@ -42,7 +42,31 @@ inicialitza_finalitza_lectura_fitxer (FILE *pf)
 	pila_alliberar (&e_ps);
 }
 
+char
+inicialitza_lectura_fitxer (void)
+{
+	char c = getc (g_pf);
 
+	if ( c == EOF )
+		exit (EXIT_FAILURE);
+		// TODO error
+
+	if ( c == '\n' )
+		bolea_lectura = CF_cert;
+	else if (bolea_lectura)
+	{
+		bolea_lectura = CF_fals;
+		e_cf++;
+		e_ps.us = 0;
+	}
+
+	pila_afegir (&e_ps, &c);
+	return c;
+}
+
+/************************************************/
+/*	Funcions publiques			*/
+/************************************************/
 int
 inicializa_lectura_objecte (char *nom, int argc, char **argv, int vl, int vs, int ve)
 {

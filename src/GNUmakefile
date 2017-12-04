@@ -1,4 +1,6 @@
 include 0-Inicialitzador/GNU.mk
+include 1-Executor/GNU.mk
+include 2-Sistema/GNU.mk
 include 9-Útils/GNU.mk
 
 ##################################################
@@ -21,6 +23,8 @@ MAIN_D_		= $(MAIN_C_)			\
 
 MAIN_INTERPRET_D_ = $(MAIN_O_)	\
 	$(INICIALITZADOR_O_)	\
+	$(EXECUTOR_O_)		\
+	$(SISTEMA_O_)		\
 	$(UTILS_O_)		\
 
 all: $(MAIN_INTERPRET)
@@ -37,6 +41,19 @@ $(OBJDIR):
 ##################################################
 $(INICIALITZADOR_INICIALITZA_O_): $(INICIALITZADOR_INICIALITZA_D_)
 	gcc $(INICIALITZADOR_INICIALITZA_C_) $(LIBS_O_) $(INICIALITZADOR_INICIALITZA_O_)
+
+##################################################
+#                    Executor                    #
+##################################################
+$(EXECUTOR_DESCRIPTOR_O_): $(EXECUTOR_DESCRIPTOR_D_)
+	gcc $(EXECUTOR_DESCRIPTOR_C_) $(LIBS_O_) $(EXECUTOR_DESCRIPTOR_O_)
+
+##################################################
+#                     Sistema                    #
+##################################################
+$(SISTEMA_INICIALITZADOR_O_): $(SISTEMA_INICIALITZADOR_D_)
+	gcc $(SISTEMA_INICIALITZADOR_C_) $(LIBS_O_) $(SISTEMA_INICIALITZADOR_O_)
+
 ##################################################
 #                    Intèrpret                   #
 ##################################################
