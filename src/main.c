@@ -102,7 +102,10 @@ main (int argc, char *argv[])
 
 	if (nom == NULL) main_error ("Ha de definir que vol executar '-f'", NULL);
 
+	inicialitza_inicialitza_funcions_sistema ();
 	out = inicializa_lectura_objecte (nom, nombre_arguments, arguments, verbos_lexic, verbos_sintactic, verbos_execucio);
+	inicialitza_finalitza_funcions_sistema ();
+
 	if (verbos_main)
 	{
 		printf ("Interpretat:\n");

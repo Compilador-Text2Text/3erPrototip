@@ -4,4 +4,7 @@
 int inicializa_lectura_objecte (char *nom, int argc, char **argv, int vl, int vs, int ve);
 void inicialitza_mostra_sistema (void);
 
+void inicialitza_inicialitza_funcions_sistema (void);
+void inicialitza_finalitza_funcions_sistema (void);
+
 #endif // INICIALITZADOR_INICIALITZA_H_

@@ -2,6 +2,7 @@
 #define EXECUTOR_DESCRIPTOR_H_
 
 #include "../9-Útils/bàsic.h"
+#include "../9-Útils/pila.h"
 
 /************************************************/
 /*	Elements bàsics				*/
@@ -66,6 +67,7 @@ sistema
 	Sistema_buit,
 
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
+	Sistema_igual,
 	Sistema_suma,
 	Sistema_resta,
 	Sistema_producte,
@@ -210,6 +212,7 @@ struct
 descriptor_sistema
 {
 	struct base_funcio funcio;
+	int (*exec) (size_t, struct element_execucio *, struct pila *);
 };
 
 /************************************************/

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+#include "../2-Sistema/inicialitza.h"
 #include "../9-Útils/bàsic.h"
 #include "../9-Útils/pila.h"
 
@@ -79,6 +80,18 @@ inicializa_lectura_objecte (char *nom, int argc, char **argv, int vl, int vs, in
 	out = 1;
 
 	return out;
+}
+
+void
+inicialitza_inicialitza_funcions_sistema (void)
+{
+	sistema_inicialitza ();
+}
+
+void
+inicialitza_finalitza_funcions_sistema (void)
+{
+	sistema_finalitza ();
 }
 
 void

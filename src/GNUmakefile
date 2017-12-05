@@ -54,6 +54,15 @@ $(EXECUTOR_DESCRIPTOR_O_): $(EXECUTOR_DESCRIPTOR_D_)
 $(SISTEMA_INICIALITZADOR_O_): $(SISTEMA_INICIALITZADOR_D_)
 	gcc $(SISTEMA_INICIALITZADOR_C_) $(LIBS_O_) $(SISTEMA_INICIALITZADOR_O_)
 
+$(SISTEMA_SISTEMA_O_): $(SISTEMA_SISTEMA_D_)
+	gcc $(SISTEMA_SISTEMA_C_) $(LIBS_O_) $(SISTEMA_SISTEMA_O_)
+
+$(SISTEMA_SALTS_O_): $(SISTEMA_SALTS_D_)
+	gcc $(SISTEMA_SALTS_C_) $(LIBS_O_) $(SISTEMA_SALTS_O_)
+
+$(SISTEMA_OPERADORS_O_): $(SISTEMA_OPERADORS_D_)
+	gcc $(SISTEMA_OPERADORS_C_) $(LIBS_O_) $(SISTEMA_OPERADORS_O_)
+
 ##################################################
 #                    Intèrpret                   #
 ##################################################
