@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 
 #include "../2-Sistema/inicialitza.h"
+#include "../6-Depurador/depurador.h"
 #include "../9-Útils/bàsic.h"
 #include "../9-Útils/pila.h"
 
@@ -97,4 +98,9 @@ inicialitza_finalitza_funcions_sistema (void)
 void
 inicialitza_mostra_sistema ()
 {
+inicialitza_inicialitza_funcions_sistema ();
+	mostra_localitzacions	();
+	mostra_tipus		();
+	mostra_sistema		();
+inicialitza_finalitza_funcions_sistema ();
 }

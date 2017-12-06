@@ -90,7 +90,7 @@ sistema_inicialitza (void)
 		sistema_definir_arguments (2, (struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
 			(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0}),
 		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
-		SYA_dreta, 2, CF_cert);
+		SYA_esquerra, 0, CF_cert);
 
 	sistema_definir_funcio (Sistema_suma, "+", sistema_suma,
 		sistema_definir_arguments (2, (struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
@@ -99,12 +99,7 @@ sistema_inicialitza (void)
 		SYA_dreta, 2, CF_cert);
 
 	/*
-	Sistema_igual,
-	// Gestió pila.
-	Sistema_buit,
-
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
-	Sistema_suma,
 	Sistema_resta,
 	Sistema_producte,
 	Sistema_divisio,

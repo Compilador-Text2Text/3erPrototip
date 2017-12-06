@@ -1,6 +1,7 @@
 include 0-Inicialitzador/GNU.mk
 include 1-Executor/GNU.mk
 include 2-Sistema/GNU.mk
+include 6-Depurador/GNU.mk
 include 9-Útils/GNU.mk
 
 ##################################################
@@ -25,9 +26,11 @@ MAIN_INTERPRET_D_ = $(MAIN_O_)	\
 	$(INICIALITZADOR_O_)	\
 	$(EXECUTOR_O_)		\
 	$(SISTEMA_O_)		\
+	$(DEPURADOR_O_)		\
 	$(UTILS_O_)		\
 
 all: $(MAIN_INTERPRET)
+
 ##################################################
 #                     Carpeta                    #
 ##################################################
@@ -71,6 +74,12 @@ $(MAIN_O_): $(MAIN_D_)
 
 $(MAIN_INTERPRET): $(MAIN_INTERPRET_D_)
 	gcc $(MAIN_INTERPRET_D_) $(LIBS_E_) $(MAIN_INTERPRET)
+
+##################################################
+#                    Depurador                   #
+##################################################
+$(DEPURADOR_DEPURADOR_O_): $(DEPURADOR_DEPURADOR_D_)
+	gcc $(DEPURADOR_DEPURADOR_C_) $(LIBS_O_) $(DEPURADOR_DEPURADOR_O_)
 
 ##################################################
 #                      Útils                     #

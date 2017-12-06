@@ -95,7 +95,8 @@ SYA
 {
 	SYA_funcio,
 	SYA_esquerra,
-	SYA_dreta
+	SYA_dreta,
+	SYA_END
 };
 
 /************************************************/
