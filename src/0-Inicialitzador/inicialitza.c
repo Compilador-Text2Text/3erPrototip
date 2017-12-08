@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 
 #include "../2-Sistema/inicialitza.h"
+#include "../3-Lèxic/objecte.h"
 #include "../6-Depurador/depurador.h"
 #include "../9-Útils/bàsic.h"
 #include "../9-Útils/pila.h"
@@ -67,14 +68,16 @@ inicialitza_lectura_fitxer (void)
 }
 
 /************************************************/
-/*	Funcions publiques			*/
+/*	Funcions públiques			*/
 /************************************************/
 int
-inicializa_lectura_objecte (char *nom, int argc, char **argv, int vl, int vs, int ve)
+inicializa_lectura_objecte (char *nom, int argc, char **argv, enum cert_fals vl, enum cert_fals vs, enum cert_fals ve)
 {
 	int out;
 
 	g_pf = inicialitza_inicialitza_lectura_fitxer (nom);
+		if (lexic_llegir_objecte (inicialitza_lectura_fitxer, vl))
+			; // TODO sya
 	inicialitza_finalitza_lectura_fitxer (g_pf);
 
 	// Executa el codi.

@@ -98,9 +98,14 @@ sistema_inicialitza (void)
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_dreta, 2, CF_cert);
 
+	sistema_definir_funcio (Sistema_resta, "-", sistema_resta,
+		sistema_definir_arguments (2, (struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+			(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_dreta, 2, CF_cert);
+
 	/*
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
-	Sistema_resta,
 	Sistema_producte,
 	Sistema_divisio,
 	Sistema_potencia,

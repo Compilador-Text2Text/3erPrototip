@@ -1,7 +1,9 @@
 #ifndef INICIALITZADOR_INICIALITZA_H_
 #define INICIALITZADOR_INICIALITZA_H_
 
-int inicializa_lectura_objecte (char *nom, int argc, char **argv, int vl, int vs, int ve);
+#include "../9-Útils/bàsic.h"
+
+int inicializa_lectura_objecte (char *nom, int argc, char **argv, enum cert_fals vl, enum cert_fals vs, enum cert_fals ve);
 void inicialitza_mostra_sistema (void);
 
 void inicialitza_inicialitza_funcions_sistema (void);

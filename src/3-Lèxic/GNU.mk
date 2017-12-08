@@ -1,0 +1,19 @@
+FILE_LEXIC = 3-Lèxic
+
+LEXIC_O_		=			\
+	$(LEXIC_OBJECTE_O_)			\
+	$(LEXIC_MAQUINA_ESTATS_O_)		\
+
+
+LEXIC_OBJECTE_C_ = $(FILE_LEXIC)/objecte.c
+LEXIC_OBJECTE_H_ = $(FILE_LEXIC)/objecte.h
+LEXIC_OBJECTE_O_ = $(OBJDIR)/lexic_objecte.o
+LEXIC_OBJECTE_D_ = $(LEXIC_OBJECTE_C_)	\
+	$(LEXIC_OBJECTE_H_)		\
+	$(LEXIC_MAQUINA_ESTATS_H_)	\
+	$(UTILS_PILA_H_)		\
+
+LEXIC_MAQUINA_ESTATS_C_ = $(FILE_LEXIC)/maquina_estats.c
+LEXIC_MAQUINA_ESTATS_H_ = $(FILE_LEXIC)/maquina_estats.h
+LEXIC_MAQUINA_ESTATS_O_ = $(OBJDIR)/lexic_maquina_estats.o
+LEXIC_MAQUINA_ESTATS_D_ = $(LEXIC_MAQUINA_ESTATS_C_)	\
