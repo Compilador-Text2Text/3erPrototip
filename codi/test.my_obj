@@ -1,0 +1,5 @@
+-v: 4e
+	"nono" "Int"	0e			;
+	"sisi" "Int"	0e : -14e		;
+	"tutu" "Char"	0e :  'l'		;
+	"viky" "Char"	1e : "\"funciona\""	;

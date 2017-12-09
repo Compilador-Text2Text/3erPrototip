@@ -67,6 +67,7 @@ main (int argc, char *argv[])
 	int out, i;
 
 	enum cert_fals verbos_lexic	= CF_fals;
+	enum cert_fals verbos_maquina	= CF_fals;
 	enum cert_fals verbos_sintactic	= CF_fals;
 	enum cert_fals verbos_execucio	= CF_fals;
 	enum cert_fals verbos_main	= CF_cert;
@@ -84,9 +85,11 @@ main (int argc, char *argv[])
 		else if ( !strcmp ("-hf", argv[i])  )
 			main_mostra_ajuda_funcions ();
 		else if ( !strcmp ("-v", argv[i])  )
-			verbos_lexic = verbos_sintactic = verbos_execucio = CF_cert;
+			verbos_lexic = verbos_maquina = verbos_sintactic = verbos_execucio = CF_cert;
 		else if ( !strcmp ("-vl", argv[i]) )
 			verbos_lexic	= CF_cert;
+		else if ( !strcmp ("-vm", argv[i]) )
+			verbos_maquina	= CF_cert;
 		else if ( !strcmp ("-vs", argv[i]) )
 			verbos_sintactic= CF_cert;
 		else if ( !strcmp ("-ve", argv[i]) )
@@ -103,18 +106,19 @@ main (int argc, char *argv[])
 	if (nom == NULL) main_error ("Ha de definir que vol executar '-f'", NULL);
 
 	inicialitza_inicialitza_funcions_sistema ();
-	out = inicializa_lectura_objecte (nom, nombre_arguments, arguments, verbos_lexic, verbos_sintactic, verbos_execucio);
+	out = inicialitza_lectura_objecte (nom, nombre_arguments, arguments, verbos_lexic, verbos_maquina, verbos_sintactic, verbos_execucio);
 	inicialitza_finalitza_funcions_sistema ();
 
 	if (verbos_main)
 	{
 		printf ("Interpretat:\n");
 		printf ("-Verbós lèxic:\t\t%s\n", basic_depurar_cert_fals (verbos_lexic) );
+		printf ("-Verbós m. d'estats:\t%s\n", basic_depurar_cert_fals (verbos_maquina) );
 		printf ("-Verbós sintàctic:\t%s\n", basic_depurar_cert_fals (verbos_sintactic) );
 		printf ("-Verbós execució:\t%s\n", basic_depurar_cert_fals (verbos_execucio) );
 		printf ("-Nom fitxer:\t\t\"%s\"\n", nom);
-		printf ("-Sortida: %d\n", out);
-		printf ("-Nombre d'arguments: %d\n", nombre_arguments);
+		printf ("-Sortida:\t\t%d\n", out);
+		printf ("-Nombre d'arguments:\t%d\n", nombre_arguments);
 		for (i = 0; i < nombre_arguments; i++)
 			printf ("%3d \"%s\"\n", i, arguments[i]);
 	}

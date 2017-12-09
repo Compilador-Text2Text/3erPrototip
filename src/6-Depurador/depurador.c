@@ -81,6 +81,12 @@ mostra_tipus (void)
 		printf ("%2d \"%s\"\n", i, string_tipu (i));
 }
 
+void
+mostra_argument (struct variable *v)
+{
+	printf ("\"%s\" ", v->nom);
+	mostra_tipu (v->descriptor);
+}
 
 void
 mostra_base_funcio (struct base_funcio *b)
@@ -90,13 +96,15 @@ mostra_base_funcio (struct base_funcio *b)
 	if (b->SYA == SYA_funcio)
 	{
 		mostra_tipu (b->retorn);
-		printf ("\t%s (", b->nom);
+		printf ("\t%10s\t(", b->nom);
+
 		if (b->arguments.mida)
-			mostra_tipu (b->arguments.punter[0]);
+			mostra_argument (&b->arguments.punter[0]);
+
 		for (i = 1; i < b->arguments.mida; i++)
 		{
 			printf (", ");
-			mostra_tipu (b->arguments.punter[i]);
+			mostra_argument (&b->arguments.punter[i]);
 		}
 		printf (")");
 	}else
@@ -104,9 +112,9 @@ mostra_base_funcio (struct base_funcio *b)
 		if (b->arguments.mida != 2)
 			basic_error ("D'un operant esperem 2 arguments. Aquest en té %d", b->arguments.mida);
 
-		mostra_tipu (b->arguments.punter[0]);
+		mostra_tipu (b->arguments.punter[0].descriptor);
 		printf (" %s ", b->nom);
-		mostra_tipu (b->arguments.punter[1]);
+		mostra_tipu (b->arguments.punter[1].descriptor);
 		printf ("\t| %s amb precedència: %d", string_SYA (b->SYA), b->precedencia);
 	}
 	printf ("\n");

@@ -117,13 +117,6 @@ descriptor
 };
 
 struct
-descriptor_argument
-{
-	size_t mida;
-	struct descriptor *punter;
-};
-
-struct
 variable
 {
 	char *nom;			// Lèxic i depurar.
@@ -190,7 +183,7 @@ base_funcio
 	char *nom;				// Lèxic i depurar.
 
 	// Semàntic.
-	struct descriptor_argument arguments;	// La mida ho fa anar també l'execució.
+	struct variables arguments;		// La mida ho fa anar també l'execució.
 	struct descriptor retorn;
 
 	// Shunting-yard algorithm
