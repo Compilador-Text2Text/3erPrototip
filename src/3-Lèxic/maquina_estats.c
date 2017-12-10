@@ -10,6 +10,7 @@ enum cert_fals verbos_maquina;	// Per saber si continuem sent verbosos.
 int g_me_f, g_me_c;		// Variables globals fila i columna.
 enum cert_fals bool_me_lectura;	// Saber si ha llegit un \n.
 struct pila g_me_cc;		// Pila de cadena de caràcters.
+char end_char = '\0';		// Afegir correctament al final de g_me_cc.
 
 /************************************************/
 /*	Funcions bàsiques			*/
@@ -161,7 +162,7 @@ if (verbos_maquina) printf("M: Espera: \"\\d+e\".\n");
 		pila_afegir (&g_me_cc, &c);
 
 	maquina_estats_comprovacio_caracter_amb_2 ('e', c, missatge, lloc);
-	pila_afegir (&g_me_cc, &c); // Evitar errors a nivell valgrind.
+	pila_afegir (&g_me_cc, &end_char);
 	g_me_cc.us = 0;
 return atoi (g_me_cc.punter);
 }
@@ -175,3 +176,46 @@ maquina_estats_llegir_enter_positiu (char *missatge, int lloc)
 	maquina_error_procedencia (missatge, lloc);
 return i; // Treure els warnings.
 }
+
+char *
+maquina_estats_cadena_caracters (char *missatge, int lloc)
+{
+	char c;
+	enum cert_fals reverse_solidus = CF_fals;
+if (verbos_maquina) printf("M: Espera: \"\"([^\\\"]|\\.)*\"\".\n");
+
+	g_me_cc.us = 0;
+
+	maquina_estats_comprovacio_caracter ('"', missatge, lloc);
+	while ((c = maquina_seguent_caracter (missatge, lloc)) != EOF)
+		if ( reverse_solidus )
+		{
+			reverse_solidus = CF_fals;
+			pila_afegir (&g_me_cc, &c);
+		}
+		else if ( c == '\\' ) reverse_solidus = CF_cert;
+		else if ( c == '"' ) break;
+		else pila_afegir (&g_me_cc, &c);
+
+	pila_afegir (&g_me_cc, &end_char);
+	g_me_cc.us = 0;
+	return g_me_cc.punter;
+}
+/*
+	// Comprovem errors.
+	if ( !isdigit((c = maquina_estats_caracter_sense_comentaris (missatge, lloc))) )
+		if ( c != '-' )
+		{
+			printf ("E: Volíem un dígit: [0-9], i ha entrat: \'%c\'.\n", c);
+			maquina_error_procedencia (missatge, lloc);
+		}
+
+	g_me_cc.us = 0;
+	pila_afegir (&g_me_cc, &c);
+	while ( isdigit ((c = maquina_seguent_caracter (missatge, lloc))) )
+		pila_afegir (&g_me_cc, &c);
+
+	maquina_estats_comprovacio_caracter_amb_2 ('e', c, missatge, lloc);
+	pila_afegir (&g_me_cc, &end_char);
+	g_me_cc.us = 0;
+	*/

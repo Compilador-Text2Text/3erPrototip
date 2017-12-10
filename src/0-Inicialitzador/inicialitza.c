@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+#include "allibera.h"
+
 #include "../2-Sistema/inicialitza.h"
 #include "../3-Lèxic/objecte.h"
 #include "../6-Depurador/depurador.h"
@@ -60,6 +62,9 @@ inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 
 	// Executa el codi.
 	out = 1;
+
+	// Alliberem en memòria.
+	alliberar_descriptors_funcio_globals ();
 
 	return out;
 }

@@ -47,6 +47,9 @@ $(OBJDIR):
 $(INICIALITZADOR_INICIALITZA_O_): $(INICIALITZADOR_INICIALITZA_D_)
 	gcc $(INICIALITZADOR_INICIALITZA_C_) $(LIBS_O_) $(INICIALITZADOR_INICIALITZA_O_)
 
+$(INICIALITZADOR_ALLIBERA_O_): $(INICIALITZADOR_ALLIBERA_D_)
+	gcc $(INICIALITZADOR_ALLIBERA_C_) $(LIBS_O_) $(INICIALITZADOR_ALLIBERA_O_)
+
 ##################################################
 #                    Executor                    #
 ##################################################

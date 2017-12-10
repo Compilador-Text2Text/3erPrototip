@@ -70,3 +70,10 @@ basic_realloc (void *p, size_t s)
 	basic_error_perror ();
 	return p; // Evitar warnings, tot i que no té sentit aquí.
 }
+
+void*
+basic_free (void *p)
+{
+	if (p != NULL) free (p);
+	return NULL;
+}
