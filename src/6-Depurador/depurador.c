@@ -159,3 +159,23 @@ mostra_valor (struct descriptor d, union valor v)
 		exit (EXIT_FAILURE);
 	}
 }
+
+void
+mostra_variable (struct variable *v)
+{
+	printf ("\"%s\" \"%s\"(%ld)", v->nom, string_tipu (v->descriptor.tipus), v->descriptor.vegades_punter);
+	if (v->inicialitzat)
+		mostra_valor (v->descriptor, v->valor);
+	else
+		printf ("No inicialitzat");
+	printf (".\n");
+}
+
+void
+mostra_variables (struct variables *vs)
+{
+	struct variable *v;
+
+	for (v = vs->punter; v < vs->punter +vs->mida; v++)
+		mostra_variable (v);
+}

@@ -94,32 +94,52 @@ lexic_definir_variable (struct variable *v, int lloc)
 		printf ("ERROR: Entrat: %c\n", c);
 		maquina_error_procedencia ("Esperàvem si inicialitzava la variable, llavors tenia que entrar: [:;]", lloc);
 	}
-if (verbos_objecte)
-{
-	printf ("L: Variable: nom: \"%s\" \"%s\"(%ld)", v->nom, string_tipu (v->descriptor.tipus), v->descriptor.vegades_punter);
-	if (v->inicialitzat)
-		mostra_valor (v->descriptor, v->valor);
-	else
-		printf ("No inicialitzat");
-	printf (".\n");
-}
+if (verbos_objecte) mostra_variable (v);
 }
 
 void
 lexic_variables_i_declarar (char b, struct variables *vs, char *missatge, int lloc)
 {
-	int mida;
 	struct variable *v;
 
 if (verbos_objecte) printf ("L: Variables i declarar → %s.\n", missatge);
 	maquina_estats_llegir_inici_final ('-', b, missatge, lloc);
 
-	vs->mida = mida = maquina_estats_llegir_enter_positiu ("Definint el nombre de variables", lloc);
-	vs->punter = basic_malloc ( mida * sizeof (struct variable) );
-if (verbos_objecte) printf ("L: Un total de: %d variables.\n", mida);
+	vs->mida = maquina_estats_llegir_enter_positiu ("Definint el nombre de variables", lloc);
+	vs->punter = basic_malloc ( vs->mida * sizeof (struct variable) );
+if (verbos_objecte) printf ("L: Un total de: %ld variables.\n", vs->mida);
 
-	for (v = vs->punter; v < vs->punter +mida; v++)
+	for (v = vs->punter; v < vs->punter +vs->mida; v++)
 		lexic_definir_variable (v, lloc);
+}
+
+void
+lexic_funcions (void)
+{
+	int mida;
+	struct descriptor_funcio *f;
+
+if (verbos_objecte) printf ("L: Funcions.\n");
+	maquina_estats_llegir_inici_final ('-', 'f', "Definint nombre total de funcions", -1);
+
+	funcions.mida = maquina_estats_llegir_enter_positiu ("Definint el nombre de funcions", -1);
+	funcions.punter = basic_malloc (funcions.mida * sizeof (struct descriptor_funcio));
+if (verbos_objecte) printf ("L: Un total de: %ld funcions.\n", funcions.mida);
+
+	// Inicialitzem els valors.
+	for (f = funcions.punter; f < funcions.punter +funcions.mida; f++)
+	{
+		f->funcio.nom	= NULL;
+		f->codi.mida	= 0;
+		f->codi.punter	= NULL;
+	}
+
+	maquina_estats_llegir_inici_final ('-', 'd', "Declarant el nombre de funcions pre-inicialitzades", -1);
+	mida = maquina_estats_llegir_enter_positiu ("Definir el nombre de noms abans de compilar", -1);
+if (verbos_objecte) printf ("L: Un total de: %d definir noms abans de compilar.\n", mida);
+
+	for (f = funcions.punter; f < funcions.punter +mida; f++)
+		f->funcio.nom = strdup (maquina_estats_cadena_caracters ("Definint nom", -1));
 }
 
 enum cert_fals
@@ -132,6 +152,7 @@ lexic_llegir_objecte (char (*funcio) (void), enum cert_fals fem_verbos, enum cer
 	// Lèxic.
 if (verbos_objecte) printf ("L: Llegir objecte.\n");
 	lexic_variables_i_declarar ('v', &variables_globals, "Variables globals", -1);
+	lexic_funcions ();
 
 	maquina_estats_finalitza ();
 	return CF_fals;

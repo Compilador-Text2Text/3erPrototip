@@ -18,7 +18,26 @@ alliberar_variables (struct variables *vs)
 }
 
 void
+alliberar_funcio (struct descriptor_funcio *f)
+{
+	f->funcio.nom = basic_free (f->funcio.nom);
+}
+
+void
+alliberar_funcions (void)
+{
+	struct descriptor_funcio *f;
+
+	for (f = funcions.punter; f < funcions.punter +funcions.mida; f++)
+		alliberar_funcio (f);
+
+	funcions.mida = 0;
+	funcions.punter = basic_free (funcions.punter);
+}
+
+void
 alliberar_descriptors_funcio_globals (void)
 {
 	alliberar_variables (&variables_globals);
+	alliberar_funcions ();
 }

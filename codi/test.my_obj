@@ -3,3 +3,6 @@
 	"sisi" "Int" (0e)	: -14e			;
 	"tutu" "Char"(0e)	:  'l'			;
 	"viky" "Char"(1e)	: "\\funciona\""	;
+
+-f: 1e
+-d: 1e	"main"
