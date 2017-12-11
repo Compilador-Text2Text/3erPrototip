@@ -9,6 +9,39 @@
 
 enum cert_fals verbos_objecte; // Per saber si continuem sent verbosos.
 
+union valor
+lexic_definir_valor (struct descriptor d, char *missatge, int lloc)
+{
+	union valor v;
+
+	if (d.vegades_punter)
+	{
+		if ((d.tipus == Tipus_char) && (d.vegades_punter == 1))
+			v.punter = strdup (maquina_estats_cadena_caracters ("Definint valor \"strings\"", lloc));
+		else
+		{
+			printf ("ERROR: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+			maquina_error_procedencia (missatge, lloc);
+		}
+		return v;
+	}
+
+	switch (d.tipus)
+	{
+	case Tipus_char:
+		v.caracter = maquina_estats_llegir_caracter ("Definint un caràcter", lloc);
+		break;
+	case Tipus_int:
+		v.enter = maquina_estats_llegir_enter ("Definint un enter", lloc);
+		break;
+	default:
+		printf ("ERROR: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+		maquina_error_procedencia (missatge, lloc);
+	}
+
+	return v;
+}
+
 enum tipus
 lexic_definir_tipu (char *t, char *missatge, int lloc)
 {
@@ -24,21 +57,34 @@ lexic_definir_tipu (char *t, char *missatge, int lloc)
 	return Tipus_cap;
 }
 
+struct descriptor
+lexic_definir_descriptor (int lloc)
+{
+	char *t;
+	struct descriptor d;
+
+	t = maquina_estats_cadena_caracters ("Definint tipus", lloc);
+	d.tipus = lexic_definir_tipu (t, "Investigant el tipus", lloc);
+	maquina_estats_comprovacio_caracter ('(', "Parèntesis per les vegades punter", lloc);
+	d.vegades_punter = maquina_estats_llegir_enter ("Vegades punter", lloc);
+	maquina_estats_comprovacio_caracter (')', "Parèntesis per les vegades punter", lloc);
+	return d;
+}
+
 void
 lexic_definir_variable (struct variable *v, int lloc)
 {
-	char c, *t;
+	char c;
 
 	v->usat = CF_fals;
 	v->nom = strdup (maquina_estats_cadena_caracters ("Definint nom", lloc));
-	t = maquina_estats_cadena_caracters ("Definint tipus", lloc);
-	v->descriptor.tipus = lexic_definir_tipu (t, "Investigant el tipus", lloc);
-	v->descriptor.vegades_punter = maquina_estats_llegir_enter ("Vegades punter", lloc);
+	v->descriptor = lexic_definir_descriptor (lloc);
 
 	switch ((c = maquina_estats_caracter_sense_comentaris ("Mirant si inicialitza la variable", lloc)))
 	{
 	case ':':
-		printf ("\nTODO\n\n");
+		v->valor = lexic_definir_valor (v->descriptor, "Definint valor de variable", lloc);
+		maquina_estats_comprovacio_caracter (';', "Per saber que hem acabat amb la variable", lloc);
 		v->inicialitzat = CF_cert;
 		break;
 	case ';':
@@ -50,9 +96,12 @@ lexic_definir_variable (struct variable *v, int lloc)
 	}
 if (verbos_objecte)
 {
-	printf ("L: Variable: nom: \"%s\" \"%s\"(%ld).\n", v->nom, string_tipu (v->descriptor.tipus), v->descriptor.vegades_punter);
+	printf ("L: Variable: nom: \"%s\" \"%s\"(%ld)", v->nom, string_tipu (v->descriptor.tipus), v->descriptor.vegades_punter);
 	if (v->inicialitzat)
-		; // TODO
+		mostra_valor (v->descriptor, v->valor);
+	else
+		printf ("No inicialitzat");
+	printf (".\n");
 }
 }
 

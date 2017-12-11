@@ -9,6 +9,7 @@ char * string_SYA (enum SYA);
 
 void mostra_tipu (struct descriptor);
 void mostra_base_funcio (struct base_funcio *);
+void mostra_valor (struct descriptor d, union valor v);
 
 void mostra_localitzacions (void);
 void mostra_tipus (void);

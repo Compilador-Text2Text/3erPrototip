@@ -4,6 +4,15 @@
 void
 alliberar_variables (struct variables *vs)
 {
+	struct variable *v;
+
+	for (v = vs->punter; v < vs->punter +vs->mida; v++)
+	{
+		v->nom = basic_free (v->nom);
+		if (v->descriptor.vegades_punter && v->inicialitzat)
+			v->valor.punter = basic_free (v->valor.punter);
+	}
+
 	vs->mida = 0;
 	vs->punter = basic_free (vs->punter);
 }

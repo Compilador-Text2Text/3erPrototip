@@ -135,3 +135,27 @@ mostra_sistema (void)
 			printf ("NULL\n");
 	}
 }
+
+void
+mostra_valor (struct descriptor d, union valor v)
+{
+	if (d.vegades_punter)
+	{
+		if ((d.tipus == Tipus_char) && (d.vegades_punter == 1))
+			printf ((char *)v.punter);
+		else
+		{
+			printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+			exit (EXIT_FAILURE);
+		}
+		return;
+	}
+	switch (d.tipus)
+	{
+	case Tipus_char:	printf ("%c", v.caracter);	break;
+	case Tipus_int:		printf ("%d", v.enter);		break;
+	default:
+		printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+		exit (EXIT_FAILURE);
+	}
+}

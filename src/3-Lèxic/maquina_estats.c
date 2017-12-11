@@ -97,16 +97,6 @@ if (verbos_maquina) printf ("M: Comprova si '%c ≠ %c'.\n", esperat, entrat);
 	printf ("ERROR: Caràcter esperat i entrat: %c ≠ %c.\n", esperat, entrat);
 	maquina_error_procedencia (missatge, lloc);
 }
-//
-// (comentaris)'esperat'
-void
-maquina_estats_comprovacio_caracter (char e, char *general, int lloc)
-{
-	char c;
-
-	c = maquina_estats_caracter_sense_comentaris (general, lloc);
-	maquina_estats_comprovacio_caracter_amb_2 (e, c, general, lloc);
-}
 
 /************************************************/
 /*	Funcions públiques			*/
@@ -128,6 +118,16 @@ void
 maquina_estats_finalitza (void)
 {
 	pila_alliberar (&g_me_cc);
+}
+
+// (comentaris)'esperat'
+void
+maquina_estats_comprovacio_caracter (char e, char *general, int lloc)
+{
+	char c;
+
+	c = maquina_estats_caracter_sense_comentaris (general, lloc);
+	maquina_estats_comprovacio_caracter_amb_2 (e, c, general, lloc);
 }
 
 // On 'p' és el primer caràcter, 's' el següent.
@@ -201,21 +201,15 @@ if (verbos_maquina) printf("M: Espera: \"\"([^\\\"]|\\.)*\"\".\n");
 	g_me_cc.us = 0;
 	return g_me_cc.punter;
 }
-/*
-	// Comprovem errors.
-	if ( !isdigit((c = maquina_estats_caracter_sense_comentaris (missatge, lloc))) )
-		if ( c != '-' )
-		{
-			printf ("E: Volíem un dígit: [0-9], i ha entrat: \'%c\'.\n", c);
-			maquina_error_procedencia (missatge, lloc);
-		}
 
-	g_me_cc.us = 0;
-	pila_afegir (&g_me_cc, &c);
-	while ( isdigit ((c = maquina_seguent_caracter (missatge, lloc))) )
-		pila_afegir (&g_me_cc, &c);
+char
+maquina_estats_llegir_caracter (char *missatge, int lloc)
+{
+	char c;
 
-	maquina_estats_comprovacio_caracter_amb_2 ('e', c, missatge, lloc);
-	pila_afegir (&g_me_cc, &end_char);
-	g_me_cc.us = 0;
-	*/
+	maquina_estats_comprovacio_caracter ('\'', missatge, lloc);
+	c = maquina_seguent_caracter (missatge, lloc);
+	maquina_estats_comprovacio_caracter_amb_2 ('\'', maquina_seguent_caracter (missatge, lloc), missatge, lloc);
+
+	return c;
+}
