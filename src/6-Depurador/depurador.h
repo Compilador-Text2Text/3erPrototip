@@ -13,9 +13,12 @@ void mostra_valor (struct descriptor d, union valor v);
 
 void mostra_variable  (struct variable  *v );
 void mostra_variables (struct variables *vs);
+void mostra_funcions_nom (void);
+void mostra_funcio (struct descriptor_funcio *f);
 
 void mostra_localitzacions (void);
 void mostra_tipus (void);
+void mostra_SYA (void);
 void mostra_sistema (void);
 
 #endif // DEPURADOR_DEPURADOR_H_

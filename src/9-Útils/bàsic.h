@@ -1,6 +1,9 @@
 #ifndef UTILS_BASIC_H_
 #define UTILS_BASIC_H_
 
+#define MIN(X, Y) X < Y ? X : Y
+#define MAX(X, Y) X > Y ? X : Y
+
 #include <stdlib.h>
 
 enum

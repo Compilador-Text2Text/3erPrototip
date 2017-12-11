@@ -6,6 +6,7 @@
 
 #include "../1-Executor/descriptor.h"
 #include "../6-Depurador/depurador.h"
+#include "../9-Útils/bàsic.h"
 
 enum cert_fals verbos_objecte; // Per saber si continuem sent verbosos.
 
@@ -57,6 +58,40 @@ lexic_definir_tipu (char *t, char *missatge, int lloc)
 	return Tipus_cap;
 }
 
+int
+lexic_definir_index_funcio (char *t, int lloc)
+{
+	int i;
+
+	for (i = 0; i < funcions.mida; i++)
+		if (funcions.punter[i].funcio.nom)
+		{
+			if (!strcmp (t, funcions.punter[i].funcio.nom))
+				return i;
+		}
+		else break;
+
+	printf ("Error: entrat: %s i esperat:\n", t);
+	mostra_funcions_nom ();
+	maquina_error_procedencia ("Extreient index de funció", lloc);
+	return 0; // Warnings.
+}
+
+enum SYA
+lexic_definir_SYA (char *t, int lloc)
+{
+	int i;
+
+	for (i = 0; i < SYA_END; i++)
+		if (!strcmp(t, string_SYA (i)))
+			return i;
+
+	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	mostra_SYA ();
+	maquina_error_procedencia ("Extraient com és comporta amb el SYA", lloc);
+	return 0;
+}
+
 struct descriptor
 lexic_definir_descriptor (int lloc)
 {
@@ -91,10 +126,10 @@ lexic_definir_variable (struct variable *v, int lloc)
 		v->inicialitzat = CF_fals;
 		break;
 	default:
-		printf ("ERROR: Entrat: %c\n", c);
+		printf ("ERROR: Entrat: %c.\n", c);
 		maquina_error_procedencia ("Esperàvem si inicialitzava la variable, llavors tenia que entrar: [:;]", lloc);
 	}
-if (verbos_objecte) mostra_variable (v);
+if (verbos_objecte) {printf ("L: "); mostra_variable (v);}
 }
 
 void
@@ -114,9 +149,54 @@ if (verbos_objecte) printf ("L: Un total de: %ld variables.\n", vs->mida);
 }
 
 void
+lexic_funcio (int definits, int *restants, int *nous, int lloc)
+{
+	int i;
+	char c;
+	struct descriptor_funcio *f;
+
+if (verbos_objecte) printf ("L: Declarant la funció.\n");
+	maquina_estats_llegir_inici_final ('<', 'F', "Declarar la funció", lloc);
+
+	switch ((c = maquina_estats_llegir_caracter ("Mirant si està inicialitzada la funció", lloc)))
+	{
+	case 'd':
+if (verbos_objecte) printf ("L: Funció declarada, ara la definirim.\n");
+		(*restants)--;
+		i = lexic_definir_index_funcio (maquina_estats_cadena_caracters ("Buscant nom definit", lloc), lloc);
+		f = funcions.punter +i;
+		break;
+
+	case 'n':
+if (verbos_objecte) printf ("L: Funció nova, ara la definirim.\n");
+		(*nous)++;
+		i = definits +*nous;
+		if ( i >= funcions.mida )
+		{
+			printf ("ERROR: Demanat %d < %ld. On són punters relatius de les funcions.\n", i, funcions.mida);
+			maquina_error_procedencia ("Index major al nombre total de funcions possibles", lloc);
+		}
+		f = funcions.punter +i;
+		f->funcio.nom = strdup (maquina_estats_cadena_caracters ("Definint nom", lloc));
+		break;
+
+	default:
+		printf ("ERROR: Entrat: %c.\n", c);
+		maquina_error_procedencia ("Esperàvem si estava inicialitzada la funció, llavors tenia que entrar: '[dn]'", lloc);
+	}
+
+	f->funcio.retorn = lexic_definir_descriptor (lloc);
+	f->funcio.SYA = lexic_definir_SYA (maquina_estats_cadena_caracters ("Definint si és operant o funció", lloc), lloc);
+	f->funcio.precedencia = f->funcio.SYA == SYA_funcio ? 0 : maquina_estats_llegir_enter_positiu ("Definint precedència", lloc);
+
+if (verbos_objecte) { printf ("L: "); mostra_funcio (f);}
+}
+
+void
 lexic_funcions (void)
 {
-	int mida;
+	int mida, i;
+	int nous, restants;
 	struct descriptor_funcio *f;
 
 if (verbos_objecte) printf ("L: Funcions.\n");
@@ -135,11 +215,20 @@ if (verbos_objecte) printf ("L: Un total de: %ld funcions.\n", funcions.mida);
 	}
 
 	maquina_estats_llegir_inici_final ('-', 'd', "Declarant el nombre de funcions pre-inicialitzades", -1);
-	mida = maquina_estats_llegir_enter_positiu ("Definir el nombre de noms abans de compilar", -1);
+	restants = mida = maquina_estats_llegir_enter_positiu ("Definir el nombre de noms abans de compilar", -1);
 if (verbos_objecte) printf ("L: Un total de: %d definir noms abans de compilar.\n", mida);
 
+	if (funcions.mida < mida)
+	{
+		printf ("ERROR: Ha dit que hi haurà: %ld i vols declarar: %d.\n", funcions.mida, mida);
+		maquina_error_procedencia ("No pot declarar més funcions de les que ha dit que hi haurà", -1);
+	}
 	for (f = funcions.punter; f < funcions.punter +mida; f++)
 		f->funcio.nom = strdup (maquina_estats_cadena_caracters ("Definint nom", -1));
+
+	nous = 0;
+	for (i = 0; i < funcions.mida; i++)
+		lexic_funcio (mida, &restants, &nous, i);
 }
 
 enum cert_fals

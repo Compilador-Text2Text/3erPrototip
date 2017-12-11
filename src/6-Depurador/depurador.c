@@ -2,6 +2,8 @@
 
 #include "depurador.h"
 
+#include "../1-Executor/descriptor.h"
+
 /* enum a cadena de caràcters */
 char *
 string_localitzacio (enum localitzacions e)
@@ -52,6 +54,15 @@ string_SYA (enum SYA e)
 		basic_error ("String SYA, esperat un valor menor que: %d, entrat: %d", SYA_END, e);
 		return "ERROR"; // Només posat perquè deixes de donar warning.
 	}
+}
+void
+mostra_SYA (void)
+{
+	int i;
+
+	printf ("Shunting-yard algorithm:\n");
+	for (i = 0; i < SYA_END; i++)
+		printf ("%2d \"%s\"\n", i, string_SYA (i));
 }
 
 /* Mostra dades interessants */
@@ -178,4 +189,21 @@ mostra_variables (struct variables *vs)
 
 	for (v = vs->punter; v < vs->punter +vs->mida; v++)
 		mostra_variable (v);
+}
+
+void
+mostra_funcions_nom (void)
+{
+	struct descriptor_funcio *f;
+
+	for (f = funcions.punter; f < funcions.punter + funcions.mida; f++)
+		if (f->funcio.nom)
+			printf (" \"%s\"\n", f->funcio.nom);
+		else break;
+}
+
+void
+mostra_funcio (struct descriptor_funcio *f)
+{
+	mostra_base_funcio (&f->funcio);
 }

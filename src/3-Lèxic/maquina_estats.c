@@ -135,7 +135,7 @@ maquina_estats_comprovacio_caracter (char e, char *general, int lloc)
 void
 maquina_estats_llegir_inici_final (char p, char s, char *missatge, int lloc)
 {
-if (verbos_maquina) printf ("M: Espera: \"%c%c[^:]*:\".\n", p, s);
+if (verbos_maquina) printf ("M: Espera: \"%c%c[^:\\n]*:\".\n", p, s);
 
 	maquina_estats_comprovacio_caracter (p, missatge, lloc);
 	maquina_estats_comprovacio_caracter (s, missatge, lloc);
