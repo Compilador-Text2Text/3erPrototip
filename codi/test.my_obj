@@ -7,3 +7,44 @@
 -funcions: 1e
 -declarat: 1e	"main"
 	<Funcio: 'd' "main" "Int" (0e) "Funció"
+		-arguments: 2e
+			"argc" "Int" (0e)		;
+			"argv" "Char"(2e)		;
+		-locals: 2e
+			"argc" "Int" (0e)		;
+			"argv" "Char"(2e)		;
+		-codi: 7e
+			-f: 3e
+				"Codi" "Char" (0e) 'c';
+				"Codi" "Char" (1e) "Cadena de caràcters";
+				"Codi" "Int" (0e) -50e;
+			-f: 2e
+				"Arguments" "argc";
+				"Arguments" "argv";
+			-f: 2e
+				"Locals" "argc";
+				"Locals" "argc";
+
+			-frase: 4e
+				"Globals" "nono";
+				"Globals" "sisi";
+				"Globals" "tutu";
+				"Globals" "viky";
+
+			-frase: 1e
+				"Funcions" "main";
+
+			-frase: 8e
+				"Sistema" "return";
+				"Sistema" "exit";
+				"Sistema" "goto";
+				"Sistema" "gotoZ";
+				"Sistema" "gotoNZ";
+				"Sistema" "=";
+				"Sistema" "+";
+				"Sistema" "-";
+
+			-frase: 3e
+				"Preexecució" "(";
+				"Preexecució" ",";
+				"Preexecució" ")";

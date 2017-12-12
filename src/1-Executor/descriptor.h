@@ -99,6 +99,16 @@ SYA
 	SYA_END
 };
 
+enum
+preexecucio
+{
+	Preexecucio_obert, // (
+	Preexecucio_coma,  // ,
+	Preexecucio_tancat,// )
+
+	Preexecucio_END
+};
+
 /************************************************/
 /*	Elements avançats			*/
 /************************************************/

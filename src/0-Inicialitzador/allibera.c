@@ -18,9 +18,39 @@ alliberar_variables (struct variables *vs)
 }
 
 void
+alliberar_frases (struct frase *f)
+{
+	struct paraula *p;
+
+	// Si hem reservat memòria al codi <cadena de caràcters per exemple>
+	// cal alliberar-ho.
+	for (p = f->punter; p < f->punter +f->mida; p++)
+		if ((p->lloc.on == Localitzacio_codi) && p->descriptor.vegades_punter)
+			p->auxiliar.punter = basic_free (p->auxiliar.punter);
+
+	f->punter = basic_free (f->punter);
+	f->mida = 0;
+}
+
+void
+alliberar_codi (struct codi *c)
+{
+	struct frase *f;
+
+	for (f = c->punter; f < c->punter +c->mida; f++)
+		alliberar_frases (f);
+
+	c->punter = basic_free (c->punter);
+	c->mida = 0;
+}
+
+void
 alliberar_funcio (struct descriptor_funcio *f)
 {
 	f->funcio.nom = basic_free (f->funcio.nom);
+	alliberar_variables (&f->funcio.arguments);
+	alliberar_variables (&f->locals);
+	alliberar_codi (&f->codi);
 }
 
 void

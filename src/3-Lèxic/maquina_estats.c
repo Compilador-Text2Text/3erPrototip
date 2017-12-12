@@ -38,13 +38,18 @@ maquina_seguent_caracter (char *general, int lloc)
 
 	g_me_c++;
 	if ( c == EOF )
+	{
+		if (bool_me_lectura) g_me_c = 0;
 		maquina_error_final (general, lloc);
+	}
 	else if ( c == '\n' )
+	{
 		bool_me_lectura = CF_cert;
+		g_me_f++;
+	}
 	else if ( bool_me_lectura )
 	{
 		bool_me_lectura = CF_fals;
-		g_me_f++;
 		g_me_c = 1;
 	}
 	return c;

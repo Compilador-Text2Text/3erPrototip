@@ -55,6 +55,21 @@ string_SYA (enum SYA e)
 		return "ERROR"; // Només posat perquè deixes de donar warning.
 	}
 }
+
+char *
+string_preexecucio (enum preexecucio e)
+{
+	switch (e)
+	{
+	case Preexecucio_obert:		return "(";
+	case Preexecucio_coma:		return ",";
+	case Preexecucio_tancat:	return ")";
+	default:
+		basic_error ("String preexecució, esperat un valor menor que: %d, entrat: %d", Preexecucio_END, e);
+		return "ERROR"; // Només posat perquè deixes de donar warning.
+	}
+}
+
 void
 mostra_SYA (void)
 {
@@ -63,6 +78,15 @@ mostra_SYA (void)
 	printf ("Shunting-yard algorithm:\n");
 	for (i = 0; i < SYA_END; i++)
 		printf ("%2d \"%s\"\n", i, string_SYA (i));
+}
+
+void
+mostra_preexecucio (void)
+{
+	int i;
+	printf ("Elements de preexecució:\n");
+	for (i = 0; i < Preexecucio_END; i++)
+		printf ("%2d \"%s\"\n", i, string_preexecucio (i));
 }
 
 /* Mostra dades interessants */
@@ -153,7 +177,7 @@ mostra_valor (struct descriptor d, union valor v)
 	if (d.vegades_punter)
 	{
 		if ((d.tipus == Tipus_char) && (d.vegades_punter == 1))
-			printf ((char *)v.punter);
+			printf ("\"%s\"", (char *)v.punter);
 		else
 		{
 			printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
@@ -163,8 +187,8 @@ mostra_valor (struct descriptor d, union valor v)
 	}
 	switch (d.tipus)
 	{
-	case Tipus_char:	printf ("%c", v.caracter);	break;
-	case Tipus_int:		printf ("%d", v.enter);		break;
+	case Tipus_char:	printf ("'%c'", v.caracter);	break;
+	case Tipus_int:		printf ("%de", v.enter);	break;
 	default:
 		printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
 		exit (EXIT_FAILURE);
@@ -200,6 +224,47 @@ mostra_funcions_nom (void)
 		if (f->funcio.nom)
 			printf (" \"%s\"\n", f->funcio.nom);
 		else break;
+}
+
+void
+mostra_paraula (struct paraula *p, int lloc)
+{
+	printf ("\"%s\" ", string_localitzacio (p->lloc.on));
+
+	switch (p->lloc.on)
+	{
+	case Localitzacio_codi:
+		mostra_valor (p->descriptor, p->auxiliar);
+		printf (".\n");
+		break;
+
+	case Localitzacio_arguments:
+		mostra_variable (&funcions.punter[lloc].funcio.arguments.punter[p->lloc.relatiu]);
+		break;
+
+	case Localitzacio_locals:
+		mostra_variable (&funcions.punter[lloc].locals.punter[p->lloc.relatiu]);
+		break;
+
+	case Localitzacio_globals:
+		mostra_variable (&variables_globals.punter[p->lloc.relatiu]);
+		break;
+
+	case Localitzacio_funcions:
+		mostra_base_funcio (&funcions.punter[p->lloc.relatiu].funcio);
+		break;
+
+	case Localitzacio_sistema:
+		mostra_base_funcio (&sistemes.punter[p->lloc.relatiu].funcio);
+		break;
+
+	case Localitzacio_preexecucio:
+		printf ("\"%s\".\n", string_preexecucio (p->lloc.relatiu));
+		break;
+
+	default:
+		basic_error ("ERROR: No sabem on està localitzada la informació de la paraula");
+	}
 }
 
 void

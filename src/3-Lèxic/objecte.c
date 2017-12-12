@@ -59,9 +59,10 @@ lexic_definir_tipu (char *t, char *missatge, int lloc)
 }
 
 int
-lexic_definir_index_funcio (char *t, int lloc)
+lexic_definir_index_funcio (int lloc)
 {
 	int i;
+	char *t = maquina_estats_cadena_caracters ("Buscant nom definit a funció", lloc);
 
 	for (i = 0; i < funcions.mida; i++)
 		if (funcions.punter[i].funcio.nom)
@@ -73,7 +74,40 @@ lexic_definir_index_funcio (char *t, int lloc)
 
 	printf ("Error: entrat: %s i esperat:\n", t);
 	mostra_funcions_nom ();
-	maquina_error_procedencia ("Extreient index de funció", lloc);
+	maquina_error_procedencia ("Extraient l'índex de funció", lloc);
+	return 0; // Warnings.
+}
+
+enum sistema
+lexic_definir_index_sistema (int lloc)
+{
+	int i;
+	char *t = maquina_estats_cadena_caracters ("Buscant nom definit pel sistema", lloc);
+
+	for (i = 0; i < Sistema_END; i++)
+		if (sistemes.punter[i].funcio.nom)
+		if (!strcmp (t, sistemes.punter[i].funcio.nom))
+			return i;
+
+	printf ("Error: entrat: %s i esperat:\n", t);
+	mostra_sistema ();
+	maquina_error_procedencia ("Extraient l'índex de la funció de sistema", lloc);
+	return 0; // Warnings.
+}
+
+enum preexecucio
+lexic_definir_index_preexecucio (int lloc)
+{
+	int i;
+	char *t = maquina_estats_cadena_caracters ("Buscant nom definit de preexecució", lloc);
+
+	for (i = 0; i < Preexecucio_END; i++)
+		if (!strcmp (t, string_preexecucio (i)))
+			return i;
+
+	printf ("Error: entrat: %s i esperat:\n", t);
+	mostra_preexecucio ();
+	maquina_error_procedencia ("Extraient l'índex de la preexecució", lloc);
 	return 0; // Warnings.
 }
 
@@ -92,6 +126,50 @@ lexic_definir_SYA (char *t, int lloc)
 	return 0;
 }
 
+enum localitzacions
+lexic_definir_localitzacio (int lloc)
+{
+	int i;
+	char *t = maquina_estats_cadena_caracters ("Localització", lloc);
+
+	for (i = 0; i < Localitzacio_END; i++)
+		if (!strcmp(t, string_localitzacio (i)))
+			return i;
+
+	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	mostra_localitzacions ();
+	maquina_error_procedencia ("Saben de on és la informació", lloc);
+	return 0;
+}
+
+int
+lexic_definir_index_variable (struct variables *vs, int lloc)
+{
+	int i;
+	char *t = maquina_estats_cadena_caracters ("TODO", lloc);
+
+	for (i = 0; i < vs->mida; i++)
+		if (!strcmp(t, vs->punter[i].nom))
+			return i;
+
+	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	mostra_variables (vs);
+	maquina_error_procedencia ("Saben de on és la informació", lloc);
+	return 0;
+}
+
+int
+lexic_llegir_digit_positiu_entre_parentesis (char *missatge, int lloc)
+{
+	int o;
+
+	maquina_estats_comprovacio_caracter ('(', "Parèntesis per descriure", lloc);
+	o = maquina_estats_llegir_enter_positiu (missatge, lloc);
+	maquina_estats_comprovacio_caracter (')', "Parèntesis per descriure", lloc);
+
+	return o;
+}
+
 struct descriptor
 lexic_definir_descriptor (int lloc)
 {
@@ -100,9 +178,7 @@ lexic_definir_descriptor (int lloc)
 
 	t = maquina_estats_cadena_caracters ("Definint tipus", lloc);
 	d.tipus = lexic_definir_tipu (t, "Investigant el tipus", lloc);
-	maquina_estats_comprovacio_caracter ('(', "Parèntesis per les vegades punter", lloc);
-	d.vegades_punter = maquina_estats_llegir_enter ("Vegades punter", lloc);
-	maquina_estats_comprovacio_caracter (')', "Parèntesis per les vegades punter", lloc);
+	d.vegades_punter = lexic_llegir_digit_positiu_entre_parentesis ("Vegades punter", lloc);
 	return d;
 }
 
@@ -148,6 +224,98 @@ if (verbos_objecte) printf ("L: Un total de: %ld variables.\n", vs->mida);
 		lexic_definir_variable (v, lloc);
 }
 
+/*
+struct localitzat lloc;		// Execució, lèxic, sintaxis i semàntic.
+union valor auxiliar;		// Execució.
+struct descriptor descriptor;	// Depurar i semàntic.
+*/
+void
+lexic_definir_paraula (struct paraula *p, int lloc)
+{
+	p->lloc.on = lexic_definir_localitzacio (lloc);
+
+	switch (p->lloc.on)
+	{
+	case Localitzacio_codi:
+		p->lloc.relatiu = 0;
+		p->descriptor = lexic_definir_descriptor (lloc);
+		p->auxiliar = lexic_definir_valor (p->descriptor, "Definint valor de la paraula", lloc);
+		break;
+
+	case Localitzacio_arguments:
+		p->lloc.relatiu = lexic_definir_index_variable (&funcions.punter[lloc].funcio.arguments, lloc);
+		p->descriptor = funcions.punter[lloc].funcio.arguments.punter[p->lloc.relatiu].descriptor;
+		p->auxiliar.enter = 0;
+		break;
+
+	case Localitzacio_locals:
+		p->lloc.relatiu = lexic_definir_index_variable (&funcions.punter[lloc].locals, lloc);
+		p->descriptor = funcions.punter[lloc].locals.punter[p->lloc.relatiu].descriptor;
+		p->auxiliar.enter = 0;
+		break;
+
+	case Localitzacio_globals:
+		p->lloc.relatiu = lexic_definir_index_variable (&variables_globals, lloc);
+		p->descriptor = variables_globals.punter[p->lloc.relatiu].descriptor;
+		p->auxiliar.enter = 0;
+		break;
+
+	case Localitzacio_funcions:
+		p->lloc.relatiu = lexic_definir_index_funcio (lloc);
+		p->descriptor = funcions.punter[p->lloc.relatiu].funcio.retorn;
+		p->auxiliar.enter = 0;
+		break;
+
+	case Localitzacio_sistema:
+		p->lloc.relatiu = lexic_definir_index_sistema (lloc);
+		p->descriptor = sistemes.punter[p->lloc.relatiu].funcio.retorn;
+		p->auxiliar.enter = sistemes.punter[p->lloc.relatiu].funcio.arguments.mida;
+		break;
+
+	case Localitzacio_preexecucio:
+		p->lloc.relatiu = lexic_definir_index_preexecucio (lloc);
+		p->descriptor.tipus = p->descriptor.vegades_punter = p->auxiliar.enter = 0;
+		break;
+
+	default:
+		printf ("ERROR: Entrat: %d < %d.\n", p->lloc.on, Localitzacio_END);
+		maquina_error_procedencia ("Esperàvem si estava inicialitzada la funció, llavors tenia que entrar: '[dn]'", lloc);
+	}
+
+	maquina_estats_comprovacio_caracter (';', "Finalitzador de paraula", lloc);
+if (verbos_objecte) {printf ("L: Paraula: "); mostra_paraula (p, lloc);}
+}
+
+void
+lexic_definir_frase (struct frase *f, int lloc)
+{
+	struct paraula *p;
+if (verbos_objecte) printf ("L: Definim una frase.\n");
+
+	maquina_estats_llegir_inici_final ('-', 'f', "Definint paraules del codi (-f:)", lloc);
+	f->mida = maquina_estats_llegir_enter_positiu ("Definint el nombre de paraules", lloc);
+	f->punter = basic_malloc (f->mida * sizeof (struct paraula));
+
+	for (p = f->punter; p < f->punter +f->mida; p++)
+		lexic_definir_paraula (p, lloc);
+}
+
+int
+lexic_definir_codi (struct codi *c, int lloc)
+{
+	struct frase *f;
+if (verbos_objecte) printf ("L: Definim el codi.\n");
+
+	maquina_estats_llegir_inici_final ('-', 'c', "Definint frases del codi", lloc);
+	c->mida = maquina_estats_llegir_enter_positiu ("Definint el nombre de frases", lloc);
+	c->punter = basic_malloc (c->mida * sizeof (struct frase));
+
+	for (f = c->punter; f < c->punter +c->mida; f++)
+		lexic_definir_frase (f, lloc);
+
+	return 0;
+}
+
 void
 lexic_funcio (int definits, int *restants, int *nous, int lloc)
 {
@@ -161,20 +329,20 @@ if (verbos_objecte) printf ("L: Declarant la funció.\n");
 	switch ((c = maquina_estats_llegir_caracter ("Mirant si està inicialitzada la funció", lloc)))
 	{
 	case 'd':
-if (verbos_objecte) printf ("L: Funció declarada, ara la definirim.\n");
+if (verbos_objecte) printf ("L: Funció declarada, ara la definirem.\n");
 		(*restants)--;
-		i = lexic_definir_index_funcio (maquina_estats_cadena_caracters ("Buscant nom definit", lloc), lloc);
+		i = lexic_definir_index_funcio (lloc);
 		f = funcions.punter +i;
 		break;
 
 	case 'n':
-if (verbos_objecte) printf ("L: Funció nova, ara la definirim.\n");
+if (verbos_objecte) printf ("L: Funció nova, ara la definirem.\n");
 		(*nous)++;
 		i = definits +*nous;
 		if ( i >= funcions.mida )
 		{
 			printf ("ERROR: Demanat %d < %ld. On són punters relatius de les funcions.\n", i, funcions.mida);
-			maquina_error_procedencia ("Index major al nombre total de funcions possibles", lloc);
+			maquina_error_procedencia ("Índex major al nombre total de funcions possibles", lloc);
 		}
 		f = funcions.punter +i;
 		f->funcio.nom = strdup (maquina_estats_cadena_caracters ("Definint nom", lloc));
@@ -187,8 +355,12 @@ if (verbos_objecte) printf ("L: Funció nova, ara la definirim.\n");
 
 	f->funcio.retorn = lexic_definir_descriptor (lloc);
 	f->funcio.SYA = lexic_definir_SYA (maquina_estats_cadena_caracters ("Definint si és operant o funció", lloc), lloc);
-	f->funcio.precedencia = f->funcio.SYA == SYA_funcio ? 0 : maquina_estats_llegir_enter_positiu ("Definint precedència", lloc);
+	f->funcio.precedencia = f->funcio.SYA == SYA_funcio ? 0 : lexic_llegir_digit_positiu_entre_parentesis ("Definint precedència", lloc);
 
+	lexic_variables_i_declarar ('a', &f->funcio.arguments, "Arguments", -1);
+	lexic_variables_i_declarar ('l', &f->locals, "Locals", -1);
+
+	f->mida_memoria_execucio = lexic_definir_codi (&f->codi, lloc);
 if (verbos_objecte) { printf ("L: "); mostra_funcio (f);}
 }
 
