@@ -1,0 +1,8 @@
+-v: 0e
+-f: 1e -d: 0e
+<Fu ció: 'n' "main" "Int" (0e) "Funció"
+ -a: 2e "argc" "Int" (0e); "argv" "Char" (1e);
+ -l: 0e
+ -c: 1e
+	# Codi que generem: 0 + 1 * 2 / ( 3 - 4 ) ^ 5 ^ 6 → 012*34-23^^/+
+  -f: 15e "Codi""Int"(0e)0e; "Sistema""+"; "Codi""Int"(0e)1e; "Sistema""*";

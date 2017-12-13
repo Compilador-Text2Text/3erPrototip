@@ -2,6 +2,7 @@ include 0-Inicialitzador/GNU.mk
 include 1-Executor/GNU.mk
 include 2-Sistema/GNU.mk
 include 3-Lèxic/GNU.mk
+include 4-Sintàctic/GNU.mk
 include 6-Depurador/GNU.mk
 include 9-Útils/GNU.mk
 
@@ -28,6 +29,7 @@ MAIN_INTERPRET_D_ = $(MAIN_O_)	\
 	$(EXECUTOR_O_)		\
 	$(SISTEMA_O_)		\
 	$(LEXIC_O_)		\
+	$(SINTACTIC_O_)		\
 	$(DEPURADOR_O_)		\
 	$(UTILS_O_)		\
 
@@ -79,6 +81,12 @@ $(LEXIC_OBJECTE_O_): $(LEXIC_OBJECTE_D_)
 
 $(LEXIC_MAQUINA_ESTATS_O_): $(LEXIC_MAQUINA_ESTATS_D_)
 	gcc $(LEXIC_MAQUINA_ESTATS_C_) $(LIBS_O_) $(LEXIC_MAQUINA_ESTATS_O_)
+
+##################################################
+#                    Sintàctic                   #
+##################################################
+$(SINTACTIC_SHUTING_YARD_ALGORITHM_O_): $(SINTACTIC_SHUTING_YARD_ALGORITHM_D_)
+	gcc $(SINTACTIC_SHUTING_YARD_ALGORITHM_C_) $(LIBS_O_) $(SINTACTIC_SHUTING_YARD_ALGORITHM_O_)
 
 ##################################################
 #                    Intèrpret                   #

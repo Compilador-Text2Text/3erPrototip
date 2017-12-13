@@ -270,5 +270,6 @@ mostra_paraula (struct paraula *p, int lloc)
 void
 mostra_funcio (struct descriptor_funcio *f)
 {
+	printf ("Reservat: %ld, ", f->mida_memoria_execucio);
 	mostra_base_funcio (&f->funcio);
 }

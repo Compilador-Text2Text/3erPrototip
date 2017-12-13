@@ -131,6 +131,29 @@ sistema_inicialitza (void)
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_dreta, 2, CF_cert);
 
+	sistema_definir_funcio (Sistema_producte, "*", sistema_producte,
+		sistema_definir_arguments (2,
+			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
+			"b",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_dreta, 3, CF_cert);
+
+	sistema_definir_funcio (Sistema_divisio, "/", sistema_divisio,
+		sistema_definir_arguments (2,
+			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
+			"b",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_dreta, 3, CF_cert);
+
+	sistema_definir_funcio (Sistema_potencia, "^", sistema_potencia,
+		sistema_definir_arguments (2,
+			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
+			"b",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_esquerra, 4, CF_cert);
 	/*
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
 	Sistema_producte,

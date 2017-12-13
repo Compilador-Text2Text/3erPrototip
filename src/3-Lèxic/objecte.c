@@ -263,18 +263,19 @@ lexic_definir_paraula (struct paraula *p, int lloc)
 	case Localitzacio_funcions:
 		p->lloc.relatiu = lexic_definir_index_funcio (lloc);
 		p->descriptor = funcions.punter[p->lloc.relatiu].funcio.retorn;
-		p->auxiliar.enter = 0;
+		p->auxiliar.enter = 0; // És definirà a la sintàxis.
 		break;
 
 	case Localitzacio_sistema:
 		p->lloc.relatiu = lexic_definir_index_sistema (lloc);
 		p->descriptor = sistemes.punter[p->lloc.relatiu].funcio.retorn;
-		p->auxiliar.enter = sistemes.punter[p->lloc.relatiu].funcio.arguments.mida;
+		p->auxiliar.enter = 0; // És definirà a la sintàxis.
 		break;
 
 	case Localitzacio_preexecucio:
 		p->lloc.relatiu = lexic_definir_index_preexecucio (lloc);
 		p->descriptor.tipus = p->descriptor.vegades_punter = p->auxiliar.enter = 0;
+		p->auxiliar.enter = 0; // Serà eliminat a la sintàxis.
 		break;
 
 	default:
@@ -303,6 +304,7 @@ if (verbos_objecte) printf ("L: Definim una frase.\n");
 int
 lexic_definir_codi (struct codi *c, int lloc)
 {
+	int m = 0;
 	struct frase *f;
 if (verbos_objecte) printf ("L: Definim el codi.\n");
 
@@ -311,12 +313,15 @@ if (verbos_objecte) printf ("L: Definim el codi.\n");
 	c->punter = basic_malloc (c->mida * sizeof (struct frase));
 
 	for (f = c->punter; f < c->punter +c->mida; f++)
+	{
 		lexic_definir_frase (f, lloc);
+		m = MAX (m, f->mida);
+	}
 
-	return 0;
+	return m;
 }
 
-void
+int
 lexic_funcio (int definits, int *restants, int *nous, int lloc)
 {
 	int i;
@@ -337,8 +342,8 @@ if (verbos_objecte) printf ("L: Funció declarada, ara la definirem.\n");
 
 	case 'n':
 if (verbos_objecte) printf ("L: Funció nova, ara la definirem.\n");
-		(*nous)++;
 		i = definits +*nous;
+		(*nous)++;
 		if ( i >= funcions.mida )
 		{
 			printf ("ERROR: Demanat %d < %ld. On són punters relatius de les funcions.\n", i, funcions.mida);
@@ -362,12 +367,13 @@ if (verbos_objecte) printf ("L: Funció nova, ara la definirem.\n");
 
 	f->mida_memoria_execucio = lexic_definir_codi (&f->codi, lloc);
 if (verbos_objecte) { printf ("L: "); mostra_funcio (f);}
+	return f->mida_memoria_execucio;
 }
 
-void
+int
 lexic_funcions (void)
 {
-	int mida, i;
+	int mida, i, max = 0, aux;
 	int nous, restants;
 	struct descriptor_funcio *f;
 
@@ -400,12 +406,19 @@ if (verbos_objecte) printf ("L: Un total de: %d definir noms abans de compilar.\
 
 	nous = 0;
 	for (i = 0; i < funcions.mida; i++)
-		lexic_funcio (mida, &restants, &nous, i);
+	{
+		aux = lexic_funcio (mida, &restants, &nous, i);
+		max = MAX (max, aux);
+	}
+
+	return aux;
 }
 
-enum cert_fals
+int
 lexic_llegir_objecte (char (*funcio) (void), enum cert_fals fem_verbos, enum cert_fals maquina_estats)
 {
+	int i;
+
 	// Definim.
 	verbos_objecte = fem_verbos;
 	maquina_estats_inicialitza (funcio, maquina_estats);
@@ -413,8 +426,9 @@ lexic_llegir_objecte (char (*funcio) (void), enum cert_fals fem_verbos, enum cer
 	// Lèxic.
 if (verbos_objecte) printf ("L: Llegir objecte.\n");
 	lexic_variables_i_declarar ('v', &variables_globals, "Variables globals", -1);
-	lexic_funcions ();
+	i = lexic_funcions ();
 
 	maquina_estats_finalitza ();
-	return CF_fals;
+
+	return i;
 }
