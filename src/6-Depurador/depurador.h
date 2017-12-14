@@ -13,6 +13,9 @@ void mostra_base_funcio (struct base_funcio *);
 void mostra_valor (struct descriptor d, union valor v);
 void mostra_paraula (struct paraula *p, int lloc);
 
+void mostra_paraula_simple (struct paraula *p, struct descriptor_funcio *d);
+void mostra_frase (struct frase *f, struct descriptor_funcio *d);
+
 void mostra_variable  (struct variable  *v );
 void mostra_variables (struct variables *vs);
 void mostra_funcions_nom (void);

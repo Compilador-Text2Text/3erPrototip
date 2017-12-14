@@ -6,3 +6,6 @@
  -c: 1e
 	# Codi que generem: 0 + 1 * 2 / ( 3 - 4 ) ^ 5 ^ 6 → 012*34-23^^/+
   -f: 15e "Codi""Int"(0e)0e; "Sistema""+"; "Codi""Int"(0e)1e; "Sistema""*";
+   "Codi""Int"(0e)2e; "Sistema""/"; "Preexecució""("; "Codi""Int"(0e)3e;
+   "Sistema""-"; "Codi""Int"(0e)4e; "Preexecució"")"; "Sistema""^";
+   "Codi""Int"(0e)5e; "Sistema""^"; "Codi""Int"(0e)6e;

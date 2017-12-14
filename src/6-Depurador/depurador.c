@@ -268,6 +268,57 @@ mostra_paraula (struct paraula *p, int lloc)
 }
 
 void
+mostra_paraula_simple (struct paraula *p, struct descriptor_funcio *d)
+{
+	printf ("<");
+
+	switch (p->lloc.on)
+	{
+	case Localitzacio_codi:
+		printf ("c'");
+		mostra_valor (p->descriptor, p->auxiliar);
+		break;
+
+	case Localitzacio_arguments:
+		printf ("a'%s", d->funcio.arguments.punter[p->lloc.relatiu].nom);
+		break;
+
+	case Localitzacio_locals:
+		printf ("l'%s", d->locals.punter[p->lloc.relatiu].nom);
+		break;
+
+	case Localitzacio_globals:
+		printf ("g'%s", variables_globals.punter[p->lloc.relatiu].nom);
+		break;
+
+	case Localitzacio_funcions:
+		printf ("f'%s", funcions.punter[p->lloc.relatiu].funcio.nom);
+		break;
+
+	case Localitzacio_sistema:
+		printf ("s'%s", sistemes.punter[p->lloc.relatiu].funcio.nom);
+		break;
+
+	case Localitzacio_preexecucio:
+		printf ("p'%s", string_preexecucio (p->lloc.relatiu));
+		break;
+
+	default:
+		basic_error ("ERROR: No sabem on està localitzada la informació de la paraula");
+	}
+	printf (">");
+}
+
+void
+mostra_frase (struct frase *f, struct descriptor_funcio *d)
+{
+	struct paraula *p;
+
+	for (p = f->punter; p < f->punter +f->mida; p++)
+		mostra_paraula_simple (p, d);
+}
+
+void
 mostra_funcio (struct descriptor_funcio *f)
 {
 	printf ("Reservat: %ld, ", f->mida_memoria_execucio);
