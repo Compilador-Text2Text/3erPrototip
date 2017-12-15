@@ -3,9 +3,30 @@
 <Fu ció: 'n' "main" "Int" (0e) "Funció"
  -a: 2e "argc" "Int" (0e); "argv" "Char" (1e);
  -l: 0e
- -c: 1e
-	# Codi que generem: 0 + 1 * 2 / ( 3 - 4 ) ^ 5 ^ 6 → 012*34-23^^/+
+ -c: 3e
+	# Codi que generem: 0 + 1 * 2 / ( 3 - 4 ) ^ 5 ^ 6 → 012*34-56^^/+
   -f: 15e "Codi""Int"(0e)0e; "Sistema""+"; "Codi""Int"(0e)1e; "Sistema""*";
    "Codi""Int"(0e)2e; "Sistema""/"; "Preexecució""("; "Codi""Int"(0e)3e;
    "Sistema""-"; "Codi""Int"(0e)4e; "Preexecució"")"; "Sistema""^";
    "Codi""Int"(0e)5e; "Sistema""^"; "Codi""Int"(0e)6e;
+  -f: 20e
+   "Sistema""+"; "Sistema""-"; "Sistema""+";
+   "Sistema""*"; "Sistema""/"; "Sistema""*";
+   "Sistema""^"; "Sistema""^"; "Sistema""^";
+   "Preexecució""(";
+   "Sistema""+"; "Sistema""-"; "Sistema""+";
+   "Sistema""*"; "Sistema""/"; "Sistema""*";
+   "Sistema""^"; "Sistema""^"; "Sistema""^";
+   "Preexecució"")";
+  -f: 11e
+   "Preexecució""(";
+   "Preexecució""(";
+   "Preexecució""(";
+   "Funcions""main";
+   "Preexecució""(";
+   "Sistema""+";
+   "Preexecució"",";
+   "Preexecució"")";
+   "Preexecució"")";
+   "Preexecució"")";
+   "Preexecució"")";
