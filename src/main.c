@@ -14,7 +14,9 @@ main_mostra_ajuda (void)
 	printf (" '-hf'\tMostra la informació de les funcions de sistema.\n");
 	printf (" '-v'\tMostra tots els detalls de tots els passos (lèxic, sintàctic i execució).\n");
 	printf (" '-vl'\tMostra tots els detalls del lèxic.\n");
+	printf (" '-vm'\tMostra tots els detalls de la màquina d'estats.\n");
 	printf (" '-vs'\tMostra tots els detalls de la sintaxis.\n");
+	printf (" '-va'\tMostra tots els detalls de la semàntica.\n");
 	printf (" '-ve'\tMostra tots els detalls de l'execució.\n");
 	printf (" '-f'\tDemana el nom d'un fitxer (serà el que compilarà i executarà).\n");
 	printf (" '-a'\tDemana el nombre d'arguments i tot seguit els mateixos.\n");
@@ -69,6 +71,7 @@ main (int argc, char *argv[])
 	enum cert_fals verbos_lexic	= CF_fals;
 	enum cert_fals verbos_maquina	= CF_fals;
 	enum cert_fals verbos_sintactic	= CF_fals;
+	enum cert_fals verbos_semantic	= CF_fals;
 	enum cert_fals verbos_execucio	= CF_fals;
 	enum cert_fals verbos_main	= CF_cert;
 
@@ -85,13 +88,15 @@ main (int argc, char *argv[])
 		else if ( !strcmp ("-hf", argv[i])  )
 			main_mostra_ajuda_funcions ();
 		else if ( !strcmp ("-v", argv[i])  )
-			verbos_lexic = verbos_maquina = verbos_sintactic = verbos_execucio = CF_cert;
+			verbos_lexic = verbos_maquina = verbos_sintactic = verbos_semantic = verbos_execucio = CF_cert;
 		else if ( !strcmp ("-vl", argv[i]) )
 			verbos_lexic	= CF_cert;
 		else if ( !strcmp ("-vm", argv[i]) )
 			verbos_maquina	= CF_cert;
 		else if ( !strcmp ("-vs", argv[i]) )
 			verbos_sintactic= CF_cert;
+		else if ( !strcmp ("-va", argv[i]) )
+			verbos_semantic = CF_cert;
 		else if ( !strcmp ("-ve", argv[i]) )
 			verbos_execucio	= CF_cert;
 		else if ( !strcmp ("-f", argv[i])  )
@@ -106,7 +111,7 @@ main (int argc, char *argv[])
 	if (nom == NULL) main_error ("Ha de definir que vol executar '-f'", NULL);
 
 	inicialitza_inicialitza_funcions_sistema ();
-	out = inicialitza_lectura_objecte (nom, nombre_arguments, arguments, verbos_lexic, verbos_maquina, verbos_sintactic, verbos_execucio);
+	out = inicialitza_lectura_objecte (nom, nombre_arguments, arguments, verbos_lexic, verbos_maquina, verbos_sintactic, verbos_semantic, verbos_execucio);
 	inicialitza_finalitza_funcions_sistema ();
 
 	if (verbos_main)
@@ -115,6 +120,7 @@ main (int argc, char *argv[])
 		printf ("-Verbós lèxic:\t\t%s\n", basic_depurar_cert_fals (verbos_lexic) );
 		printf ("-Verbós m. d'estats:\t%s\n", basic_depurar_cert_fals (verbos_maquina) );
 		printf ("-Verbós sintàctic:\t%s\n", basic_depurar_cert_fals (verbos_sintactic) );
+		printf ("-Verbós semàntic:\t%s\n", basic_depurar_cert_fals (verbos_semantic) );
 		printf ("-Verbós execució:\t%s\n", basic_depurar_cert_fals (verbos_execucio) );
 		printf ("-Nom fitxer:\t\t\"%s\"\n", nom);
 		printf ("-Sortida:\t\t%d\n", out);

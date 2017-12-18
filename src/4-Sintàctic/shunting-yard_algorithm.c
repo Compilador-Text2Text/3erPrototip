@@ -225,7 +225,7 @@ if (verbos_sintactic) printf ("S: Funció: %s.\n", d->funcio.nom);
 		shunting_yard_algorithm_frase (p, a, d);
 }
 
-void
+struct pila
 shunting_yard_algorithm (int longitud_maxima_frase, enum cert_fals verbos)
 {
 	int i;
@@ -239,5 +239,6 @@ if (verbos_sintactic) printf ("S: Shunting yard algorithm.\n");
 	for (i = 0; i < funcions.mida; i++)
 		shunting_yard_algorithm_codi (&funcions.punter[i], &f);
 
-	pila_alliberar (&f);
+	f.us = 0; // Allibero l'espai.
+	return f;
 }
