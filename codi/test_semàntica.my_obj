@@ -1,0 +1,9 @@
+
+-variables globals: 0e
+-funcions: 1e -declarar: 1e "main"
+ <Funció main: 'd' "main" "Int"(0e) "Funció"
+  -arguments: 2e "argc" "Int"(0e); "argv" "Char"(2e);
+  -locals: 1e "m""Int"(0e);
+  -codi: 1e
+   -frase: 3e
+    "Locals""m";"Sistema""=";"Codi""Int"(0e)4e;

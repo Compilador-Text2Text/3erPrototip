@@ -10,9 +10,16 @@ void
 semantica_funcions (struct pila *a, int mida, struct variables *vs)
 {
 	int i;
+	struct paraula *p;
 
 	for (i = 0; i < mida; i++)
-	; // TODO i comprovar els que manquen!
+	{
+		p = pila_treure (a);
+		if (!((p->descriptor.tipus == vs->punter[i].descriptor.tipus) && (p->descriptor.vegades_punter == vs->punter[i].descriptor.vegades_punter)))
+			if (vs->punter[i].descriptor.tipus == Tipus_cap)
+			printf ("No mola");
+		printf ("%d - mola mucho\n", i);
+	}
 }
 
 void
@@ -33,6 +40,12 @@ semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *
 		if (p->lloc.relatiu >= funcions.mida)
 			basic_error ("Semàntic error, ja que hi ha %d funcions i s'està cridant el %d", funcions.mida, p->lloc.relatiu);
 		semantica_funcions (a, p->auxiliar.enter, &funcions.punter[p->lloc.relatiu].funcio.arguments);
+		break;
+
+	case Localitzacio_sistema:
+		if (p->lloc.relatiu >= sistemes.mida)
+			basic_error ("Semàntic error, ja que hi ha %d funcions de sistema i s'està cridant el %d", sistemes.mida, p->lloc.relatiu);
+		semantica_funcions (a, p->auxiliar.enter, &sistemes.punter[p->lloc.relatiu].funcio.arguments);
 		break;
 	}
 }

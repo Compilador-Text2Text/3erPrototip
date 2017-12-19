@@ -121,6 +121,8 @@ mostra_argument (struct variable *v)
 {
 	printf ("\"%s\" ", v->nom);
 	mostra_tipu (v->descriptor);
+	if (v->inicialitzat)
+		mostra_valor (v->descriptor, v->valor);
 }
 
 void

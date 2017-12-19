@@ -70,14 +70,14 @@ sistema_inicialitza (void)
 	// Sistema.
 	sistema_definir_funcio (Sistema_return, "return", sistema_retorn,
 		sistema_definir_arguments (1,
-			"retorn",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			"retorn",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_cert, (union valor){.enter = 0}
 			),
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
 	sistema_definir_funcio (Sistema_exit, "exit", sistema_exit,
 		sistema_definir_arguments (1,
-			"sortir",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			"sortir",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_cert, (union valor){.enter = 0}
 			),
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);

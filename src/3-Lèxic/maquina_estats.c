@@ -97,7 +97,7 @@ maquina_estats_caracter_sense_comentaris (char *general, int lloc)
 void
 maquina_estats_comprovacio_caracter_amb_2 (char esperat, char entrat, char *missatge, int lloc)
 {
-if (verbos_maquina) printf ("M: Comprova si '%c ≠ %c'.\n", esperat, entrat);
+if (verbos_maquina) printf ("M: Comprova si '%c' ≠ '%c'.\n", esperat, entrat);
 	if ( esperat == entrat ) return;
 	printf ("ERROR: Caràcter esperat i entrat: %c ≠ %c.\n", esperat, entrat);
 	maquina_error_procedencia (missatge, lloc);
