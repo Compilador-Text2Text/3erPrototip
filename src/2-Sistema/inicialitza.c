@@ -87,7 +87,7 @@ sistema_inicialitza (void)
 		sistema_definir_arguments (1,
 			"línia salt",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
 			),
-		(struct descriptor){.tipus = Tipus_cap, .vegades_punter = 0},
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
 	sistema_definir_funcio (Sistema_gotoZ, "gotoZ", sistema_gotoZ,
@@ -95,7 +95,7 @@ sistema_inicialitza (void)
 			"línia salt",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
 			"condició",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
 			),
-		(struct descriptor){.tipus = Tipus_cap, .vegades_punter = 0},
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
 	sistema_definir_funcio (Sistema_gotoNZ, "gotoNZ", sistema_gotoNZ,
@@ -103,7 +103,7 @@ sistema_inicialitza (void)
 			"línia salt",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
 			"condició",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
 			),
-		(struct descriptor){.tipus = Tipus_cap, .vegades_punter = 0},
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
 	// Operacions binaries.

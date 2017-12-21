@@ -7,26 +7,35 @@
 enum cert_fals verbos_semantic; // Per saber si continuem sent verbosos.
 
 void
-semantica_funcions (struct pila *a, int mida, struct variables *vs)
+semantica_funcions (struct pila *a, int mida, struct base_funcio *f)
 {
 	int i;
 	struct paraula *p;
+	struct variables *vs;
+
+	vs = &f->arguments;
+
+	if (mida > a->us)
+		basic_error ("Semàntic error, ja que hi ha una funció que demana %d arguments i n'hi ha %d", mida, a->us);
 
 	for (i = 0; i < mida; i++)
 	{
 		p = pila_treure (a);
+
+		if ((vs->punter[i].descriptor.tipus == Tipus_void) || (p->descriptor.tipus == Tipus_void)) continue;
 		if (!((p->descriptor.tipus == vs->punter[i].descriptor.tipus) && (p->descriptor.vegades_punter == vs->punter[i].descriptor.vegades_punter)))
-			if (vs->punter[i].descriptor.tipus == Tipus_cap)
-			printf ("No mola");
-		printf ("%d - mola mucho\n", i);
+			basic_error ("Semàntic error, els tipus d'arguments i d'entrada no són compatibles.");
 	}
+
+	pila_afegir (a, &f->retorn);
 }
 
 void
-semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *d)
+semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *d, int lloc)
 {
 	int i;
 
+if (verbos_semantic) {printf ("A: Paraula: "); mostra_paraula (p, lloc);}
 	switch ((enum localitzacions)(i = p->lloc.on))
 	{
 	case Localitzacio_codi:
@@ -39,26 +48,30 @@ semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *
 	case Localitzacio_funcions:
 		if (p->lloc.relatiu >= funcions.mida)
 			basic_error ("Semàntic error, ja que hi ha %d funcions i s'està cridant el %d", funcions.mida, p->lloc.relatiu);
-		semantica_funcions (a, p->auxiliar.enter, &funcions.punter[p->lloc.relatiu].funcio.arguments);
+		semantica_funcions (a, p->auxiliar.enter, &funcions.punter[p->lloc.relatiu].funcio);
 		break;
 
 	case Localitzacio_sistema:
 		if (p->lloc.relatiu >= sistemes.mida)
 			basic_error ("Semàntic error, ja que hi ha %d funcions de sistema i s'està cridant el %d", sistemes.mida, p->lloc.relatiu);
-		semantica_funcions (a, p->auxiliar.enter, &sistemes.punter[p->lloc.relatiu].funcio.arguments);
+		semantica_funcions (a, p->auxiliar.enter, &sistemes.punter[p->lloc.relatiu].funcio);
 		break;
+
+	default:
+		basic_error ("Semàntic error, ha entrat un element imprevist");
 	}
 }
 
 int
-semantica_frase (struct frase *f, struct pila *a, struct descriptor_funcio *d)
+semantica_frase (struct frase *f, struct pila *a, struct descriptor_funcio *d, int lloc)
 {
 	int m = 0;
 	struct paraula *p;
+	a->us = 0; // Alliberem la memòria.
 
 	for (p = f->punter; p < f->punter +f->mida; p++)
 	{
-		semantica_paraula (p, a, d);
+		semantica_paraula (p, a, d, lloc);
 		m = MAX (m, a->us);
 	}
 if (verbos_semantic) {printf("A: Frase màxim: %de: ", m); mostra_frase (f, d); printf ("\n");}
@@ -69,7 +82,7 @@ if (verbos_semantic) {printf("A: Frase màxim: %de: ", m); mostra_frase (f, d); 
 void
 semantica_codi (int i, struct pila *a)
 {
-	int m = 0; // Màxim.
+	int m = 0, j; // Màxim.
 	struct descriptor_funcio *d;
 	struct codi *c;
 	struct frase *p;
@@ -80,8 +93,8 @@ if (verbos_semantic) printf ("A: Funció: %s.\n", funcions.punter[i].funcio.nom)
 
 	for (p = c->punter; p < c->punter +c->mida; p++)
 	{
-		i = semantica_frase (p, a, d);
-		m = MAX (i, m);
+		j = semantica_frase (p, a, d, i);
+		m = MAX (j, m);
 	}
 
 	d->mida_memoria_execucio = m;

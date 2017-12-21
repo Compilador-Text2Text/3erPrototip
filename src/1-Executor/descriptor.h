@@ -19,13 +19,10 @@ valor
 enum
 tipus
 {
-	Tipus_cap,
-
 	Tipus_void,
 	Tipus_char,
 	Tipus_int,
 	Tipus_float,
-	Tipus_pointer,
 
 	Tipus_END
 };

@@ -55,7 +55,7 @@ lexic_definir_tipu (char *t, char *missatge, int lloc)
 	printf ("Error: entrat: %s i esperat:\n", t);
 	mostra_tipus ();
 	maquina_error_procedencia (missatge, lloc);
-	return Tipus_cap;
+	return Tipus_void;
 }
 
 int

@@ -29,12 +29,10 @@ string_tipu (enum tipus e)
 {
 	switch (e)
 	{
-	case Tipus_cap:		return "NT";
 	case Tipus_void:	return "Void";
 	case Tipus_char:	return "Char";
 	case Tipus_int:		return "Int";
 	case Tipus_float:	return "Float";
-	case Tipus_pointer:	return "Punter";
 	case Tipus_END:		return "Fi";
 	default:
 		basic_error ("String tipus, esperat un valor menor que: %d, entrat: %d", Tipus_END, e);
