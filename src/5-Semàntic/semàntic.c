@@ -43,7 +43,7 @@ semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *
 {
 	int i;
 
-if (verbos_semantic) {printf ("A: Paraula: "); mostra_paraula (p, lloc);}
+if (verbos_semantic) {printf ("A:  Paraula: "); mostra_paraula (p, lloc);}
 	switch ((enum localitzacions)(i = p->lloc.on))
 	{
 	case Localitzacio_codi:

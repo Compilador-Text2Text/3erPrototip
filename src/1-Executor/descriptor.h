@@ -164,6 +164,7 @@ struct
 memoria_execucio
 {
 	size_t mida;
+	size_t us;
 	struct element_execucio *punter;
 };
 
@@ -214,6 +215,17 @@ descriptor_sistema
 {
 	struct base_funcio funcio;
 	int (*exec) (size_t, struct element_execucio *, struct pila *);
+};
+
+struct
+funcio_dinamica
+{
+	struct element_execucio *retorn;
+	struct variables arguments;
+	struct variables locals;
+	struct memoria_execucio memoria;
+	size_t cf, cp; // Comptador frase i paraula.
+	struct descriptor_funcio *descriptor;
 };
 
 /************************************************/
