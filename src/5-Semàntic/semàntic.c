@@ -6,6 +6,8 @@
 
 enum cert_fals verbos_semantic; // Per saber si continuem sent verbosos.
 
+// Com a python, pots tenir variables inicialitzades.
+// No he fet que puguis enviar més arguments dels que demanes.
 void
 semantica_funcions (struct pila *a, int mida, struct base_funcio *f)
 {
@@ -20,12 +22,18 @@ semantica_funcions (struct pila *a, int mida, struct base_funcio *f)
 
 	for (i = 0; i < mida; i++)
 	{
+		if (i >= vs->mida)
+			printf ("A: Curiós!!\n");
 		p = pila_treure (a);
 
 		if ((vs->punter[i].descriptor.tipus == Tipus_void) || (p->descriptor.tipus == Tipus_void)) continue;
 		if (!((p->descriptor.tipus == vs->punter[i].descriptor.tipus) && (p->descriptor.vegades_punter == vs->punter[i].descriptor.vegades_punter)))
 			basic_error ("Semàntic error, els tipus d'arguments i d'entrada no són compatibles.");
 	}
+
+	for (i = mida; i < vs->mida; i++)
+		if (!vs->punter[i].inicialitzat)
+			basic_error ("Error semàntica. Falten arguments!\n");
 
 	pila_afegir (a, &f->retorn);
 }
@@ -98,6 +106,7 @@ if (verbos_semantic) printf ("A: Funció: %s.\n", funcions.punter[i].funcio.nom)
 	}
 
 	d->mida_memoria_execucio = m;
+if (verbos_semantic) printf ("A:%s: màxim: %d.\n", d->funcio.nom, m);
 }
 
 void

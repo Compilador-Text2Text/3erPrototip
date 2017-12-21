@@ -60,6 +60,9 @@ $(INICIALITZADOR_ALLIBERA_O_): $(INICIALITZADOR_ALLIBERA_D_)
 $(EXECUTOR_DESCRIPTOR_O_): $(EXECUTOR_DESCRIPTOR_D_)
 	gcc $(EXECUTOR_DESCRIPTOR_C_) $(LIBS_O_) $(EXECUTOR_DESCRIPTOR_O_)
 
+$(EXECUTOR_INSTRUCCIONS_O_): $(EXECUTOR_INSTRUCCIONS_D_)
+	gcc $(EXECUTOR_INSTRUCCIONS_C_) $(LIBS_O_) $(EXECUTOR_INSTRUCCIONS_O_)
+
 ##################################################
 #                     Sistema                    #
 ##################################################
