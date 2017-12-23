@@ -1,6 +1,16 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "instruccions.h"
+
+enum cert_fals verbos_execucio; // Per saber si continuem sent verbosos.
+
+void
+instruccio_inicialitzada (enum cert_fals ve)
+{
+	verbos_execucio = ve;
+if (verbos_execucio) printf ("E: Comença l'execució.\n");
+}
 
 void
 instruccions_codi_a_element_execucio (struct element_execucio *e, struct paraula p)
@@ -16,6 +26,56 @@ instruccions_variable_a_element_execucio (struct element_execucio *e, struct var
 	e->descriptor	= v->descriptor;
 	e->valor	= v->valor;
 	e->punter	= v;
+}
+
+void
+instruccions_element_execucio_a_variable (struct variable *v, struct element_execucio *e)
+{ // El descriptor normalment ho ha comprovat la semàntica.
+	v->valor = e->valor;
+}
+
+void
+instruccions_crear_nova_funcio_dinamica
+(
+ size_t n,			// Nombre d'arguments.
+ struct element_execucio *e,	// On fa el retorn.
+ size_t r,			// Funció relativa.
+ struct pila *p			// On guardem el resultat.
+)
+{
+	struct funcio_dinamica f = {.cf = 0, .cp = 0};
+	struct descriptor_funcio *d;
+	int i;
+
+	// Execució.
+	d = funcions.punter +r;
+	f.descriptor = d;
+	f.memoria.mida = d->mida_memoria_execucio;
+	f.memoria.punter = basic_malloc (f.memoria.mida * sizeof(struct element_execucio));
+
+	// Retorn.
+	f.retorn = e;
+
+	// Arguments.
+	f.arguments = d->funcio.arguments;
+	f.arguments.punter = basic_malloc (f.arguments.mida * sizeof(struct variable));
+	memcpy (f.arguments.punter, d->funcio.arguments.punter, f.arguments.mida * sizeof (struct variable));
+	for (i = 0; i < n; i++)
+		instruccions_element_execucio_a_variable (f.arguments.punter +i, e +i);
+
+	// Variables locals.
+	f.locals = d->locals;
+	f.locals.punter = basic_malloc (f.locals.mida * sizeof(struct variable));
+	memcpy (f.locals.punter, d->locals.punter, f.locals.mida * sizeof(struct variable));
+
+	// Guardem el resultat.
+	pila_afegir (p, &f);
+}
+
+int
+instruccions_crida_funcio_sistema (size_t r, size_t n, struct element_execucio *e, struct pila *p)
+{
+	return sistemes.punter[r].exec (n, e, p, &sistemes.punter[r].funcio);
 }
 
 // Funció que retorna el toquen que apunta la funció dinàmica
@@ -59,8 +119,10 @@ instruccio_execucio_paraula (struct pila *pf)
 	struct funcio_dinamica *f;
 	struct paraula p;
 	struct element_execucio *e;
+	int aux;
 
 	f = pila_mostra (pf);
+if (verbos_execucio) {printf ("E: lloc:%ld:%ld: \n", f->cf, f->cp);}
 	p = instruccions_toquen_i_increment (f);
 	e = instruccions_obtencio_element_execucio (f);
 
@@ -81,6 +143,15 @@ instruccio_execucio_paraula (struct pila *pf)
 	case Localitzacio_globals:
 		instruccions_variable_a_element_execucio (e, variables_globals.punter + p.lloc.relatiu);
 		return 1;
+
+	case Localitzacio_funcions:
+		return 1;
+
+	case Localitzacio_sistema:
+		aux = p.auxiliar.enter;
+		f->memoria.us -= aux;
+		e -= aux;
+		return instruccions_crida_funcio_sistema (p.lloc.relatiu, aux, e, pf);
 	}
 	return 0;
 }

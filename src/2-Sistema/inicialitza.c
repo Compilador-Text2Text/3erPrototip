@@ -38,7 +38,7 @@ sistema_definir_arguments (int num, ...)
 }
 
 void
-sistema_definir_funcio (enum sistema r, char *nom, int (*exec) (size_t, struct element_execucio *, struct pila *),
+sistema_definir_funcio (enum sistema r, char *nom, int (*exec) (size_t, struct element_execucio *, struct pila *, struct base_funcio *),
 	struct variables a, struct descriptor d, enum SYA s, int p, enum cert_fals o)
 {
 	sistemes.punter[r].funcio.nom		= nom;

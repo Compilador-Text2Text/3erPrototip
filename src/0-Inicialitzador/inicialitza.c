@@ -4,6 +4,7 @@
 
 #include "allibera.h"
 
+#include "../1-Executor/instruccions.h"
 #include "../2-Sistema/inicialitza.h"
 #include "../3-Lèxic/objecte.h"
 #include "../4-Sintàctic/shunting-yard_algorithm.h"
@@ -57,19 +58,32 @@ inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 {
 	struct pila p;
 	int out, reservar;
+	struct element_execucio *e;
 
+	// Lèxic.
 	g_pf = inicialitza_inicialitza_lectura_fitxer (nom);
 		reservar = lexic_llegir_objecte (inicialitza_lectura_fitxer, vl, vm);
 	inicialitza_finalitza_lectura_fitxer (g_pf);
 
+	// Sintaxis.
 	p = shunting_yard_algorithm (reservar, vs);
 	semantica (p, va);
 
+	// Preparatius per l'execució.
+	p = pila_inicialitzar (100, sizeof (struct funcio_dinamica));
+	e = malloc ( 2 * sizeof (struct element_execucio));
+	e[0].valor.enter = argc;
+	e[1].valor.punter= argv;
+	instruccions_crear_nova_funcio_dinamica (2, e, 0, &p);
+
 	// Executa el codi.
-	out = 1;
+	instruccio_inicialitzada (ve);
+	while (instruccio_execucio_paraula (&p));
+	out = (*e).valor.enter;
 
 	// Alliberem en memòria.
 	alliberar_descriptors_funcio_globals ();
+	free (e);
 
 	return out;
 }

@@ -214,7 +214,7 @@ struct
 descriptor_sistema
 {
 	struct base_funcio funcio;
-	int (*exec) (size_t, struct element_execucio *, struct pila *);
+	int (*exec) (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 };
 
 struct
