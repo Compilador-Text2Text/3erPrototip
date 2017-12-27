@@ -388,8 +388,18 @@ if (verbos_objecte) printf ("L: Un total de: %ld funcions.\n", funcions.mida);
 	for (f = funcions.punter; f < funcions.punter +funcions.mida; f++)
 	{
 		f->funcio.nom	= NULL;
+		f->funcio.arguments.mida	= 0;
+		f->funcio.arguments.punter	= NULL;
+		f->funcio.retorn.vegades_punter	= 0;
+		f->funcio.retorn.tipus		= Tipus_END;
+		f->funcio.SYA	= SYA_END;
+		f->funcio.precedencia		= 0;
+		f->funcio.optimitzable		= CF_fals;
 		f->codi.mida	= 0;
 		f->codi.punter	= NULL;
+		f->mida_memoria_execucio = 0;
+		f->locals.mida	= 0;
+		f->locals.punter= NULL;
 	}
 
 	maquina_estats_llegir_inici_final ('-', 'd', "Declarant el nombre de funcions pre-inicialitzades", -1);

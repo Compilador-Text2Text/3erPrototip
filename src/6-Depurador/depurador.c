@@ -142,7 +142,9 @@ mostra_base_funcio (struct base_funcio *b)
 			mostra_argument (&b->arguments.punter[i]);
 		}
 		printf (")");
-	}else
+	} else if (b->SYA == SYA_END)
+		printf ("\t%10s\tPer definir", b->nom);
+	else
 	{
 		if (b->arguments.mida != 2)
 			basic_error ("D'un operant esperem 2 arguments. Aquest en té %d", b->arguments.mida);

@@ -1,11 +1,19 @@
 -v: 0e
--f: 1e -d: 0e
- <F: 'n' "main""Int"(0e)"Funció"
+-f: 2e -d: 2e "main""Funció cridada"
+ <F: 'd' "main""Int"(0e)"Funció"
   -a:2e"argc""Int"(0e);"argv""Char"(2e);
   -l:0e
   -c:1e
    -f:4e
 	"Sistema""return";
 	"Preexecució""(";
-	"Codi""Int"(0e)98e;
+	"Funcions""Funció cridada";
+	"Preexecució"")";
+ <F: 'd' "Funció cridada""Int"(0e)"Funció"
+  -a:0e -l:0e
+  -c:1e
+   -f:4e
+	"Sistema""return";
+	"Preexecució""(";
+	"Codi""Int"(0e)678e;
 	"Preexecució"")";

@@ -122,7 +122,7 @@ instruccio_execucio_paraula (struct pila *pf)
 	int aux;
 
 	f = pila_mostra (pf);
-if (verbos_execucio) {printf ("E: lloc:%ld:%ld: \n", f->cf, f->cp);}
+if (verbos_execucio) {printf ("E: lloc:%s:%ld:%ld: \n", f->descriptor->funcio.nom, f->cf, f->cp);}
 	p = instruccions_toquen_i_increment (f);
 	e = instruccions_obtencio_element_execucio (f);
 
@@ -145,6 +145,10 @@ if (verbos_execucio) {printf ("E: lloc:%ld:%ld: \n", f->cf, f->cp);}
 		return 1;
 
 	case Localitzacio_funcions:
+		aux = p.auxiliar.enter;
+		f->memoria.us -= aux;
+		e -= aux;
+		instruccions_crear_nova_funcio_dinamica (aux, e, p.lloc.relatiu, pf);
 		return 1;
 
 	case Localitzacio_sistema:
