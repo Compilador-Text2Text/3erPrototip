@@ -23,12 +23,15 @@ semantica_funcions (struct pila *a, int mida, struct base_funcio *f, struct para
 	for (i = 0; i < mida; i++)
 	{
 		if (i >= vs->mida)
-			printf ("A: Curiós!!\n");
+			basic_error ("Semàntic: No està preparat per rebre més arguments dels que estan definits");
 		p = pila_treure (a);
 
 		if ((vs->punter[i].descriptor.tipus == Tipus_void) || (p->descriptor.tipus == Tipus_void)) continue;
 		if (!((p->descriptor.tipus == vs->punter[i].descriptor.tipus) && (p->descriptor.vegades_punter == vs->punter[i].descriptor.vegades_punter)))
+		{
+			printf ("Error:\nParaula: %s(%ld)\nArgument: %s(%ld)\n", string_tipu (p->descriptor.tipus), p->descriptor.vegades_punter, string_tipu (vs->punter[i].descriptor.tipus), vs->punter[i].descriptor.vegades_punter);
 			basic_error ("Semàntic error, els tipus d'arguments i d'entrada no són compatibles.");
+		}
 	}
 
 	for (i = mida; i < vs->mida; i++)

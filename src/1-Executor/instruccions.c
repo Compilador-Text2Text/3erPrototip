@@ -121,7 +121,7 @@ instruccio_execucio_paraula (struct pila *pf)
 	struct funcio_dinamica *f;
 	struct paraula p;
 	struct element_execucio *e;
-	int aux;
+	int aux, i;
 
 	f = pila_mostra (pf);
 aux = f->cf;
@@ -135,7 +135,7 @@ printf ("E: lloc:%s:%ld:%ld:<%ld> ", f->descriptor->funcio.nom, f->cf, f->cp, f-
 if (verbos_execucio) {mostra_paraula_simple (&p, f->descriptor); printf ("\n");}
 	e = instruccions_obtencio_element_execucio (f);
 
-	switch (p.lloc.on)
+	switch ((i = p.lloc.on))
 	{
 	case Localitzacio_codi:
 		instruccions_codi_a_element_execucio (e, p);
@@ -165,6 +165,9 @@ if (verbos_execucio) {mostra_paraula_simple (&p, f->descriptor); printf ("\n");}
 		f->memoria.us -= aux;
 		e -= aux;
 		return instruccions_crida_funcio_sistema (p.lloc.relatiu, aux, e, pf);
+
+	default:
+		basic_error ("Execució: instrucció desconeguda, ha de ser menor que %d i ha entrat %d", Localitzacio_preexecucio, i);
 	}
 	return 0;
 }

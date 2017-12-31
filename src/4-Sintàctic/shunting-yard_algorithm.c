@@ -168,6 +168,7 @@ shunting_yard_algorithm_paraula (struct paraula *p, struct pila *o, struct pila 
 		break;
 
 	case Localitzacio_funcions:
+		p->descriptor = funcions.punter[p->lloc.relatiu].funcio.retorn;
 		shunting_yard_algorithm_funcio_o_operant (p, &funcions.punter[p->lloc.relatiu].funcio, o, a);
 		break;
 
