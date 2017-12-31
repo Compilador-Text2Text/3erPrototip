@@ -80,6 +80,7 @@ sistema
 	Sistema_mes_petit_que,
 	// Operacions d'un valor
 	Sistema_primer_resta,
+	Sistema_segon_resta,
 
 	// Accés només amb la semàntica.
 	Sistema_suma_float,
@@ -93,6 +94,7 @@ sistema
 
 	// Mostrar resultats.
 	Sistema_mostra_cadena_caracters,
+	Sistema_mostra_enter,
 
 	Sistema_END
 };

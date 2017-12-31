@@ -6,25 +6,43 @@
    "argc""Int"(0e);"argv""Char"(2e);
   -locals: 1e
    "out""Int"(0e);
-  -codi: 5e
-   -frase: 11e # if (argc < 2)
+  -codi: 10e
+   -frase 0: 11e # if (argc < 2)
 	"Sistema""gotoZ";"Preexecució""(";"Codi""Int"(0e)3e;"Preexecució"","; # On saltarà, posició 3.
 		"Sistema""<";"Preexecució""(";"Arguments""argc";"Preexecució"",";"Codi""Int"(0e)2e;"Preexecució"")";"Preexecució"")";
-   -frase: 4e "Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"Volem mínim 2 arguments
+   -frase 1: 4e "Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"Volem mínim 2 arguments
 ";"Preexecució"")";
-   -frase: 4e "Sistema""exit"; "Preexecució""("; "Codi""Int"(0e)1e; "Preexecució"")";
+   -frase 2: 4e "Sistema""exit"; "Preexecució""("; "Codi""Int"(0e)1e; "Preexecució"")";
 
 # Arribats aquí calculem el màxim.
-   -frase: 19e
+   -frase 3: 30e
 	"Locals""out"; "Sistema""=";"Funcions""màxim";"Preexecució""(";
 		"Sistema""atoi";"Preexecució""(";"Sistema""*pp";"Preexecució""(";
 			"Arguments""argv";"Sistema""pp+e";"Sistema""--v";"Preexecució""(";
 				"Arguments""argc";"Preexecució"")"; "Preexecució"")"; "Preexecució"")";"Preexecució"",";
-#		"Codi""Int"(0e)8e;"Preexecució"",";
-		"Codi""Int"(0e)5e;"Preexecució"")";
+		"Sistema""atoi";"Preexecució""(";"Sistema""*pp";"Preexecució""(";
+			"Arguments""argv";"Sistema""pp+e";"Sistema""--v";"Preexecució""(";
+				"Arguments""argc";"Preexecució"")"; "Preexecució"")"; "Preexecució"")";"Preexecució"")";
+
+# Comença el while.
+   -frase 4: 6e
+	"Sistema""gotoZ";"Preexecució""(";"Codi""Int"(0e)7e;"Preexecució"",";
+		"Arguments""argc";"Preexecució"")";
+   -frase 5: 19e
+	"Locals""out"; "Sistema""=";"Funcions""màxim";"Preexecució""(";
+		"Locals""out";"Preexecució"",";
+		"Sistema""atoi";"Preexecució""(";"Sistema""*pp";"Preexecució""(";
+			"Arguments""argv";"Sistema""pp+e";"Sistema""--v";"Preexecució""(";
+				"Arguments""argc";"Preexecució"")"; "Preexecució"")"; "Preexecució"")";"Preexecució"")";
+   -frase 6: 6e
+	"Sistema""gotoNZ";"Preexecució""(";"Codi""Int"(0e)5e;"Preexecució"",";
+		"Arguments""argc";"Preexecució"")";
 
 # Retorn del resultat final.
-   -frase: 4e "Sistema""return"; "Preexecució""("; "Locals""out"; "Preexecució"")";
+   -frase: 4e "Sistema""printInt0"; "Preexecució""("; "Locals""out"; "Preexecució"")";
+   -frase: 4e "Sistema""printChar1";"Preexecució""("; "Codi""Char"(1e)"
+";"Preexecució"")";
+   -frase: 4e "Sistema""return"; "Preexecució""("; "Codi""Int"(0e)0e; "Preexecució"")";
 
  <Funció: 'd' "màxim" "Int"(0e) "Funció"
   -arguments: 2e

@@ -19,5 +19,8 @@ int sistema_potencia	(size_t, struct element_execucio *, struct pila *, struct b
 int sistema_mes_petit_que	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 
 int sistema_primer_resta	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
+int sistema_segon_resta		(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
+
+void sistema_operadors_inicialitza_sistema (void);
 
 #endif // SISTEMA_OPERADORS_H_

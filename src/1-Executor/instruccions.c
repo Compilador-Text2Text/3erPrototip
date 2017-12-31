@@ -132,7 +132,7 @@ for (aux = 1; aux < pf->us; aux++)
 printf ("E: lloc:%s:%ld:%ld:<%ld> ", f->descriptor->funcio.nom, f->cf, f->cp, f->memoria.us);
 }
 	p = instruccions_toquen_i_increment (f);
-if (verbos_execucio) mostra_paraula_simple (&p, f->descriptor);
+if (verbos_execucio) {mostra_paraula_simple (&p, f->descriptor); printf ("\n");}
 	e = instruccions_obtencio_element_execucio (f);
 
 	switch ((i = p.lloc.on))
@@ -164,13 +164,11 @@ if (verbos_execucio) mostra_paraula_simple (&p, f->descriptor);
 		aux = p.auxiliar.enter;
 		f->memoria.us -= aux;
 		e -= aux;
-if (verbos_execucio) {printf ("("); if (e->descriptor.vegades_punter < 1) mostra_valor (e->descriptor, e->valor); printf (")\n");}
 		return instruccions_crida_funcio_sistema (p.lloc.relatiu, aux, e, pf);
 
 	default:
 		basic_error ("Execució: instrucció desconeguda, ha de ser menor que %d i ha entrat %d", Localitzacio_preexecucio, i);
 	}
 
-if (verbos_execucio) {printf ("("); if (e->descriptor.vegades_punter < 1) mostra_valor (e->descriptor, e->valor); printf (")\n");}
 	return 1;
 }

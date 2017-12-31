@@ -4,8 +4,6 @@
 #include "../1-Executor/descriptor.h"
 #include "../9-Útils/pila.h"
 
-int sistema_goto   (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_gotoZ  (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_gotoNZ (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
+void sistema_salts_inicialitza_sistema (void);
 
 #endif // SISTEMA_SALTS_H_
