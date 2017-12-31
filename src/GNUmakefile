@@ -78,6 +78,10 @@ $(SISTEMA_SALTS_O_): $(SISTEMA_SALTS_D_)
 $(SISTEMA_OPERADORS_O_): $(SISTEMA_OPERADORS_D_)
 	gcc $(SISTEMA_OPERADORS_C_) $(LIBS_O_) $(SISTEMA_OPERADORS_O_)
 
+SISTEMA_MOSTRA_C_ = $(FILE_SISTEMA)/mostra.c
+$(SISTEMA_MOSTRA_O_): $(SISTEMA_MOSTRA_D_)
+	gcc $(SISTEMA_MOSTRA_C_) $(LIBS_O_) $(SISTEMA_MOSTRA_O_)
+
 ##################################################
 #                      Lèxic                     #
 ##################################################

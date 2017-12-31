@@ -3,6 +3,8 @@
 
 #include "instruccions.h"
 
+#include "../6-Depurador/depurador.h"
+
 enum cert_fals verbos_execucio; // Per saber si continuem sent verbosos.
 
 void
@@ -122,8 +124,15 @@ instruccio_execucio_paraula (struct pila *pf)
 	int aux;
 
 	f = pila_mostra (pf);
-if (verbos_execucio) {printf ("E: lloc:%s:%ld:%ld: \n", f->descriptor->funcio.nom, f->cf, f->cp);}
+aux = f->cf;
+if (verbos_execucio)
+{
+for (aux = 1; aux < pf->us; aux++)
+	printf (" ");
+printf ("E: lloc:%s:%ld:%ld:<%ld> ", f->descriptor->funcio.nom, f->cf, f->cp, f->memoria.us);
+}
 	p = instruccions_toquen_i_increment (f);
+if (verbos_execucio) {mostra_paraula_simple (&p, f->descriptor); printf ("\n");}
 	e = instruccions_obtencio_element_execucio (f);
 
 	switch (p.lloc.on)

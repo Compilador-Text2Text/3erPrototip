@@ -182,7 +182,7 @@ mostra_valor (struct descriptor d, union valor v)
 			printf ("\"%s\"", (char *)v.punter);
 		else
 		{
-			printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+			printf ("ERROR: Depurador: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
 			exit (EXIT_FAILURE);
 		}
 		return;
@@ -192,7 +192,7 @@ mostra_valor (struct descriptor d, union valor v)
 	case Tipus_char:	printf ("'%c'", v.caracter);	break;
 	case Tipus_int:		printf ("%de", v.enter);	break;
 	default:
-		printf ("ERROR: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+		printf ("ERROR: Depurador: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
 		exit (EXIT_FAILURE);
 	}
 }
@@ -265,7 +265,7 @@ mostra_paraula (struct paraula *p, int lloc)
 		break;
 
 	default:
-		basic_error ("ERROR: No sabem on està localitzada la informació de la paraula");
+		basic_error ("ERROR: Depurador: No sabem on està localitzada la informació de la paraula");
 	}
 }
 
@@ -306,7 +306,7 @@ mostra_paraula_simple (struct paraula *p, struct descriptor_funcio *d)
 		break;
 
 	default:
-		basic_error ("ERROR: No sabem on està localitzada la informació de la paraula");
+		basic_error ("Depurador: No sabem on està localitzada la informació de la paraula");
 	}
 	printf (">");
 }

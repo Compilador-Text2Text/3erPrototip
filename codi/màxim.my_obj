@@ -1,0 +1,27 @@
+-variables globals: 0e
+-funcions: 2e -declarats: 2e "main""màxim"
+
+ <Funció: 'd' "main" "Int"(0e) "Funció"
+  -arguments: 2e
+   "argc""Int"(0e);"argv""Char"(2e);
+  -locals: 1e
+   "out""Int"(0e);
+  -codi: 2e #9e
+   -frase: 11e # if (argc < 2)
+	"Sistema""gotoZ";"Preexecució""(";"Codi""Int"(0e)1e;"Preexecució"","; # On saltarà, posició 2.
+		"Sistema""<";"Preexecució""(";"Arguments""argc";"Preexecució"",";"Codi""Int"(0e)2e;"Preexecució"")";"Preexecució"")";
+#   -frase: 4e "Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"Volem mínim 2 arguments
+#";"Preexecució"")";
+   -frase: 4e "Sistema""exit"; "Preexecució""("; "Codi""Int"(0e)1e; "Preexecució"")";
+#   -frase: 1e # Tot va bé.
+#	"Sistema""return";
+#   -f:4e "Sistema""return"; "Preexecució""("; "Codi""Int"(0e)678e; "Preexecució"")";
+
+ <Funció: 'd' "màxim" "Int"(0e) "Funció"
+  -arguments: 2e
+   "a""Int"(0e);"b""Int"(0e);
+  -locals: 1e "out""Int"(0e);
+  -codi: 1e
+   -frase: 1e
+	"Codi""Int"(0e)3e;
+sdf

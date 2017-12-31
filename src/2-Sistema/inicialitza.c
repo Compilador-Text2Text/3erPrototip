@@ -3,6 +3,7 @@
 #include "salts.h"
 #include "sistema.h"
 #include "operadors.h"
+#include "mostra.h"
 
 #include "../1-Executor/descriptor.h"
 #include "../9-Útils/bàsic.h"
@@ -82,6 +83,13 @@ sistema_inicialitza (void)
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
+	sistema_definir_funcio (Sistema_atoi, "atoi", sistema_atoi,
+		sistema_definir_arguments (1,
+			"convertir",	(struct descriptor){.tipus = Tipus_char, .vegades_punter = 1}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_funcio, 0, CF_cert);
+
 	// Salts.
 	sistema_definir_funcio (Sistema_goto, "goto", sistema_goto,
 		sistema_definir_arguments (1,
@@ -147,6 +155,14 @@ sistema_inicialitza (void)
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_dreta, 3, CF_cert);
 
+	sistema_definir_funcio (Sistema_modul, "%", sistema_modul,
+		sistema_definir_arguments (2,
+			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
+			"b",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_dreta, 3, CF_cert);
+
 	sistema_definir_funcio (Sistema_potencia, "^", sistema_potencia,
 		sistema_definir_arguments (2,
 			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
@@ -154,11 +170,33 @@ sistema_inicialitza (void)
 			),
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_esquerra, 4, CF_cert);
+
+	sistema_definir_funcio (Sistema_mes_petit_que, "<", sistema_mes_petit_que,
+		sistema_definir_arguments (2,
+			"a",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals,
+			"b",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_funcio, 0, CF_cert);
+
+	sistema_definir_funcio (Sistema_primer_resta, "--v", sistema_primer_resta,
+		sistema_definir_arguments (1,
+			"v",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
+		SYA_funcio, 0, CF_cert);
+
+	// Mostrar dades
+	sistema_definir_funcio (Sistema_mostra_cadena_caracters, "printChar1", sistema_mostra_cadena_caracters,
+		sistema_definir_arguments (1,
+			"i",	(struct descriptor){.tipus = Tipus_char, .vegades_punter = 1}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 0},
+		SYA_funcio, 0, CF_cert);
+
 	/*
+	Sistema_mostra_cadena_caracters,
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
-	Sistema_producte,
-	Sistema_divisio,
-	Sistema_potencia,
 
 		// Accés només amb la semàntica.
 	Sistema_suma_float,
@@ -171,7 +209,6 @@ sistema_inicialitza (void)
 	Sistema_resta_punter_int,
 
 	// Funcions
-	Sistema_modul,
 
 	Sistema_END
 	*/

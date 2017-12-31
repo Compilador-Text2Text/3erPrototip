@@ -7,4 +7,5 @@
 int sistema_retorn	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 int sistema_exit	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 
+int sistema_atoi	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 #endif // SISTEMA_SISTEMA_H_

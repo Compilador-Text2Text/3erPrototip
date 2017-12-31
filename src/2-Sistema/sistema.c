@@ -44,3 +44,10 @@ sistema_exit (size_t n, struct element_execucio *e, struct pila *p, struct base_
 	while (private_sistema_retorn (n, &v, p));
 	return 0;
 }
+
+int
+sistema_atoi (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
+{
+	e[0].valor.enter = atoi (e[0].valor.punter);
+	return 1;
+}

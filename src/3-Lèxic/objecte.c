@@ -224,11 +224,6 @@ if (verbos_objecte) printf ("L: Un total de: %ld variables.\n", vs->mida);
 		lexic_definir_variable (v, lloc);
 }
 
-/*
-struct localitzat lloc;		// Execució, lèxic, sintaxis i semàntic.
-union valor auxiliar;		// Execució.
-struct descriptor descriptor;	// Depurar i semàntic.
-*/
 void
 lexic_definir_paraula (struct paraula *p, int lloc)
 {

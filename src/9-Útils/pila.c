@@ -17,8 +17,7 @@ pila_total_byts (struct pila *p)
 void
 pila_incrementar_mida_pila_en_necessitat (struct pila *p)
 {
-	// +1 és perquè afegirem un element.
-	if ((p->us +1) < p->mida) return; // No cal fer res.
+	if ((p->us) < p->mida) return; // No cal fer res.
 
 	// Extret de open source de ArrayList de Java.
 	p->mida = (p->mida *3)/2 +1;

@@ -55,6 +55,9 @@ sistema
 	Sistema_return,
 	Sistema_exit,
 
+	// String a dígit.
+	Sistema_atoi,
+
 	// Salts.
 	Sistema_goto,	// Sempre.
 	Sistema_gotoZ,	// Només si és zero farà el salt.
@@ -69,9 +72,14 @@ sistema
 	Sistema_resta,
 	Sistema_producte,
 	Sistema_divisio,
+	Sistema_modul,
 	Sistema_potencia,
+	// Comparadors
+	Sistema_mes_petit_que,
+	// Operacions d'un valor
+	Sistema_primer_resta,
 
-		// Accés només amb la semàntica.
+	// Accés només amb la semàntica.
 	Sistema_suma_float,
 	Sistema_resta_float,
 	Sistema_producte_float,
@@ -81,8 +89,8 @@ sistema
 	Sistema_suma_putner_int,
 	Sistema_resta_punter_int,
 
-	// Funcions
-	Sistema_modul,
+	// Mostrar resultats.
+	Sistema_mostra_cadena_caracters,
 
 	Sistema_END
 };

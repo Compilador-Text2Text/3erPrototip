@@ -9,7 +9,7 @@ enum cert_fals verbos_semantic; // Per saber si continuem sent verbosos.
 // Com a python, pots tenir variables inicialitzades.
 // No he fet que puguis enviar més arguments dels que demanes.
 void
-semantica_funcions (struct pila *a, int mida, struct base_funcio *f)
+semantica_funcions (struct pila *a, int mida, struct base_funcio *f, struct paraula *pf)
 {
 	int i;
 	struct paraula *p;
@@ -35,15 +35,16 @@ semantica_funcions (struct pila *a, int mida, struct base_funcio *f)
 		if (!vs->punter[i].inicialitzat)
 			basic_error ("Error semàntica. Falten arguments!\n");
 
-	pila_afegir (a, &f->retorn);
+	pila_afegir (a, pf);
 }
 
 void
 semantica_paraula (struct paraula *p, struct pila *a, struct descriptor_funcio *d, int lloc)
 {
 	int i;
+struct frase f = {.mida = a->us, .punter = a->punter};
+if (verbos_semantic) {printf ("A:  Paraula: "); mostra_frase (&f, d); mostra_paraula (p, lloc);}
 
-if (verbos_semantic) {printf ("A:  Paraula: "); mostra_paraula (p, lloc);}
 	switch ((enum localitzacions)(i = p->lloc.on))
 	{
 	case Localitzacio_codi:
@@ -56,13 +57,13 @@ if (verbos_semantic) {printf ("A:  Paraula: "); mostra_paraula (p, lloc);}
 	case Localitzacio_funcions:
 		if (p->lloc.relatiu >= funcions.mida)
 			basic_error ("Semàntic error, ja que hi ha %d funcions i s'està cridant el %d", funcions.mida, p->lloc.relatiu);
-		semantica_funcions (a, p->auxiliar.enter, &funcions.punter[p->lloc.relatiu].funcio);
+		semantica_funcions (a, p->auxiliar.enter, &funcions.punter[p->lloc.relatiu].funcio, p);
 		break;
 
 	case Localitzacio_sistema:
 		if (p->lloc.relatiu >= sistemes.mida)
 			basic_error ("Semàntic error, ja que hi ha %d funcions de sistema i s'està cridant el %d", sistemes.mida, p->lloc.relatiu);
-		semantica_funcions (a, p->auxiliar.enter, &sistemes.punter[p->lloc.relatiu].funcio);
+		semantica_funcions (a, p->auxiliar.enter, &sistemes.punter[p->lloc.relatiu].funcio, p);
 		break;
 
 	default:
