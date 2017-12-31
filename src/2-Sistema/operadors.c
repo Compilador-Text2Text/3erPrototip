@@ -3,7 +3,7 @@
 int
 sistema_igual (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {
-	*((union valor*)e[0].punter) = e[1].valor;
+	((struct variable*)e[0].punter)->valor = e[1].valor;
 	return 1;
 }
 
@@ -11,6 +11,18 @@ int
 sistema_suma (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {
 	e[0].valor.enter += e[1].valor.enter;
+	return 1;
+}
+
+int
+sistema_suma_punter_punters_amb_enter (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
+{
+	void **pp;
+
+	pp = e[0].valor.punter;
+	pp += e[1].valor.enter;
+	e[0].valor.punter = pp;
+
 	return 1;
 }
 

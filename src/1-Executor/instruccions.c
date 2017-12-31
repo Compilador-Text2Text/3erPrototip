@@ -132,42 +132,45 @@ for (aux = 1; aux < pf->us; aux++)
 printf ("E: lloc:%s:%ld:%ld:<%ld> ", f->descriptor->funcio.nom, f->cf, f->cp, f->memoria.us);
 }
 	p = instruccions_toquen_i_increment (f);
-if (verbos_execucio) {mostra_paraula_simple (&p, f->descriptor); printf ("\n");}
+if (verbos_execucio) mostra_paraula_simple (&p, f->descriptor);
 	e = instruccions_obtencio_element_execucio (f);
 
 	switch ((i = p.lloc.on))
 	{
 	case Localitzacio_codi:
 		instruccions_codi_a_element_execucio (e, p);
-		return 1;
+		break;
 
 	case Localitzacio_arguments:
 		instruccions_variable_a_element_execucio (e, f->arguments.punter + p.lloc.relatiu);
-		return 1;
+		break;
 
 	case Localitzacio_locals:
 		instruccions_variable_a_element_execucio (e, f->locals.punter + p.lloc.relatiu);
-		return 1;
+		break;
 
 	case Localitzacio_globals:
 		instruccions_variable_a_element_execucio (e, variables_globals.punter + p.lloc.relatiu);
-		return 1;
+		break;
 
 	case Localitzacio_funcions:
 		aux = p.auxiliar.enter;
 		f->memoria.us -= aux;
 		e -= aux;
 		instruccions_crear_nova_funcio_dinamica (aux, e, p.lloc.relatiu, pf);
-		return 1;
+		break;
 
 	case Localitzacio_sistema:
 		aux = p.auxiliar.enter;
 		f->memoria.us -= aux;
 		e -= aux;
+if (verbos_execucio) {printf ("("); if (e->descriptor.vegades_punter < 1) mostra_valor (e->descriptor, e->valor); printf (")\n");}
 		return instruccions_crida_funcio_sistema (p.lloc.relatiu, aux, e, pf);
 
 	default:
 		basic_error ("Execució: instrucció desconeguda, ha de ser menor que %d i ha entrat %d", Localitzacio_preexecucio, i);
 	}
-	return 0;
+
+if (verbos_execucio) {printf ("("); if (e->descriptor.vegades_punter < 1) mostra_valor (e->descriptor, e->valor); printf (")\n");}
+	return 1;
 }

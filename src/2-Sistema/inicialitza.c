@@ -83,6 +83,13 @@ sistema_inicialitza (void)
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_funcio, 0, CF_cert);
 
+	sistema_definir_funcio (Sistema_obtenir_punter_de_punter, "*pp", sistema_obtenir_punter_de_punter,
+		sistema_definir_arguments (1,
+			"punter(2)",	(struct descriptor){.tipus = Tipus_void, .vegades_punter = 2}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 1},
+		SYA_funcio, 0, CF_cert);
+
 	sistema_definir_funcio (Sistema_atoi, "atoi", sistema_atoi,
 		sistema_definir_arguments (1,
 			"convertir",	(struct descriptor){.tipus = Tipus_char, .vegades_punter = 1}, CF_fals
@@ -170,6 +177,14 @@ sistema_inicialitza (void)
 			),
 		(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0},
 		SYA_esquerra, 4, CF_cert);
+
+	sistema_definir_funcio (Sistema_suma_punter_punters_amb_enter, "pp+e", sistema_suma_punter_punters_amb_enter,
+		sistema_definir_arguments (2,
+			"p",	(struct descriptor){.tipus = Tipus_void, .vegades_punter = 1}, CF_fals,
+			"e",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
+			),
+		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 1},
+		SYA_esquerra, 2, CF_cert);
 
 	sistema_definir_funcio (Sistema_mes_petit_que, "<", sistema_mes_petit_que,
 		sistema_definir_arguments (2,

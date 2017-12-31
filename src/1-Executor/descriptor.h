@@ -54,7 +54,8 @@ sistema
 	// Retorns.
 	Sistema_return,
 	Sistema_exit,
-
+	// Valors dels punters.
+	Sistema_obtenir_punter_de_punter,
 	// String a dígit.
 	Sistema_atoi,
 
@@ -74,6 +75,7 @@ sistema
 	Sistema_divisio,
 	Sistema_modul,
 	Sistema_potencia,
+	Sistema_suma_punter_punters_amb_enter,
 	// Comparadors
 	Sistema_mes_petit_que,
 	// Operacions d'un valor

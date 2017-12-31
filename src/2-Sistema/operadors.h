@@ -8,6 +8,7 @@ int sistema_igual	(size_t, struct element_execucio *, struct pila *, struct base
 
 int sistema_suma	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 int sistema_resta	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
+int sistema_suma_punter_punters_amb_enter (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 
 int sistema_producte	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 int sistema_divisio	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);

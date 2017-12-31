@@ -46,8 +46,17 @@ sistema_exit (size_t n, struct element_execucio *e, struct pila *p, struct base_
 }
 
 int
+sistema_obtenir_punter_de_punter (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
+{
+	e[0].valor.punter = *(void **)e[0].valor.punter;
+	e[0].descriptor.vegades_punter--;
+	return 1;
+}
+
+int
 sistema_atoi (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {
 	e[0].valor.enter = atoi (e[0].valor.punter);
+	e[0].descriptor = (struct descriptor){.tipus = Tipus_int, .vegades_punter = 0};
 	return 1;
 }

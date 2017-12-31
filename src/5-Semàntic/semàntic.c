@@ -20,11 +20,15 @@ semantica_funcions (struct pila *a, int mida, struct base_funcio *f, struct para
 	if (mida > a->us)
 		basic_error ("Semàntic error, ja que hi ha una funció que demana %d arguments i n'hi ha %d", mida, a->us);
 
+	// Tot això és perquè llegeix en línia, no del revés.
+	for (i = 0; i < mida; i++)
+		p = pila_treure (a);
+	p--;
 	for (i = 0; i < mida; i++)
 	{
 		if (i >= vs->mida)
 			basic_error ("Semàntic: No està preparat per rebre més arguments dels que estan definits");
-		p = pila_treure (a);
+		p++;
 
 		if ((vs->punter[i].descriptor.tipus == Tipus_void) || (p->descriptor.tipus == Tipus_void)) continue;
 		if (!((p->descriptor.tipus == vs->punter[i].descriptor.tipus) && (p->descriptor.vegades_punter == vs->punter[i].descriptor.vegades_punter)))
