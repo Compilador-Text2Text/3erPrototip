@@ -1,0 +1,84 @@
+-variables globals: 0e
+-funcions: 3e -declarats: 2e "main""màxim comú divisible"
+
+ <Funció: 'n' "mcd""Void"(0e) "Funció"
+  -arguments: 2e
+   "a""Int"(0e);"b""Int"(0e):0e;
+  -locals: 0e
+  -codi: 4e
+   -frase 0: 6e # if (a)
+	"Sistema""gotoNZ"; "Preexecució""(";"Codi""Int"(0e)3e;
+	"Preexecució"",";"Arguments""a";"Preexecució"")";
+   -frase 1: 8e
+	"Sistema""printInt0";"Preexecució""(";"Arguments""b";"Preexecució"")";
+	"Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"
+";"Preexecució"")";
+   -frase 2: 4e "Sistema""exit"; "Preexecució""("; "Codi""Int"(0e)0e; "Preexecució"")";
+
+# euclides_recursiu (b%a, a);
+   -frase 3: 8e
+	"Funcions""mcd";
+	"Preexecució""(";
+		"Arguments""b";"Sistema""%";"Arguments""a";
+	"Preexecució"",";
+		"Arguments""a";
+	"Preexecució"")";
+
+
+ <Funció: 'd' "màxim comú divisible""Void"(0e) "Funció"
+  -arguments: 2e
+   "a""Int"(0e);"b""Int"(0e):0e;
+  -locals: 1e
+   "aux""Int"(0e);
+  -codi: 6e
+   -frase 0: 11e # if (a > b)
+	"Sistema""gotoZ";"Preexecució""(";"Codi""Int"(0e)4e;"Preexecució"",";
+		"Sistema""<";"Preexecució""(";"Arguments""b";"Preexecució"",";"Arguments""a";"Preexecució"")";"Preexecució"")";
+
+# aux = a;
+# a = b;
+# b = aux;
+   -frase 1: 3e "Locals""aux";"Sistema""=";"Arguments""a";
+   -frase 2: 3e "Arguments""a";"Sistema""=";"Arguments""b";
+   -frase 3: 3e "Arguments""b";"Sistema""=";"Locals""aux";
+
+# Aquesta frase per ajudar a debbugeixar.
+   -frase 4: 20e
+	"Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"a: ";"Preexecució"")";
+	"Sistema""printInt0";"Preexecució""(";"Arguments""a";"Preexecució"")";
+	"Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)" ≤ b: ";"Preexecució"")";
+	"Sistema""printInt0";"Preexecució""(";"Arguments""b";"Preexecució"")";
+	"Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"
+";"Preexecució"")";
+   -frase FI: 9e
+	"Sistema""return";"Preexecució""(";"Funcions""mcd";"Preexecució""(";"Arguments""a";"Preexecució"",";
+		"Arguments""b";"Preexecució"")";"Preexecució"")";
+
+
+### MAIN ###
+ <Funció: 'd' "main" "Int"(0e) "Funció"
+  -arguments: 2e
+   "argc""Int"(0e);"argv""Char"(2e);
+  -locals: 2e
+   "a""Int"(0e);"b""Int"(0e);
+  -codi: 7e
+   -frase 0: 11e # if (argc < 2)
+	"Sistema""gotoZ";"Preexecució""(";"Codi""Int"(0e)3e;"Preexecució"","; # On saltarà, posició 3.
+		"Sistema""<";"Preexecució""(";"Arguments""argc";"Preexecució"",";"Codi""Int"(0e)2e;"Preexecució"")";"Preexecució"")";
+   -frase 1: 4e "Sistema""printChar1";"Preexecució""(";"Codi""Char"(1e)"Volem mínim 2 arguments
+";"Preexecució"")";
+   -frase 2: 4e "Sistema""exit"; "Preexecució""("; "Codi""Int"(0e)1e; "Preexecució"")";
+
+#	a = atoi (argv[1]);
+#	b = atoi (argv[2]);
+   -frase 3: 9e
+	"Locals""a";"Sistema""=";"Sistema""atoi";"Preexecució""(";"Sistema""*pp";"Preexecució""(";"Arguments""argv";"Preexecució"")";
+		"Preexecució"")";
+   -frase 3: 11e
+	"Locals""b";"Sistema""=";"Sistema""atoi";"Preexecució""(";"Sistema""*pp";"Preexecució""(";
+		"Arguments""argv";"Sistema""pp+e";"Codi""Int"(0e)1e;"Preexecució"")"; "Preexecució"")";
+
+   -frase 4: 6e
+	"Funcions""màxim comú divisible"; "Preexecució""("; "Locals""a"; "Preexecució"","; "Locals""b"; "Preexecució"")";
+# Final
+   -frase Fi: 4e "Sistema""return"; "Preexecució""("; "Codi""Int"(0e)0e; "Preexecució"")";

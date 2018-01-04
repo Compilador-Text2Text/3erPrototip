@@ -21,7 +21,7 @@ lexic_definir_valor (struct descriptor d, char *missatge, int lloc)
 			v.punter = strdup (maquina_estats_cadena_caracters ("Definint valor \"strings\"", lloc));
 		else
 		{
-			printf ("ERROR: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+			printf ("ERROR 12: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
 			maquina_error_procedencia (missatge, lloc);
 		}
 		return v;
@@ -36,7 +36,7 @@ lexic_definir_valor (struct descriptor d, char *missatge, int lloc)
 		v.enter = maquina_estats_llegir_enter ("Definint un enter", lloc);
 		break;
 	default:
-		printf ("ERROR: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
+		printf ("ERROR 13: No sabem definir el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
 		maquina_error_procedencia (missatge, lloc);
 	}
 
@@ -52,7 +52,7 @@ lexic_definir_tipu (char *t, char *missatge, int lloc)
 		if (!strcmp (t, string_tipu (i)))
 			return i;
 
-	printf ("Error: entrat: %s i esperat:\n", t);
+	printf ("Error 0: entrat: %s i esperat:\n", t);
 	mostra_tipus ();
 	maquina_error_procedencia (missatge, lloc);
 	return Tipus_void;
@@ -72,7 +72,7 @@ lexic_definir_index_funcio (int lloc)
 		}
 		else break;
 
-	printf ("Error: entrat: %s i esperat:\n", t);
+	printf ("Error 1: entrat: %s i esperat:\n", t);
 	mostra_funcions_nom ();
 	maquina_error_procedencia ("Extraient l'índex de funció", lloc);
 	return 0; // Warnings.
@@ -89,7 +89,7 @@ lexic_definir_index_sistema (int lloc)
 		if (!strcmp (t, sistemes.punter[i].funcio.nom))
 			return i;
 
-	printf ("Error: entrat: %s i esperat:\n", t);
+	printf ("Error 2: entrat: %s i esperat:\n", t);
 	mostra_sistema ();
 	maquina_error_procedencia ("Extraient l'índex de la funció de sistema", lloc);
 	return 0; // Warnings.
@@ -105,7 +105,7 @@ lexic_definir_index_preexecucio (int lloc)
 		if (!strcmp (t, string_preexecucio (i)))
 			return i;
 
-	printf ("Error: entrat: %s i esperat:\n", t);
+	printf ("Error 3: entrat: %s i esperat:\n", t);
 	mostra_preexecucio ();
 	maquina_error_procedencia ("Extraient l'índex de la preexecució", lloc);
 	return 0; // Warnings.
@@ -120,7 +120,7 @@ lexic_definir_SYA (char *t, int lloc)
 		if (!strcmp(t, string_SYA (i)))
 			return i;
 
-	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	printf ("ERROR 4: Entrat: \"%s\" i esperat:\n", t);
 	mostra_SYA ();
 	maquina_error_procedencia ("Extraient com és comporta amb el SYA", lloc);
 	return 0;
@@ -136,7 +136,7 @@ lexic_definir_localitzacio (int lloc)
 		if (!strcmp(t, string_localitzacio (i)))
 			return i;
 
-	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	printf ("ERROR 5: Entrat: \"%s\" i esperat:\n", t);
 	mostra_localitzacions ();
 	maquina_error_procedencia ("Saben de on és la informació", lloc);
 	return 0;
@@ -146,13 +146,13 @@ int
 lexic_definir_index_variable (struct variables *vs, int lloc)
 {
 	int i;
-	char *t = maquina_estats_cadena_caracters ("TODO", lloc);
+	char *t = maquina_estats_cadena_caracters ("Localitzant el índex de la variable", lloc);
 
 	for (i = 0; i < vs->mida; i++)
 		if (!strcmp(t, vs->punter[i].nom))
 			return i;
 
-	printf ("ERROR: Entrat: \"%s\" i esperat:\n", t);
+	printf ("ERROR 6: Entrat: \"%s\" i esperat:\n", t);
 	mostra_variables (vs);
 	maquina_error_procedencia ("Saben de on és la informació", lloc);
 	return 0;
@@ -202,7 +202,7 @@ lexic_definir_variable (struct variable *v, int lloc)
 		v->inicialitzat = CF_fals;
 		break;
 	default:
-		printf ("ERROR: Entrat: %c.\n", c);
+		printf ("ERROR 7: Entrat: %c.\n", c);
 		maquina_error_procedencia ("Esperàvem si inicialitzava la variable, llavors tenia que entrar: [:;]", lloc);
 	}
 if (verbos_objecte) {printf ("L: "); mostra_variable (v);}
@@ -274,7 +274,7 @@ lexic_definir_paraula (struct paraula *p, int lloc)
 		break;
 
 	default:
-		printf ("ERROR: Entrat: %d < %d.\n", p->lloc.on, Localitzacio_END);
+		printf ("ERROR 8: Entrat: %d < %d.\n", p->lloc.on, Localitzacio_END);
 		maquina_error_procedencia ("Esperàvem si estava inicialitzada la funció, llavors tenia que entrar: '[dn]'", lloc);
 	}
 
@@ -341,7 +341,7 @@ if (verbos_objecte) printf ("L: Funció nova, ara la definirem.\n");
 		(*nous)++;
 		if ( i >= funcions.mida )
 		{
-			printf ("ERROR: Demanat %d < %ld. On són punters relatius de les funcions.\n", i, funcions.mida);
+			printf ("ERROR 9: Demanat %d < %ld. On són punters relatius de les funcions.\n", i, funcions.mida);
 			maquina_error_procedencia ("Índex major al nombre total de funcions possibles", lloc);
 		}
 		f = funcions.punter +i;
@@ -349,18 +349,18 @@ if (verbos_objecte) printf ("L: Funció nova, ara la definirem.\n");
 		break;
 
 	default:
-		printf ("ERROR: Entrat: %c.\n", c);
+		printf ("ERROR 10: Entrat: %c.\n", c);
 		maquina_error_procedencia ("Esperàvem si estava inicialitzada la funció, llavors tenia que entrar: '[dn]'", lloc);
 	}
 
-	f->funcio.retorn = lexic_definir_descriptor (lloc);
-	f->funcio.SYA = lexic_definir_SYA (maquina_estats_cadena_caracters ("Definint si és operant o funció", lloc), lloc);
-	f->funcio.precedencia = f->funcio.SYA == SYA_funcio ? 0 : lexic_llegir_digit_positiu_entre_parentesis ("Definint precedència", lloc);
+	f->funcio.retorn = lexic_definir_descriptor (i);
+	f->funcio.SYA = lexic_definir_SYA (maquina_estats_cadena_caracters ("Definint si és operant o funció", i), i);
+	f->funcio.precedencia = f->funcio.SYA == SYA_funcio ? 0 : lexic_llegir_digit_positiu_entre_parentesis ("Definint precedència", i);
 
 	lexic_variables_i_declarar ('a', &f->funcio.arguments, "Arguments", -1);
 	lexic_variables_i_declarar ('l', &f->locals, "Locals", -1);
 
-	f->mida_memoria_execucio = lexic_definir_codi (&f->codi, lloc);
+	f->mida_memoria_execucio = lexic_definir_codi (&f->codi, i);
 if (verbos_objecte) { printf ("L: "); mostra_funcio (f);}
 	return f->mida_memoria_execucio;
 }
@@ -403,7 +403,7 @@ if (verbos_objecte) printf ("L: Un total de: %d definir noms abans de compilar.\
 
 	if (funcions.mida < mida)
 	{
-		printf ("ERROR: Ha dit que hi haurà: %ld i vols declarar: %d.\n", funcions.mida, mida);
+		printf ("ERROR 11: Ha dit que hi haurà: %ld i vols declarar: %d.\n", funcions.mida, mida);
 		maquina_error_procedencia ("No pot declarar més funcions de les que ha dit que hi haurà", -1);
 	}
 	for (f = funcions.punter; f < funcions.punter +mida; f++)
