@@ -54,10 +54,20 @@ sistema
 	// Retorns.
 	Sistema_return,
 	Sistema_exit,
+	// Tamany
+	Sistema_sizeof,
+	// Memòria
+	Sistema_malloc,
+	Sistema_free,
 	// Valors dels punters.
+	Sistema_obtenir_punter,
 	Sistema_obtenir_punter_de_punter,
+	Sistema_obtenir_caracter_de_punter,
 	// String a dígit.
 	Sistema_atoi,
+	// Canvis de tipus.
+	Sistema_canvi_int_char,
+	Sistema_canvi_char_int,
 
 	// Salts.
 	Sistema_goto,	// Sempre.
@@ -68,7 +78,8 @@ sistema
 	Sistema_buit,
 
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
-	Sistema_igual,
+	Sistema_igual,		// Variables.
+	Sistema_igual_caracter,	// Accés directe a memòria.
 	Sistema_suma,
 	Sistema_resta,
 	Sistema_producte,
@@ -76,11 +87,17 @@ sistema
 	Sistema_modul,
 	Sistema_potencia,
 	Sistema_suma_punter_punters_amb_enter,
+	Sistema_suma_punter_de_cacarters,
 	// Comparadors
 	Sistema_mes_petit_que,
+	Sistema_mes_o_igual_que,
+	Sistema_igual_que,
+	Sistema_diferent_que,
+	Sistema_or,
 	// Operacions d'un valor
 	Sistema_primer_resta,
 	Sistema_segon_resta,
+	Sistema_sqrt,
 
 	// Accés només amb la semàntica.
 	Sistema_suma_float,

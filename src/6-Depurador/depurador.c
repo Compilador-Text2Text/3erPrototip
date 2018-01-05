@@ -178,13 +178,12 @@ mostra_valor (struct descriptor d, union valor v)
 {
 	if (d.vegades_punter)
 	{
+			printf ("\"???\"");
+			return;
 		if ((d.tipus == Tipus_char) && (d.vegades_punter == 1))
 			printf ("\"%s\"", (char *)v.punter);
 		else
-		{
-			printf ("ERROR: Depurador: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
-			exit (EXIT_FAILURE);
-		}
+			printf ("\"???\"");
 		return;
 	}
 	switch (d.tipus)
@@ -192,8 +191,7 @@ mostra_valor (struct descriptor d, union valor v)
 	case Tipus_char:	printf ("'%c'", v.caracter);	break;
 	case Tipus_int:		printf ("%de", v.enter);	break;
 	default:
-		printf ("ERROR: Depurador: No sabem mostrar el valor de: %s(%ld).\n", string_tipu(d.tipus), d.vegades_punter);
-		exit (EXIT_FAILURE);
+		printf ("\"???\"");
 	}
 }
 

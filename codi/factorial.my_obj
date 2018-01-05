@@ -1,0 +1,355 @@
+-variables globals: 0e
+-funcions: 2e -declarats: 1e "main"
+
+###MAKE PRIMES###
+#int8_t *make_primes(int max)
+#	int i, j;
+#	int8_t *primes = (int8_t *)malloc(sizeof(int8_t) * (max + 1));
+ <Funció: 'n' "make primes" "Char"(1e) "Funció"
+  -arguments: 1e
+	"max"	"Int"(0e);
+  -locals: 3e
+	"i"	"Int"(0e);
+	"j"	"Int"(0e);
+	"primes""Char"(1e);
+
+  -codi: 18e
+   -frase 0: 15e
+	"Locals""primes";
+	"Sistema""=";
+	"Sistema""malloc";
+	"Preexecució""(";
+		"Sistema""sizeof";
+		"Preexecució""(";
+			"Codi""Char"(0e)'l'; # No sé dir només el tipus...
+		"Preexecució"")";
+		"Sistema""*";
+		"Preexecució""(";
+			"Arguments""max";
+			"Sistema""+";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+
+#
+#	for (i = 2; i <= max; i++) primes[i] = 1;
+#
+   -frase 1: 3e
+	"Locals""i";
+	"Sistema""=";
+	"Codi""Int"(0e)2e;
+   -frase 2: 11e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)6e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"",";
+			"Arguments""max";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 3: 11e # Línia complicada per no entendre exactament que ha de fer el sistema amb les mateixes operacions.
+	"Sistema""*p="; # !!! *p=, pc+e, =char, funcions creades per a poder executar aquesta línia!
+	"Preexecució""(";  # primes[i] = 1;
+		"Locals""primes";
+		"Sistema""pc+e";
+		"Locals""i";
+	"Preexecució"")";
+	"Sistema""=char";
+	"Sistema""int2char";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+   -frase 4: 5e
+	"Locals""i";
+	"Sistema""=";
+	"Locals""i";
+	"Sistema""+";
+	"Codi""Int"(0e)1e;
+   -frase 5: 11e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)3e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"",";
+			"Arguments""max";
+		"Preexecució"")";
+	"Preexecució"")";
+
+#
+#	primes[0] = primes[1] = 0;
+#
+   -frase 6: 16e
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Locals""primes";
+	"Preexecució"")";
+	"Sistema""=char";
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Locals""primes";
+		"Sistema""pc+e";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+	"Sistema""=char";
+	"Sistema""int2char";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+
+#
+# 7 8	for (i = 2; i < sqrt(max) + 1; i++)
+# 9		if (primes[i])
+# 10 11			for (j = i*i; j < max; j += i)
+# 12				primes[j] = 0;
+# 13 14 15 16
+   -frase 7: 3e
+	"Locals""i";
+	"Sistema""=";
+	"Codi""Int"(0e)2e;
+   -frase 8: 16e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)17e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"","; #sqrt(max) + 1
+			"Sistema""sqrt";
+			"Preexecució""(";
+				"Arguments""max";
+			"Preexecució"")";
+			"Sistema""+";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+# 9		if (primes[i])
+   -frase 9: 14e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)15e; # Salt
+	"Preexecució"",";
+		"Sistema""char2int";
+		"Preexecució""(";
+			"Sistema""*p=";
+			"Preexecució""(";
+				"Locals""primes";
+				"Sistema""pc+e";
+				"Locals""i";
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+# 10 11			for (j = i*i; j <= max; j += i)
+   -frase 10: 5e
+	"Locals""j";
+	"Sistema""=";
+	"Locals""i";
+	"Sistema""*";
+	"Locals""i";
+   -frase 11: 11e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)15e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Locals""j";
+		"Preexecució"",";
+			"Arguments""max";
+		"Preexecució"")";
+	"Preexecució"")";
+#
+# 12				primes[j] = 0;
+   -frase 12: 11e
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Locals""primes";
+		"Sistema""pc+e";
+		"Locals""j";
+	"Preexecució"")";
+	"Sistema""=char";
+	"Sistema""int2char";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+# 10 11			for (j = i*i; j <= max; j += i)
+# 13 14
+   -frase 13: 5e
+	"Locals""j";
+	"Sistema""=";
+	"Locals""j";
+	"Sistema""+";
+	"Locals""i";
+   -frase 14: 11e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)12e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Locals""j";
+		"Preexecució"",";
+			"Arguments""max";
+		"Preexecució"")";
+	"Preexecució"")";
+# 7 8	for (i = 2; i < sqrt(max) + 1; i++)
+# 15 16
+   -frase 15: 5e
+	"Locals""i";
+	"Sistema""=";
+	"Locals""i";
+	"Sistema""+";
+	"Codi""Int"(0e)1e;
+   -frase 16: 16e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)9e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"","; #sqrt(max) + 1
+			"Sistema""sqrt";
+			"Preexecució""(";
+				"Arguments""max";
+			"Preexecució"")";
+			"Sistema""+";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+
+
+   -frase FI: 4e
+	"Sistema""return";
+	"Preexecució""(";
+		"Locals""primes";
+	"Preexecució"")";
+
+### MAIN ###
+# int main(int argc, char *argv[])
+# 	int8_t *primes;
+# 	int n;
+# 	int max;
+# 	int p;
+# 	int powerof;
+ <Funció: 'd' "main" "Int"(0e) "Funció"
+  -arguments: 2e
+   "argc""Int"(0e);"argv""Char"(2e);
+  -locals: 5e
+	"primes""Char"(1e);
+	"n"	"Int"(0e);
+	"max"	"Int"(0e);
+	"p"	"Int"(0e);
+	"powerof""Int"(0e);
+
+  -codi: 10e
+#	if (argc != 2)
+#		printf("Usage: %s number\n", argv[0]);
+#		return 1;
+   -frase 0: 11e	# if (argc != 2)
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)3e;
+	"Preexecució"",";
+		"Sistema""≠";
+		"Preexecució""(";
+			"Arguments""argc";
+		"Preexecució"",";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 1: 4e
+	"Sistema""printChar1";
+	"Preexecució""(";
+		"Codi""Char"(1e)"Usage: 'this function' number
+";
+	"Preexecució"")";
+   -frase 2: 4e
+	"Sistema""exit";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+
+#
+#	n = atoi(argv[1]);
+#
+   -frase 3: 9e
+	"Locals""n";
+		"Sistema""=";
+	"Sistema""atoi";
+	"Preexecució""(";
+		"Sistema""*pp";
+		"Preexecució""(";
+			"Arguments""argv";
+		"Preexecució"")";
+	"Preexecució"")";
+
+# 4	if (n == 0 || n == 1)
+# 5		printf("$%d! = 1$\n", n);
+# 6		return 0;
+   -frase 4: 21e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)7e;
+	"Preexecució"",";
+		"Sistema""or";
+		"Preexecució""(";
+			"Sistema""==";
+			"Preexecució""(";
+				"Locals""n";
+			"Preexecució"",";
+				"Codi""Int"(0e)0e;
+			"Preexecució"")";
+		"Preexecució"",";
+			"Sistema""==";
+			"Preexecució""(";
+				"Locals""n";
+			"Preexecució"",";
+				"Codi""Int"(0e)1e;
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 5: 8e
+	"Sistema""printInt0";
+	"Preexecució""(";
+		"Locals""n";
+	"Preexecució"")";
+	"Sistema""printChar1";
+	"Preexecució""(";
+		"Codi""Char"(1e)"! = 1
+";
+	"Preexecució"")";
+   -frase 6: 4e
+	"Sistema""exit";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+
+#
+#	primes = make_primes(n);
+#
+   -frase 7: 6e
+	"Locals""primes";
+	"Sistema""=";
+	"Funcions""make primes";
+	"Preexecució""(";
+		"Locals""n";
+	"Preexecució"")";
+
+   -frase FI: 4e
+	"Sistema""free";
+	"Preexecució""(";
+		"Locals""primes";
+	"Preexecució"")";
+# pugui executar.
+   -frase FI: 4e
+	"Sistema""return";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
