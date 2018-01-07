@@ -81,15 +81,11 @@ int main(int argc, char *argv[])
 	 * 2 <= p <= n
 	 */
 	powerof = power(n, 2);
-	if (powerof) {
-		printf(" 2^{%d}", powerof);
-	}
+	printf(" 2^{%d}", powerof);
 	for (p = 3; p <= n; p++) {
 		if (primes[p]) {
 			powerof = power(n, p);
-			if (powerof) {
-				printf(" \\cdot %d^{%d}", p, powerof);
-			}
+			printf(" \\cdot %d^{%d}", p, powerof);
 		}
 	}
 
