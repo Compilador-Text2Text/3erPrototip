@@ -1,0 +1,564 @@
+-variables globals: 0e
+-funcions: 7e -declarats: 1e "main"
+
+### CANVI ### ####################
+#void canvi (int i, int l, char *p)
+#	char a;
+###
+ <Funció: 'n' "canvi" "Void"(0e) "Funció"
+  -arguments: 3e
+	"i"	"Int"(0e);
+	"l"	"Int"(0e);
+	"p"	"Char"(1e);
+  -locals: 1e
+	"a"	"Char"(0e);
+
+  -codi: 4e
+#
+#	a = p[i];
+#
+   -frase 0: 8e
+	"Locals""a";
+	"Sistema""=";
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Arguments""i";
+	"Preexecució"")";
+#
+#	p[i] = p[l];
+#
+   -frase 1: 13e
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Arguments""i";
+	"Preexecució"")";
+	"Sistema""=char";
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Arguments""l";
+	"Preexecució"")";
+#
+#	p[l] = a;
+#
+   -frase 2: 8e
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Arguments""l";
+	"Preexecució"")";
+	"Sistema""=char";
+	"Locals""a";
+   -frase FI: 1e
+	"Sistema""return";
+### END CANVI ### ####################
+
+### GIRA ### ####################
+# void gira (int l, char *p)
+#	int i; // minim, increment
+#	i = -1;
+###
+ <Funció: 'n' "gira" "Void"(0e) "Funció"
+  -arguments: 2e
+	"l"	"Int"(0e);
+	"p"	"Char"(1e);
+  -locals: 1e
+	"i"	"Int"(0e):-1e;
+  -codi: 4e
+
+#
+# 0	while ( ++i < --l )
+# 1		canvi (i, l, p);
+# 2
+   -frase 0: 19e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)3e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+			"Sistema""=";
+			"Locals""i";
+			"Sistema""+";
+			"Codi""Int"(0e)1e;
+		"Preexecució"",";
+			"Arguments""l";
+			"Sistema""=";
+			"Arguments""l";
+			"Sistema""-";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+#
+# 1		canvi (i, l, p);
+#
+   -frase 1: 8e
+	"Funcions""canvi";
+	"Preexecució""(";
+		"Locals""i";
+	"Preexecució"",";
+		"Arguments""l";
+	"Preexecució"",";
+		"Arguments""p";
+	"Preexecució"")";
+
+   -frase 2: 19e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+			"Sistema""=";
+			"Locals""i";
+			"Sistema""+";
+			"Codi""Int"(0e)1e;
+		"Preexecució"",";
+			"Arguments""l";
+			"Sistema""=";
+			"Arguments""l";
+			"Sistema""-";
+			"Codi""Int"(0e)1e;
+		"Preexecució"")";
+	"Preexecució"")";
+
+   -frase FI: 1e
+	"Sistema""return";
+### END GIRA ### ####################
+
+### QUAN ES FA PETIT ### ####################
+# int trobar_quan_se_fa_petit (int l, char *p)
+#	int i;
+#	char v, n;
+###
+ <Funció: 'n' "trobar quan se fa petit" "Int"(0e) "Funció"
+  -arguments: 2e
+	"l"	"Int"(0e);
+	"p"	"Char"(1e);
+  -locals: 3e
+	"i"	"Int"(0e);
+	"v"	"Char"(0e);
+	"n"	"Char"(0e);
+  -codi: 10e
+#
+#	v = 0; // valor mínim
+#
+   -frase 0: 6e
+	"Locals""v";
+	"Sistema""=";
+	"Sistema""int2char";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+
+#
+# 1 2	for (i = l-1; i >= 0; i--)
+# 3		n = p[i];
+# 4		if ( n < v )
+# 5			return i +1;
+# 6		v = n;
+# 7 8
+#
+   -frase 1: 5e
+	"Locals""i";
+	"Sistema""=";
+	"Arguments""l";
+	"Sistema""+";
+	"Codi""Int"(0e)-1e;
+   -frase 2: 11e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)9e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Codi""Int"(0e)0e;
+		"Preexecució"",";
+			"Locals""i";
+		"Preexecució"")";
+	"Preexecució"")";
+#
+# 3		n = p[i];
+#
+   -frase 3: 8e
+	"Locals""n";
+	"Sistema""=";
+	"Sistema""*p=";
+	"Preexecució""(";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Locals""i";
+	"Preexecució"")";
+#
+# 4		if ( n < v )
+#
+   -frase 4: 17e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)6e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Sistema""char2int";
+			"Preexecució""(";
+				"Locals""n";
+			"Preexecució"")";
+		"Preexecució"",";
+			"Sistema""char2int";
+			"Preexecució""(";
+				"Locals""v";
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+#
+# 5			return i +1;
+#
+    -frase 5: 12e
+"Sistema""printInt0"; # TODO, eliminar
+"Preexecució""(";
+"Locals""i";
+"Sistema""+";
+"Codi""Int"(0e)1e;
+"Preexecució"")";
+	"Sistema""return";
+	"Preexecució""(";
+		"Locals""i";
+		"Sistema""+";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+#
+# 6		v = n;
+#
+    -frase 6: 3e
+	"Locals""v";
+	"Sistema""=";
+	"Locals""n";
+
+# END FOR
+    -frase 7: 5e
+	"Locals""i";
+	"Sistema""=";
+	"Locals""i";
+	"Sistema""+";
+	"Codi""Int"(0e)-1e;
+   -frase 8: 11e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)3e; # Salt
+	"Preexecució"",";
+		"Sistema""≤";
+		"Preexecució""(";
+			"Codi""Int"(0e)0e;
+		"Preexecució"",";
+			"Locals""i";
+		"Preexecució"")";
+	"Preexecució"")";
+
+#
+#	exit (1);
+#
+   -frase FI: 4e
+	"Sistema""exit";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+### END QUAN ES FA PETIT ### ####################
+
+### QUAN ES FA GRAN ### ####################
+# int trobar_quan_se_fa_gran (int l, char *p, char v)
+#	int i;
+###
+ <Funció: 'n' "quan es fa gran" "Int"(0e) "Funció"
+  -arguments: 3e
+	"l"	"Int"(0e);
+	"p"	"Char"(1e);
+	"v"	"Char"(0e);
+  -locals: 1e
+	"i"	"Int"(0e):0e;
+  -codi: 6e
+#
+# 0	for (i = 0; i < l; i++)
+# 1		if (v < p[i])
+# 2			return i +1;
+# 3 4
+# 4	exit (1);
+#
+   -frase 0: 11e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)4e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"",";
+			"Arguments""l";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 1: 22e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)3e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Sistema""char2int";
+			"Preexecució""(";
+				"Arguments""v";
+			"Preexecució"")";
+		"Preexecució"",";
+			"Sistema""char2int";
+			"Preexecució""(";
+				"Sistema""*p=";
+				"Preexecució""(";
+					"Arguments""p";
+					"Sistema""pc+e";
+					"Locals""i";
+				"Preexecució"")";
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 2: 6e
+	"Sistema""return";
+	"Preexecució""(";
+		"Locals""i";
+		"Sistema""+";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+   -frase 3: 5e
+	"Locals""i";
+	"Sistema""=";
+	"Locals""i";
+	"Sistema""+";
+	"Codi""Int"(0e)1e;
+   -frase 4: 11e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e; # Salt
+	"Preexecució"",";
+		"Sistema""<";
+		"Preexecució""(";
+			"Locals""i";
+		"Preexecució"",";
+			"Arguments""l";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase FI aux: 1e
+	"Sistema""exit";
+
+### END QUAN ES FA GRAN ### ####################
+
+### NEXT ###
+# int next (int l, char *p)
+#	int m, c;
+###
+ <Funció: 'n' "next" "Int"(0e) "Funció"
+  -arguments: 2e
+	"l"	"Int"(0e);
+	"p"	"Char"(1e);
+  -locals: 2e
+	"m"	"Int"(0e);
+	"c"	"Int"(0e);
+  -codi: 5e
+#
+#	m = trobar_quan_se_fa_petit (l, p);
+#
+   -frase 0: 8e
+	"Locals""m";
+	"Sistema""=";
+	"Funcions""trobar quan se fa petit";
+	"Preexecució""(";
+		"Arguments""l";
+	"Preexecució"",";
+		"Arguments""p";
+	"Preexecució"")";
+#
+#	gira (l-m, p+m);
+#
+   -frase 1: 22e# 10e
+	"Funcions""gira";
+	"Preexecució""(";
+		"Arguments""l";
+		"Sistema""-";
+		"Locals""m";
+	"Preexecució"",";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Locals""m";
+	"Preexecució"")";
+"Sistema""printChar1"; # TODO eliminar
+"Preexecució""(";
+"Codi""Char"(1e)"
+";
+"Preexecució"")";
+"Sistema""printChar1"; # TODO eliminar
+"Preexecució""(";
+	"Arguments""p";
+"Preexecució"")";
+"Sistema""printChar1"; # TODO eliminar
+"Preexecució""(";
+"Codi""Char"(1e)"
+";
+"Preexecució"")";
+
+#
+#	c = trobar_quan_se_fa_gran (l-m, p+m, p[m-1]);
+#
+   -frase 2: 26e
+"Sistema""printInt0";
+"Preexecució""(";
+	"Locals""c";
+	"Sistema""=";
+	"Funcions""quan es fa gran";
+	"Preexecució""(";
+		"Arguments""l";
+		"Sistema""-";
+		"Locals""m";
+	"Preexecució"",";
+		"Arguments""p";
+		"Sistema""pc+e";
+		"Locals""m";
+	"Preexecució"",";
+		"Sistema""*p=";
+		"Preexecució""(";
+			"Arguments""p";
+			"Sistema""pc+e";
+			"Preexecució""(";
+				"Locals""m";
+				"Sistema""-";
+				"Codi""Int"(0e)1e;
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+"Preexecució"")";
+
+#
+#	canvi (m-1, c+m-1, p);
+#
+   -frase 3: 14e
+	"Funcions""canvi";
+	"Preexecució""(";
+		"Locals""m";
+		"Sistema""-";
+		"Codi""Int"(0e)1e;
+	"Preexecució"",";
+		"Locals""c";
+		"Sistema""+";
+		"Locals""m";
+		"Sistema""-";
+		"Codi""Int"(0e)1e;
+	"Preexecució"",";
+		"Arguments""p";
+	"Preexecució"")";
+   -frase FI: 4e
+	"Sistema""return";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+
+### STRLEN ### ####################
+ <Funció: 'n' "strlen" "Int"(0e) "Funció"
+  -arguments: 1e
+	"in" "Char"(1e);
+  -locals: 1e
+	"índex""Int"(0e): -1e;
+  -codi: 3e
+   -frase 0: 5e
+	"Locals""índex";
+	"Sistema""=";
+	"Locals""índex";
+	"Sistema""+";
+	"Codi""Int"(0e)1e;
+   -frase 1: 19e
+	"Sistema""gotoNZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e; # Salt
+	"Preexecució"",";
+		"Sistema""≠";
+		"Preexecució""(";
+			"Codi""Int"(0e)0e;
+		"Preexecució"",";
+			"Sistema""char2int";
+			"Preexecució""(";
+				"Sistema""*p=";
+				"Preexecució""(";
+					"Arguments""in";
+					"Sistema""pc+e";
+					"Locals""índex";
+				"Preexecució"")";
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase FI: 8e
+"Sistema""printInt0"; # TODO
+"Preexecució""(";
+"Locals""índex";
+"Preexecució"")";
+	"Sistema""return";
+	"Preexecució""(";
+		"Locals""índex";
+	"Preexecució"")";
+### END STRLEN ###
+
+### MAIN ###
+ <Funció: 'd' "main" "Int"(0e) "Funció"
+  -arguments: 2e
+   "argc""Int"(0e);"argv""Char"(2e);
+  -locals: 0e
+  -codi: 4e
+#
+#	if (argc == 1) return 1;
+#
+   -frase 0: 11e
+	"Sistema""gotoZ";
+	"Preexecució""(";
+		"Codi""Int"(0e)2e; # Salt
+	"Preexecució"",";
+		"Sistema""≠";
+		"Preexecució""(";
+			"Arguments""argc";
+		"Preexecució"",";
+			"Codi""Int"(0e)1e; # Salt
+		"Preexecució"")";
+	"Preexecució"")";
+   -frase 1: 4e
+	"Sistema""exit";
+	"Preexecució""(";
+		"Codi""Int"(0e)1e;
+	"Preexecució"")";
+
+#
+#	next (strlen (argv[1]), argv[1]);
+#
+   -frase 2: 15e
+	"Funcions""next";
+	"Preexecució""(";
+		"Funcions""strlen";
+		"Preexecució""(";
+			"Sistema""*pp";
+			"Preexecució""(";
+				"Arguments""argv";
+			"Preexecució"")";
+		"Preexecució"")";
+	"Preexecució"",";
+			"Sistema""*pp";
+			"Preexecució""(";
+				"Arguments""argv";
+			"Preexecució"")";
+	"Preexecució"")";
+   -frase FI: 4e
+	"Sistema""return";
+	"Preexecució""(";
+		"Codi""Int"(0e)0e;
+	"Preexecució"")";
+
+
+08765
