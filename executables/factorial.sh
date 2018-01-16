@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./interpret -f codi/factorial.my_obj -q -a $# $@
+./../interpret -f ../codi/factorial.my_obj -q -a $# $@
