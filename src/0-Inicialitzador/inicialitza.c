@@ -18,6 +18,18 @@ FILE *g_pf;			// punter de fitxer, variable global.
 /************************************************/
 /*	Funcions privades			*/
 /************************************************/
+void
+inicialitza_inicialitza_funcions_sistema (void)
+{
+	sistema_inicialitza ();
+}
+
+void
+inicialitza_finalitza_funcions_sistema (void)
+{
+	sistema_finalitza ();
+}
+
 FILE *
 inicialitza_inicialitza_lectura_fitxer (char *nom)
 {
@@ -60,6 +72,8 @@ inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 	int out, reservar;
 	struct element_execucio *e;
 
+	inicialitza_inicialitza_funcions_sistema ();
+
 	// Lèxic.
 	g_pf = inicialitza_inicialitza_lectura_fitxer (nom);
 		reservar = lexic_llegir_objecte (inicialitza_lectura_fitxer, vl, vm);
@@ -84,20 +98,9 @@ inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 	// Alliberem en memòria.
 	alliberar_descriptors_funcio_globals ();
 	free (e);
+	inicialitza_finalitza_funcions_sistema ();
 
 	return out;
-}
-
-void
-inicialitza_inicialitza_funcions_sistema (void)
-{
-	sistema_inicialitza ();
-}
-
-void
-inicialitza_finalitza_funcions_sistema (void)
-{
-	sistema_finalitza ();
 }
 
 void
