@@ -3,6 +3,11 @@
 #include "operadors.h"
 #include "inicialitza.h"
 
+/**
+ * Funcions que són operacions binàries.
+ * També inclou funcions aritmètiques
+ * i operacions lògiques.
+ */
 int
 sistema_igual (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {

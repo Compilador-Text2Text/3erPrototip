@@ -3,6 +3,13 @@
 
 #include "../1-Executor/instruccions.h"
 
+/**
+ * Són funcions de sistema.
+ * Control d'elements propis de la pila de funció d'execució.
+ * També pots fer canvis de valors, (int2char)
+ * o finalment pots fer gestions de memòria dinàmica (malloc i free)
+ */
+
 int private_sistema_retorn (size_t n, union valor *v, struct pila *p)
 {
 	struct funcio_dinamica *f;
@@ -103,7 +110,7 @@ sistema_obtenir_caracter_de_punter (size_t n, struct element_execucio *e, struct
 	return 1;
 }
 
-// Perquè el valgrind es queixava al fer anar el obtenir caracter de punter `e[0].valor.caracter = *(char *)e[0].valor.punter;`
+// Perquè el valgrind es queixava al fer anar el obtenir caràcter de punter `e[0].valor.caracter = *(char *)e[0].valor.punter;`
 // Ja que aquest element no està inicialitzat.
 int
 sistema_obtenir_punter (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)

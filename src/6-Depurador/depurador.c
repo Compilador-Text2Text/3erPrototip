@@ -4,6 +4,12 @@
 
 #include "../1-Executor/descriptor.h"
 
+/**
+ * Quan l'usuari demana que sigui verbos,
+ * aquí és qui normalment és fa responsable
+ * que aquesta operació pugui ser realitzada.
+ */
+
 /* enum a cadena de caràcters */
 char *
 string_localitzacio (enum localitzacions e)

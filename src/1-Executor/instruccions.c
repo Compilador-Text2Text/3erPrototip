@@ -5,6 +5,17 @@
 
 #include "../6-Depurador/depurador.h"
 
+/**
+ * Són totes les funcions necessàries
+ * per a poder executar totes les instruccions.
+ *
+ * És molt important saber que conté:
+ * - l'estructura paraula i
+ * - l'estructura element d'execució
+ * i com estan aquests relacionats,
+ * sinó entendre aquest apartat pot ser complex.
+ */
+
 enum cert_fals verbos_execucio; // Per saber si continuem sent verbosos.
 
 void
@@ -32,7 +43,7 @@ instruccions_variable_a_element_execucio (struct element_execucio *e, struct var
 
 void
 instruccions_element_execucio_a_variable (struct variable *v, struct element_execucio *e)
-{ // El descriptor normalment ho ha comprovat la semàntica.
+{ // El descriptor normalment s'ha comprovat a la semàntica.
 	v->valor = e->valor;
 }
 

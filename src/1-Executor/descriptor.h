@@ -4,9 +4,21 @@
 #include "../9-Útils/bàsic.h"
 #include "../9-Útils/pila.h"
 
+/**
+ * Són tots els objectes que necessitem per a fer el compilador.
+ * Estan separats en diferents nivells de complexitat.
+ * Al final, l'objectiu és poder treballar amb funcions i
+ * que aquestes tinguin el seu codi i variables (molt resumit).
+ *
+ * La dificultat que hi ha, és que C no és un llenguatge
+ * orientat objecte.
+ */
+
 /************************************************/
 /*	Elements bàsics				*/
 /************************************************/
+
+// Valors que podem emmagatzemar.
 union
 valor
 {
@@ -16,6 +28,7 @@ valor
 	void *punter;
 };
 
+// Elements que tindrà capacitat de treballar el intèrpret.
 enum
 tipus
 {
@@ -27,6 +40,7 @@ tipus
 	Tipus_END
 };
 
+// Permet saber dins del codi, on està la informació.
 enum
 localitzacions
 {
@@ -48,6 +62,7 @@ localitzacions
 	Localitzacio_END
 };
 
+// Totes les funcions que té el compilador.
 enum
 sistema
 {
@@ -74,9 +89,6 @@ sistema
 	Sistema_gotoZ,	// Només si és zero farà el salt.
 	Sistema_gotoNZ,	// Només si no és zero farà el salt.
 
-	// Gestió pila.
-	Sistema_buit,
-
 	// Operacions infixes. (Per defecte int, si vols diferent, amb la semàntica)
 	Sistema_igual,		// Variables.
 	Sistema_igual_caracter,	// Accés directe a memòria.
@@ -99,16 +111,6 @@ sistema
 	Sistema_segon_resta,
 	Sistema_sqrt,
 
-	// Accés només amb la semàntica.
-	Sistema_suma_float,
-	Sistema_resta_float,
-	Sistema_producte_float,
-	Sistema_divisio_float,
-	Sistema_potencia_float,
-
-	Sistema_suma_putner_int,
-	Sistema_resta_punter_int,
-
 	// Mostrar resultats.
 	Sistema_mostra_cadena_caracters,
 	Sistema_mostra_enter,
@@ -116,6 +118,7 @@ sistema
 	Sistema_END
 };
 
+// Saber com ordenar les operacions binàries i funcions.
 enum
 SYA
 {
@@ -125,6 +128,7 @@ SYA
 	SYA_END
 };
 
+// Elements que no pertanyen a l'execució del programa.
 enum
 preexecucio
 {
@@ -138,6 +142,7 @@ preexecucio
 /************************************************/
 /*	Elements avançats			*/
 /************************************************/
+// Exactament on es troba.
 struct
 localitzat
 {
@@ -145,6 +150,7 @@ localitzat
 	size_t relatiu;
 };
 
+// Defineix que és. Si un element o un punter i quantes vegades.
 struct
 descriptor
 {
@@ -152,6 +158,7 @@ descriptor
 	size_t vegades_punter;
 };
 
+// Variables dins del intèrpret.
 struct
 variable
 {
@@ -164,15 +171,20 @@ variable
 	enum cert_fals usat;		// Semàntica.
 };
 
+// Element per guardar els resultats de les funcions i valors del codi.
 struct
 element_execucio
 {
 	union valor valor;		// Execució.
 	struct descriptor descriptor;	// Depurar.
-	void *punter;			// Execució. TODO ??
+
+// Quan és tracta d'una variable, escriu quina és.
+// Això es fa perquè la funció de sistema (=), pugui operar correctament.
+	void *punter;			// Execució.
 };
 
-
+// Element per saber exactament on està la informació.
+// És on és guarden totes les instruccions.
 struct
 paraula
 {
@@ -189,6 +201,7 @@ variables
 	struct variable *punter;
 };
 
+// És una pila.
 struct
 memoria_execucio
 {
@@ -214,6 +227,8 @@ codi
 /************************************************/
 /*	Funcions				*/
 /************************************************/
+// Elements necessaris per la sintaxis, semàntica
+// i execució en cas d'estar relacionat amb un descriptor de funció.
 struct
 base_funcio
 {
@@ -230,6 +245,7 @@ base_funcio
 	enum cert_fals optimitzable;		// Semàntic.
 };
 
+// Tota la informació estàtica per a poder ajudar a les funcions dinàmiques.
 struct
 descriptor_funcio
 {
@@ -239,6 +255,7 @@ descriptor_funcio
 	struct codi codi;
 };
 
+// Funcions pròpies del intèrpret.
 struct
 descriptor_sistema
 {
@@ -246,6 +263,7 @@ descriptor_sistema
 	int (*exec) (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
 };
 
+// Totes les dades que emmagatzemem per fer les funcions dinàmiques.
 struct
 funcio_dinamica
 {

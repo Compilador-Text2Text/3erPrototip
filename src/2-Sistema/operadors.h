@@ -4,23 +4,7 @@
 #include "../1-Executor/descriptor.h"
 #include "../9-Útils/pila.h"
 
-int sistema_igual	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
-int sistema_suma	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_resta	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_suma_punter_punters_amb_enter (size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
-int sistema_producte	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_divisio	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_modul	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
-int sistema_potencia	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
-int sistema_mes_petit_que	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
-int sistema_primer_resta	(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-int sistema_segon_resta		(size_t, struct element_execucio *, struct pila *, struct base_funcio *);
-
+// És la crida que cal fer per tenir les funcions per tenir operadors binaris.
 void sistema_operadors_inicialitza_sistema (void);
 
 #endif // SISTEMA_OPERADORS_H_

@@ -1,6 +1,14 @@
 #include "../1-Executor/descriptor.h"
 #include "../9-Útils/bàsic.h"
 
+/**
+ * Estructura que primer elimina les variables globals
+ * i tot seguit elimina les funcions.
+ *
+ * És progressiu, comença per totes les funcions,
+ * continua per les frases i finalment les paraules.
+ */
+
 void
 alliberar_variables (struct variables *vs)
 {

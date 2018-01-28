@@ -1,6 +1,10 @@
 #include "salts.h"
 #include "inicialitza.h"
 
+/**
+ * Funcions per a fer salts.
+ * Hi ha salts condiciionals.
+ */
 int
 sistema_goto (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {

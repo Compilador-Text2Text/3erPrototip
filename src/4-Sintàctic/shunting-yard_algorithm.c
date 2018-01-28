@@ -5,6 +5,19 @@
 #include "../1-Executor/descriptor.h"
 #include "../6-Depurador/depurador.h"
 
+/**
+ * Codi estructurat que treballa amb:
+ * - Funcions
+ *   - Codi
+ *     - Frases
+ *       - Paraula (ordenar)
+ *
+ * Ordena i estructura els elements per tal
+ * que a l'hora d'executar el codi sigui més fàcil,
+ * eliminant per exemple comes i parèntesis.
+ * La sortida és amb notació polonesa inversa.
+ */
+
 enum cert_fals verbos_sintactic; // Per saber si continuem sent verbosos.
 enum cert_fals arguments_parentesis;
 

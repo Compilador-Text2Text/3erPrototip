@@ -5,6 +5,12 @@
 
 #include "../9-Útils/pila.h"
 
+/**
+ * Funcions que orientades a una màquina d'estats.
+ * Són per simplificar la lectura d'un fitxer,
+ * tenint present errors com que ha acabat el fitxer.
+ */
+
 char (*seguent_me_caracter) (void);
 enum cert_fals verbos_maquina;	// Per saber si continuem sent verbosos.
 int g_me_f, g_me_c;		// Variables globals fila i columna.

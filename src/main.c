@@ -5,6 +5,11 @@
 #include "0-Inicialitzador/inicialitza.h"
 #include "9-Útils/bàsic.h"
 
+/**
+ * Aquí només és responsable de tractar els arguments
+ * i enviar la informació correctament al controlador.
+ */
+
 void
 main_mostra_ajuda (void)
 {

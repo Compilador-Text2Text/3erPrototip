@@ -4,6 +4,14 @@
 #include "bàsic.h"
 #include "pila.h"
 
+/**
+ * Funció pila per a qualsevol element,
+ * llavors té molta importància indicar la mida d'aquests.
+ * Tot i ser així, tots els elements han de ser igual de grans.
+ * L'apartat d'incrementar la mida ha sigut gràcies al Guillermo Blasco
+ * que em va fer descobrir que tenia accés al codi font de java (en concret ArrayList)
+ */
+
 /************************************************/
 /*	Funcions privades			*/
 /************************************************/

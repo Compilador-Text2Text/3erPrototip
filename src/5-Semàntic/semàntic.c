@@ -4,6 +4,17 @@
 #include "../6-Depurador/depurador.h"
 #include "../9-Útils/pila.h"
 
+/**
+ * Estructurat:
+ * - Funcions, codi
+ *   - Frases
+ *     - Paraules
+ *
+ * Només vigila que els arguments coincideixin amb el tipus d'arguments desitjats.
+ * Com a extra, no cal posar tots els arguments, ja que aquest és capaç d'entendre
+ * quan un argument ja està inicialitzat o no.
+ */
+
 enum cert_fals verbos_semantic; // Per saber si continuem sent verbosos.
 
 // Com a python, pots tenir variables inicialitzades.

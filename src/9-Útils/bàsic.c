@@ -4,6 +4,11 @@
 
 #include "bàsic.h"
 
+/**
+ * Funcions bàsiques per ajudar a fer el projecte.
+ * Missatges d'error i control de la memòria dinàmica.
+ */
+
 /************************************************/
 /*	Errors					*/
 /************************************************/

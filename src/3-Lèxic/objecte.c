@@ -8,6 +8,17 @@
 #include "../6-Depurador/depurador.h"
 #include "../9-Útils/bàsic.h"
 
+/**
+ * Funcions ordenades:
+ * - General
+ *   - Variables
+ *   - Funcions
+ *     - Frases
+ *       - Paraules
+ *
+ * D'aquesta forma és capaç d'anar definint i reservar memòria pels objectes.
+ */
+
 enum cert_fals verbos_objecte; // Per saber si continuem sent verbosos.
 
 union valor

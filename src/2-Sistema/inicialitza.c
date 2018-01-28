@@ -8,6 +8,17 @@
 #include "../1-Executor/descriptor.h"
 #include "../9-Útils/bàsic.h"
 
+/**
+ * Funcions per a facilitar la creació
+ * de les funcions a sistema.
+ *
+ * Tenim definir funció i arguments per a crear les funcions
+ * de sistema correctament.
+ *
+ * Des de fora, cal cridar a inicialitza i finalitza
+ * per començar a treballar amb les funcions i per acabar.
+ */
+
 struct variables
 sistema_definir_arguments (int num, ...)
 {
@@ -51,11 +62,6 @@ sistema_definir_funcio (enum sistema r, char *nom, int (*exec) (size_t, struct e
 	sistemes.punter[r].exec			= exec;
 }
 
-	/*
-	SYA_funcio,
-	SYA_esquerra,
-	SYA_dreta
-	*/
 void
 sistema_inicialitza (void)
 {

@@ -3,6 +3,13 @@
 #include "mostra.h"
 #include "inicialitza.h"
 
+/**
+ * Funcions que mostren els valors.
+ * Pot servir per mostrar una variable,
+ * com el resultat d'una funció
+ * com mostrar informació del propi codi.
+ */
+
 int
 sistema_mostra_cadena_caracters (size_t n, struct element_execucio *e, struct pila *p, struct base_funcio *b)
 {

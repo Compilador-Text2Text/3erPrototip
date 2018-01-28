@@ -13,6 +13,15 @@
 #include "../9-Útils/bàsic.h"
 #include "../9-Útils/pila.h"
 
+/**
+ * És el controlador del programa.
+ * Responsable a fer totes les crides necessàries perquè tot funcioni.
+ *
+ * Quan és tracta d'executar codi, farà les crides ordenades
+ * de lectura del fitxer (lèxic), també ordenarà les operacions (sintaxis),
+ * comprovarà que tot és correcte (semàntic) i finalment farà l'execució.
+ */
+
 FILE *g_pf;			// punter de fitxer, variable global.
 
 /************************************************/
@@ -30,6 +39,7 @@ inicialitza_finalitza_funcions_sistema (void)
 	sistema_finalitza ();
 }
 
+// Comprova que el fitxer sigui un fitxer vàlid.
 FILE *
 inicialitza_inicialitza_lectura_fitxer (char *nom)
 {
@@ -64,6 +74,7 @@ inicialitza_lectura_fitxer (void)
 /************************************************/
 /*	Funcions públiques			*/
 /************************************************/
+// Programa principal que fa crides al Lèxic, Sintaxis, semàntica i l'execució.
 int
 inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 	enum cert_fals vl, enum cert_fals vm, enum cert_fals vs, enum cert_fals va, enum cert_fals ve)
@@ -79,7 +90,7 @@ inicialitza_lectura_objecte (char *nom, int argc, char **argv,
 		reservar = lexic_llegir_objecte (inicialitza_lectura_fitxer, vl, vm);
 	inicialitza_finalitza_lectura_fitxer (g_pf);
 
-	// Sintaxis.
+	// Sintaxis. (la p és una frase en format de pila "per simplificar la memòria dinàmica")
 	p = shunting_yard_algorithm (reservar, vs);
 	semantica (p, va);
 
