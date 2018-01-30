@@ -52,8 +52,10 @@ string_SYA (enum SYA e)
 	switch (e)
 	{
 	case SYA_funcio:	return "Funció";
-	case SYA_esquerra:	return "Associativa per l'esquerra";
-	case SYA_dreta:		return "Associativa per la dreta";
+
+// He descobert aquest error el 30 de gener, no he tingut temps per arreclar-l'ho correctament.
+	case SYA_dreta:		return "Associativa per l'esquerra";
+	case SYA_esquerra:	return "Associativa per la dreta";
 	default:
 		basic_error ("String SYA, esperat un valor menor que: %d, entrat: %d", SYA_END, e);
 		return "ERROR"; // Només posat perquè deixes de donar warning.

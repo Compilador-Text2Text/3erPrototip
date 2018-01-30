@@ -219,7 +219,7 @@ sistema_operadors_inicialitza_sistema (void)
 			"e",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
 			),
 		(struct descriptor){.tipus = Tipus_void, .vegades_punter = 1},
-		SYA_esquerra, 2, CF_cert);
+		SYA_dreta, 2, CF_cert);
 
 	sistema_definir_funcio (Sistema_suma_punter_de_cacarters, "pc+e", sistema_suma_punter_de_cacarters,
 		sistema_definir_arguments (2,
@@ -227,7 +227,7 @@ sistema_operadors_inicialitza_sistema (void)
 			"e",	(struct descriptor){.tipus = Tipus_int, .vegades_punter = 0}, CF_fals
 			),
 		(struct descriptor){.tipus = Tipus_char, .vegades_punter = 1},
-		SYA_esquerra, 2, CF_cert);
+		SYA_dreta, 2, CF_cert);
 
 	sistema_definir_funcio (Sistema_mes_petit_que, "<", sistema_mes_petit_que,
 		sistema_definir_arguments (2,
