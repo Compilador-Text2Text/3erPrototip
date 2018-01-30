@@ -1,0 +1,4308 @@
+./interpret -f codi/factorial.my_obj -v
+
+L: Llegir objecte.
+L: Variables i declarar → Variables globals.
+M: Espera: "-v[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'v' ≠ 'v'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 0 variables.
+L: Funcions.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 3 funcions.
+M: Espera: "-d[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'd' ≠ 'd'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 1 definir noms abans de compilar.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+L: Declarant la funció.
+M: Espera: "<F[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '<' ≠ '<'.
+M: Comprova si 'F' ≠ 'F'.
+M: Llegir fins: ':'.
+M: Comprova si ''' ≠ '''.
+M: Comprova si ''' ≠ '''.
+L: Funció nova, ara la definirem.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+L: Variables i declarar → Arguments.
+M: Espera: "-a[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'a' ≠ 'a'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 1 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "max" "Int"(0)No inicialitzat.
+L: Variables i declarar → Locals.
+M: Espera: "-l[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'l' ≠ 'l'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 3 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "primes" "Char"(1)No inicialitzat.
+L: Definim el codi.
+M: Espera: "-c[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'c' ≠ 'c'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1)	    malloc	("reservar" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	    sizeof	("mida" Void(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Comprova si ''' ≠ '''.
+M: Comprova si ''' ≠ '''.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 'l'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) * Int(0)	| Associativa per la dreta amb precedència: 3
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 2e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 6e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(0)	  int2char	("convertir" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 3e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(0)	  int2char	("convertir" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 2e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 17e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	      sqrt	("v" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 15e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	  char2int	("convertir" Char(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) * Int(0)	| Associativa per la dreta amb precedència: 3
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 15e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(0)	  int2char	("convertir" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 12e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 9e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	      sqrt	("v" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	    return	("retorn" Void(0)"???")
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Reservat: 16, Char(1)	make primes	("max" Int(0))
+L: Declarant la funció.
+M: Espera: "<F[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '<' ≠ '<'.
+M: Comprova si 'F' ≠ 'F'.
+M: Llegir fins: ':'.
+M: Comprova si ''' ≠ '''.
+M: Comprova si ''' ≠ '''.
+L: Funció nova, ara la definirem.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+L: Variables i declarar → Arguments.
+M: Espera: "-a[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'a' ≠ 'a'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 2 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "p" "Int"(0)No inicialitzat.
+L: Variables i declarar → Locals.
+M: Espera: "-l[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'l' ≠ 'l'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 2 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "last" "Int"(0)No inicialitzat.
+L: Definim el codi.
+M: Espera: "-c[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'c' ≠ 'c'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "p" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "p" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 6e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "p" "Int"(0)No inicialitzat.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 3e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	    return	("retorn" Void(0)"???")
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Reservat: 11, Int(0)	     power	("n" Int(0), "p" Int(0))
+L: Declarant la funció.
+M: Espera: "<F[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '<' ≠ '<'.
+M: Comprova si 'F' ≠ 'F'.
+M: Llegir fins: ':'.
+M: Comprova si ''' ≠ '''.
+M: Comprova si ''' ≠ '''.
+L: Funció declarada, ara la definirem.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+L: Variables i declarar → Arguments.
+M: Espera: "-a[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'a' ≠ 'a'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 2 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "argc" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "argv" "Char"(2)No inicialitzat.
+L: Variables i declarar → Locals.
+M: Espera: "-l[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'l' ≠ 'l'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Un total de: 5 variables.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "max" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+L: "powerof" "Int"(0)No inicialitzat.
+L: Definim el codi.
+M: Espera: "-c[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'c' ≠ 'c'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 3e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≠	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "argc" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	      exit	("sortir" Int(0)0e)
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	      atoi	("convertir" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(1)	       *pp	("punter(2)" Void(2))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Arguments" "argv" "Char"(2)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 7e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	        or	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	        ==	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	        ==	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	 printInt0	("i" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	      exit	("sortir" Int(0)0e)
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Funcions" Char(1)	make primes	("max" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	 printInt0	("i" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Funcions" Int(0)	     power	("n" Int(0), "p" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 2e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	 printInt0	("i" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 3e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 18e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 16e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	  char2int	("convertir" Char(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Funcions" Int(0)	     power	("n" Int(0), "p" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	 printInt0	("i" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	 printInt0	("i" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 1e.
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 13e.
+M: Espera: ""([^\"]|\.)*"".
+M: Llegir fins: '
+'.
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ",".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	printChar1	("i" Char(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" "???".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Void(0)	      free	("alliberar" Void(1))
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Definim una frase.
+M: Espera: "-f[^:\n]*:".
+M: Llegir fins: '
+'.
+M: Comprova si '-' ≠ '-'.
+M: Comprova si 'f' ≠ 'f'.
+M: Llegir fins: ':'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Sistema" Int(0)	    return	("retorn" Void(0)"???")
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" "(".
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si '(' ≠ '('.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ')' ≠ ')'.
+M: Espera: "\d+e".
+M: Comprova si 'e' ≠ 'e'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Codi" 0e.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Espera: ""([^\"]|\.)*"".
+M: Comprova si '"' ≠ '"'.
+M: Comprova si ';' ≠ ';'.
+L: Paraula: "Preexecució" ")".
+L: Reservat: 21, Int(0)	      main	("argc" Int(0), "argv" Char(2))
+S: Shunting yard algorithm.
+S: Funció: main.
+S: Frase 11e: <s'gotoZ><p'(><c'3e><p',><s'≠><p'(><a'argc><p',><c'1e><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'3e>	|<c'3e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'3e>	|<s'gotoZ><p'(>
+S: <s'≠>	|<c'3e>	|<s'gotoZ><p'(><s'≠>
+S: <p'(>	|<c'3e>	|<s'gotoZ><p'(><s'≠><p'(>
+S: <a'argc>	|<c'3e><a'argc>	|<s'gotoZ><p'(><s'≠><p'(>
+S: <p',>	|<c'3e><a'argc>	|<s'gotoZ><p'(><s'≠><p'(>
+S: <c'1e>	|<c'3e><a'argc><c'1e>	|<s'gotoZ><p'(><s'≠><p'(>
+S: <p')>	|<c'3e><a'argc><c'1e><s'≠>	|<s'gotoZ><p'(>
+S: <p')>	|<c'3e><a'argc><c'1e><s'≠><s'gotoZ>	|
+S: Frase2 5e: <c'3e><a'argc><c'1e><s'≠><s'gotoZ>
+S: Frase 4e: <s'printChar1><p'(><c'"???"><p')>
+S: <s'printChar1>	|	|<s'printChar1>
+S: <p'(>	|	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1>	|
+S: Frase2 2e: <c'"???"><s'printChar1>
+S: Frase 4e: <s'exit><p'(><c'1e><p')>
+S: <s'exit>	|	|<s'exit>
+S: <p'(>	|	|<s'exit><p'(>
+S: <c'1e>	|<c'1e>	|<s'exit><p'(>
+S: <p')>	|<c'1e><s'exit>	|
+S: Frase2 2e: <c'1e><s'exit>
+S: Frase 9e: <l'n><s'=><s'atoi><p'(><s'*pp><p'(><a'argv><p')><p')>
+S: <l'n>	|<l'n>	|
+S: <s'=>	|<l'n>	|<s'=>
+S: <s'atoi>	|<l'n>	|<s'=><s'atoi>
+S: <p'(>	|<l'n>	|<s'=><s'atoi><p'(>
+S: <s'*pp>	|<l'n>	|<s'=><s'atoi><p'(><s'*pp>
+S: <p'(>	|<l'n>	|<s'=><s'atoi><p'(><s'*pp><p'(>
+S: <a'argv>	|<l'n><a'argv>	|<s'=><s'atoi><p'(><s'*pp><p'(>
+S: <p')>	|<l'n><a'argv><s'*pp>	|<s'=><s'atoi><p'(>
+S: <p')>	|<l'n><a'argv><s'*pp><s'atoi>	|<s'=>
+S: Frase2 5e: <l'n><a'argv><s'*pp><s'atoi><s'=>
+S: Frase 21e: <s'gotoZ><p'(><c'7e><p',><s'or><p'(><s'==><p'(><l'n><p',><c'0e><p')><p',><s'==><p'(><l'n><p',><c'1e><p')><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'7e>	|<c'7e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'7e>	|<s'gotoZ><p'(>
+S: <s'or>	|<c'7e>	|<s'gotoZ><p'(><s'or>
+S: <p'(>	|<c'7e>	|<s'gotoZ><p'(><s'or><p'(>
+S: <s'==>	|<c'7e>	|<s'gotoZ><p'(><s'or><p'(><s'==>
+S: <p'(>	|<c'7e>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <l'n>	|<c'7e><l'n>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <p',>	|<c'7e><l'n>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <c'0e>	|<c'7e><l'n><c'0e>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <p')>	|<c'7e><l'n><c'0e><s'==>	|<s'gotoZ><p'(><s'or><p'(>
+S: <p',>	|<c'7e><l'n><c'0e><s'==>	|<s'gotoZ><p'(><s'or><p'(>
+S: <s'==>	|<c'7e><l'n><c'0e><s'==>	|<s'gotoZ><p'(><s'or><p'(><s'==>
+S: <p'(>	|<c'7e><l'n><c'0e><s'==>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <l'n>	|<c'7e><l'n><c'0e><s'==><l'n>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <p',>	|<c'7e><l'n><c'0e><s'==><l'n>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <c'1e>	|<c'7e><l'n><c'0e><s'==><l'n><c'1e>	|<s'gotoZ><p'(><s'or><p'(><s'==><p'(>
+S: <p')>	|<c'7e><l'n><c'0e><s'==><l'n><c'1e><s'==>	|<s'gotoZ><p'(><s'or><p'(>
+S: <p')>	|<c'7e><l'n><c'0e><s'==><l'n><c'1e><s'==><s'or>	|<s'gotoZ><p'(>
+S: <p')>	|<c'7e><l'n><c'0e><s'==><l'n><c'1e><s'==><s'or><s'gotoZ>	|
+S: Frase2 9e: <c'7e><l'n><c'0e><s'==><l'n><c'1e><s'==><s'or><s'gotoZ>
+S: Frase 8e: <s'printInt0><p'(><l'n><p')><s'printChar1><p'(><c'"???"><p')>
+S: <s'printInt0>	|	|<s'printInt0>
+S: <p'(>	|	|<s'printInt0><p'(>
+S: <l'n>	|<l'n>	|<s'printInt0><p'(>
+S: <p')>	|<l'n><s'printInt0>	|
+S: <s'printChar1>	|<l'n><s'printInt0>	|<s'printChar1>
+S: <p'(>	|<l'n><s'printInt0>	|<s'printChar1><p'(>
+S: <c'"???">	|<l'n><s'printInt0><c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<l'n><s'printInt0><c'"???"><s'printChar1>	|
+S: Frase2 4e: <l'n><s'printInt0><c'"???"><s'printChar1>
+S: Frase 4e: <s'exit><p'(><c'0e><p')>
+S: <s'exit>	|	|<s'exit>
+S: <p'(>	|	|<s'exit><p'(>
+S: <c'0e>	|<c'0e>	|<s'exit><p'(>
+S: <p')>	|<c'0e><s'exit>	|
+S: Frase2 2e: <c'0e><s'exit>
+S: Frase 6e: <l'primes><s'=><f'make primes><p'(><l'n><p')>
+S: <l'primes>	|<l'primes>	|
+S: <s'=>	|<l'primes>	|<s'=>
+S: <f'make primes>	|<l'primes>	|<s'=><f'make primes>
+S: <p'(>	|<l'primes>	|<s'=><f'make primes><p'(>
+S: <l'n>	|<l'primes><l'n>	|<s'=><f'make primes><p'(>
+S: <p')>	|<l'primes><l'n><f'make primes>	|<s'=>
+S: Frase2 4e: <l'primes><l'n><f'make primes><s'=>
+S: Frase 12e: <s'printChar1><p'(><c'"???"><p')><s'printInt0><p'(><l'n><p')><s'printChar1><p'(><c'"???"><p')>
+S: <s'printChar1>	|	|<s'printChar1>
+S: <p'(>	|	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1>	|
+S: <s'printInt0>	|<c'"???"><s'printChar1>	|<s'printInt0>
+S: <p'(>	|<c'"???"><s'printChar1>	|<s'printInt0><p'(>
+S: <l'n>	|<c'"???"><s'printChar1><l'n>	|<s'printInt0><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'n><s'printInt0>	|
+S: <s'printChar1>	|<c'"???"><s'printChar1><l'n><s'printInt0>	|<s'printChar1>
+S: <p'(>	|<c'"???"><s'printChar1><l'n><s'printInt0>	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???"><s'printChar1><l'n><s'printInt0><c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'n><s'printInt0><c'"???"><s'printChar1>	|
+S: Frase2 6e: <c'"???"><s'printChar1><l'n><s'printInt0><c'"???"><s'printChar1>
+S: Frase 8e: <l'powerof><s'=><f'power><p'(><l'n><p',><c'2e><p')>
+S: <l'powerof>	|<l'powerof>	|
+S: <s'=>	|<l'powerof>	|<s'=>
+S: <f'power>	|<l'powerof>	|<s'=><f'power>
+S: <p'(>	|<l'powerof>	|<s'=><f'power><p'(>
+S: <l'n>	|<l'powerof><l'n>	|<s'=><f'power><p'(>
+S: <p',>	|<l'powerof><l'n>	|<s'=><f'power><p'(>
+S: <c'2e>	|<l'powerof><l'n><c'2e>	|<s'=><f'power><p'(>
+S: <p')>	|<l'powerof><l'n><c'2e><f'power>	|<s'=>
+S: Frase2 5e: <l'powerof><l'n><c'2e><f'power><s'=>
+S: Frase 12e: <s'printChar1><p'(><c'"???"><p')><s'printInt0><p'(><l'powerof><p')><s'printChar1><p'(><c'"???"><p')>
+S: <s'printChar1>	|	|<s'printChar1>
+S: <p'(>	|	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1>	|
+S: <s'printInt0>	|<c'"???"><s'printChar1>	|<s'printInt0>
+S: <p'(>	|<c'"???"><s'printChar1>	|<s'printInt0><p'(>
+S: <l'powerof>	|<c'"???"><s'printChar1><l'powerof>	|<s'printInt0><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'powerof><s'printInt0>	|
+S: <s'printChar1>	|<c'"???"><s'printChar1><l'powerof><s'printInt0>	|<s'printChar1>
+S: <p'(>	|<c'"???"><s'printChar1><l'powerof><s'printInt0>	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>	|
+S: Frase2 6e: <c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>
+S: Frase 3e: <l'p><s'=><c'3e>
+S: <l'p>	|<l'p>	|
+S: <s'=>	|<l'p>	|<s'=>
+S: <c'3e>	|<l'p><c'3e>	|<s'=>
+S: Frase2 3e: <l'p><c'3e><s'=>
+S: Frase 11e: <s'gotoZ><p'(><c'18e><p',><s'≤><p'(><l'p><p',><l'n><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'18e>	|<c'18e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'18e>	|<s'gotoZ><p'(>
+S: <s'≤>	|<c'18e>	|<s'gotoZ><p'(><s'≤>
+S: <p'(>	|<c'18e>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <l'p>	|<c'18e><l'p>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p',>	|<c'18e><l'p>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <l'n>	|<c'18e><l'p><l'n>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p')>	|<c'18e><l'p><l'n><s'≤>	|<s'gotoZ><p'(>
+S: <p')>	|<c'18e><l'p><l'n><s'≤><s'gotoZ>	|
+S: Frase2 5e: <c'18e><l'p><l'n><s'≤><s'gotoZ>
+S: Frase 14e: <s'gotoZ><p'(><c'16e><p',><s'char2int><p'(><s'*p=><p'(><l'primes><s'pc+e><l'p><p')><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'16e>	|<c'16e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'16e>	|<s'gotoZ><p'(>
+S: <s'char2int>	|<c'16e>	|<s'gotoZ><p'(><s'char2int>
+S: <p'(>	|<c'16e>	|<s'gotoZ><p'(><s'char2int><p'(>
+S: <s'*p=>	|<c'16e>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=>
+S: <p'(>	|<c'16e>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(>
+S: <l'primes>	|<c'16e><l'primes>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(>
+S: <s'pc+e>	|<c'16e><l'primes>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(><s'pc+e>
+S: <l'p>	|<c'16e><l'primes><l'p>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(><s'pc+e>
+S: <p')>	|<c'16e><l'primes><l'p><s'pc+e><s'*p=>	|<s'gotoZ><p'(><s'char2int><p'(>
+S: <p')>	|<c'16e><l'primes><l'p><s'pc+e><s'*p=><s'char2int>	|<s'gotoZ><p'(>
+S: <p')>	|<c'16e><l'primes><l'p><s'pc+e><s'*p=><s'char2int><s'gotoZ>	|
+S: Frase2 7e: <c'16e><l'primes><l'p><s'pc+e><s'*p=><s'char2int><s'gotoZ>
+S: Frase 8e: <l'powerof><s'=><f'power><p'(><l'n><p',><l'p><p')>
+S: <l'powerof>	|<l'powerof>	|
+S: <s'=>	|<l'powerof>	|<s'=>
+S: <f'power>	|<l'powerof>	|<s'=><f'power>
+S: <p'(>	|<l'powerof>	|<s'=><f'power><p'(>
+S: <l'n>	|<l'powerof><l'n>	|<s'=><f'power><p'(>
+S: <p',>	|<l'powerof><l'n>	|<s'=><f'power><p'(>
+S: <l'p>	|<l'powerof><l'n><l'p>	|<s'=><f'power><p'(>
+S: <p')>	|<l'powerof><l'n><l'p><f'power>	|<s'=>
+S: Frase2 5e: <l'powerof><l'n><l'p><f'power><s'=>
+S: Frase 20e: <s'printChar1><p'(><c'"???"><p')><s'printInt0><p'(><l'p><p')><s'printChar1><p'(><c'"???"><p')><s'printInt0><p'(><l'powerof><p')><s'printChar1><p'(><c'"???"><p')>
+S: <s'printChar1>	|	|<s'printChar1>
+S: <p'(>	|	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1>	|
+S: <s'printInt0>	|<c'"???"><s'printChar1>	|<s'printInt0>
+S: <p'(>	|<c'"???"><s'printChar1>	|<s'printInt0><p'(>
+S: <l'p>	|<c'"???"><s'printChar1><l'p>	|<s'printInt0><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'p><s'printInt0>	|
+S: <s'printChar1>	|<c'"???"><s'printChar1><l'p><s'printInt0>	|<s'printChar1>
+S: <p'(>	|<c'"???"><s'printChar1><l'p><s'printInt0>	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1>	|
+S: <s'printInt0>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1>	|<s'printInt0>
+S: <p'(>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1>	|<s'printInt0><p'(>
+S: <l'powerof>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof>	|<s'printInt0><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0>	|
+S: <s'printChar1>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0>	|<s'printChar1>
+S: <p'(>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0>	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>	|
+S: Frase2 10e: <c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>
+S: Frase 5e: <l'p><s'=><l'p><s'+><c'1e>
+S: <l'p>	|<l'p>	|
+S: <s'=>	|<l'p>	|<s'=>
+S: <l'p>	|<l'p><l'p>	|<s'=>
+S: <s'+>	|<l'p><l'p>	|<s'=><s'+>
+S: <c'1e>	|<l'p><l'p><c'1e>	|<s'=><s'+>
+S: Frase2 5e: <l'p><l'p><c'1e><s'+><s'=>
+S: Frase 11e: <s'gotoNZ><p'(><c'13e><p',><s'≤><p'(><l'p><p',><l'n><p')><p')>
+S: <s'gotoNZ>	|	|<s'gotoNZ>
+S: <p'(>	|	|<s'gotoNZ><p'(>
+S: <c'13e>	|<c'13e>	|<s'gotoNZ><p'(>
+S: <p',>	|<c'13e>	|<s'gotoNZ><p'(>
+S: <s'≤>	|<c'13e>	|<s'gotoNZ><p'(><s'≤>
+S: <p'(>	|<c'13e>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <l'p>	|<c'13e><l'p>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p',>	|<c'13e><l'p>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <l'n>	|<c'13e><l'p><l'n>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p')>	|<c'13e><l'p><l'n><s'≤>	|<s'gotoNZ><p'(>
+S: <p')>	|<c'13e><l'p><l'n><s'≤><s'gotoNZ>	|
+S: Frase2 5e: <c'13e><l'p><l'n><s'≤><s'gotoNZ>
+S: Frase 4e: <s'printChar1><p'(><c'"???"><p')>
+S: <s'printChar1>	|	|<s'printChar1>
+S: <p'(>	|	|<s'printChar1><p'(>
+S: <c'"???">	|<c'"???">	|<s'printChar1><p'(>
+S: <p')>	|<c'"???"><s'printChar1>	|
+S: Frase2 2e: <c'"???"><s'printChar1>
+S: Frase 4e: <s'free><p'(><l'primes><p')>
+S: <s'free>	|	|<s'free>
+S: <p'(>	|	|<s'free><p'(>
+S: <l'primes>	|<l'primes>	|<s'free><p'(>
+S: <p')>	|<l'primes><s'free>	|
+S: Frase2 2e: <l'primes><s'free>
+S: Frase 4e: <s'return><p'(><c'0e><p')>
+S: <s'return>	|	|<s'return>
+S: <p'(>	|	|<s'return><p'(>
+S: <c'0e>	|<c'0e>	|<s'return><p'(>
+S: <p')>	|<c'0e><s'return>	|
+S: Frase2 2e: <c'0e><s'return>
+S: Funció: make primes.
+S: Frase 15e: <l'primes><s'=><s'malloc><p'(><s'sizeof><p'(><c''l'><p')><s'*><p'(><a'max><s'+><c'1e><p')><p')>
+S: <l'primes>	|<l'primes>	|
+S: <s'=>	|<l'primes>	|<s'=>
+S: <s'malloc>	|<l'primes>	|<s'=><s'malloc>
+S: <p'(>	|<l'primes>	|<s'=><s'malloc><p'(>
+S: <s'sizeof>	|<l'primes>	|<s'=><s'malloc><p'(><s'sizeof>
+S: <p'(>	|<l'primes>	|<s'=><s'malloc><p'(><s'sizeof><p'(>
+S: <c''l'>	|<l'primes><c''l'>	|<s'=><s'malloc><p'(><s'sizeof><p'(>
+S: <p')>	|<l'primes><c''l'><s'sizeof>	|<s'=><s'malloc><p'(>
+S: <s'*>	|<l'primes><c''l'><s'sizeof>	|<s'=><s'malloc><p'(><s'*>
+S: <p'(>	|<l'primes><c''l'><s'sizeof>	|<s'=><s'malloc><p'(><s'*><p'(>
+S: <a'max>	|<l'primes><c''l'><s'sizeof><a'max>	|<s'=><s'malloc><p'(><s'*><p'(>
+S: <s'+>	|<l'primes><c''l'><s'sizeof><a'max>	|<s'=><s'malloc><p'(><s'*><p'(><s'+>
+S: <c'1e>	|<l'primes><c''l'><s'sizeof><a'max><c'1e>	|<s'=><s'malloc><p'(><s'*><p'(><s'+>
+S: <p')>	|<l'primes><c''l'><s'sizeof><a'max><c'1e><s'+>	|<s'=><s'malloc><p'(><s'*>
+S: <p')>	|<l'primes><c''l'><s'sizeof><a'max><c'1e><s'+><s'*><s'malloc>	|<s'=>
+S: Frase2 9e: <l'primes><c''l'><s'sizeof><a'max><c'1e><s'+><s'*><s'malloc><s'=>
+S: Frase 3e: <l'i><s'=><c'2e>
+S: <l'i>	|<l'i>	|
+S: <s'=>	|<l'i>	|<s'=>
+S: <c'2e>	|<l'i><c'2e>	|<s'=>
+S: Frase2 3e: <l'i><c'2e><s'=>
+S: Frase 11e: <s'gotoZ><p'(><c'6e><p',><s'≤><p'(><l'i><p',><a'max><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'6e>	|<c'6e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'6e>	|<s'gotoZ><p'(>
+S: <s'≤>	|<c'6e>	|<s'gotoZ><p'(><s'≤>
+S: <p'(>	|<c'6e>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <l'i>	|<c'6e><l'i>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p',>	|<c'6e><l'i>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <a'max>	|<c'6e><l'i><a'max>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p')>	|<c'6e><l'i><a'max><s'≤>	|<s'gotoZ><p'(>
+S: <p')>	|<c'6e><l'i><a'max><s'≤><s'gotoZ>	|
+S: Frase2 5e: <c'6e><l'i><a'max><s'≤><s'gotoZ>
+S: Frase 11e: <s'*p=><p'(><l'primes><s'pc+e><l'i><p')><s'=char><s'int2char><p'(><c'1e><p')>
+S: <s'*p=>	|	|<s'*p=>
+S: <p'(>	|	|<s'*p=><p'(>
+S: <l'primes>	|<l'primes>	|<s'*p=><p'(>
+S: <s'pc+e>	|<l'primes>	|<s'*p=><p'(><s'pc+e>
+S: <l'i>	|<l'primes><l'i>	|<s'*p=><p'(><s'pc+e>
+S: <p')>	|<l'primes><l'i><s'pc+e><s'*p=>	|
+S: <s'=char>	|<l'primes><l'i><s'pc+e><s'*p=>	|<s'=char>
+S: <s'int2char>	|<l'primes><l'i><s'pc+e><s'*p=>	|<s'=char><s'int2char>
+S: <p'(>	|<l'primes><l'i><s'pc+e><s'*p=>	|<s'=char><s'int2char><p'(>
+S: <c'1e>	|<l'primes><l'i><s'pc+e><s'*p=><c'1e>	|<s'=char><s'int2char><p'(>
+S: <p')>	|<l'primes><l'i><s'pc+e><s'*p=><c'1e><s'int2char>	|<s'=char>
+S: Frase2 7e: <l'primes><l'i><s'pc+e><s'*p=><c'1e><s'int2char><s'=char>
+S: Frase 5e: <l'i><s'=><l'i><s'+><c'1e>
+S: <l'i>	|<l'i>	|
+S: <s'=>	|<l'i>	|<s'=>
+S: <l'i>	|<l'i><l'i>	|<s'=>
+S: <s'+>	|<l'i><l'i>	|<s'=><s'+>
+S: <c'1e>	|<l'i><l'i><c'1e>	|<s'=><s'+>
+S: Frase2 5e: <l'i><l'i><c'1e><s'+><s'=>
+S: Frase 11e: <s'gotoNZ><p'(><c'3e><p',><s'≤><p'(><l'i><p',><a'max><p')><p')>
+S: <s'gotoNZ>	|	|<s'gotoNZ>
+S: <p'(>	|	|<s'gotoNZ><p'(>
+S: <c'3e>	|<c'3e>	|<s'gotoNZ><p'(>
+S: <p',>	|<c'3e>	|<s'gotoNZ><p'(>
+S: <s'≤>	|<c'3e>	|<s'gotoNZ><p'(><s'≤>
+S: <p'(>	|<c'3e>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <l'i>	|<c'3e><l'i>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p',>	|<c'3e><l'i>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <a'max>	|<c'3e><l'i><a'max>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p')>	|<c'3e><l'i><a'max><s'≤>	|<s'gotoNZ><p'(>
+S: <p')>	|<c'3e><l'i><a'max><s'≤><s'gotoNZ>	|
+S: Frase2 5e: <c'3e><l'i><a'max><s'≤><s'gotoNZ>
+S: Frase 16e: <s'*p=><p'(><l'primes><p')><s'=char><s'*p=><p'(><l'primes><s'pc+e><c'1e><p')><s'=char><s'int2char><p'(><c'0e><p')>
+S: <s'*p=>	|	|<s'*p=>
+S: <p'(>	|	|<s'*p=><p'(>
+S: <l'primes>	|<l'primes>	|<s'*p=><p'(>
+S: <p')>	|<l'primes><s'*p=>	|
+S: <s'=char>	|<l'primes><s'*p=>	|<s'=char>
+S: <s'*p=>	|<l'primes><s'*p=>	|<s'=char><s'*p=>
+S: <p'(>	|<l'primes><s'*p=>	|<s'=char><s'*p=><p'(>
+S: <l'primes>	|<l'primes><s'*p=><l'primes>	|<s'=char><s'*p=><p'(>
+S: <s'pc+e>	|<l'primes><s'*p=><l'primes>	|<s'=char><s'*p=><p'(><s'pc+e>
+S: <c'1e>	|<l'primes><s'*p=><l'primes><c'1e>	|<s'=char><s'*p=><p'(><s'pc+e>
+S: <p')>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=>	|<s'=char>
+S: <s'=char>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=>	|<s'=char><s'=char>
+S: <s'int2char>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=>	|<s'=char><s'=char><s'int2char>
+S: <p'(>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=>	|<s'=char><s'=char><s'int2char><p'(>
+S: <c'0e>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=><c'0e>	|<s'=char><s'=char><s'int2char><p'(>
+S: <p')>	|<l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=><c'0e><s'int2char>	|<s'=char><s'=char>
+S: Frase2 10e: <l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=><c'0e><s'int2char><s'=char><s'=char>
+S: Frase 3e: <l'i><s'=><c'2e>
+S: <l'i>	|<l'i>	|
+S: <s'=>	|<l'i>	|<s'=>
+S: <c'2e>	|<l'i><c'2e>	|<s'=>
+S: Frase2 3e: <l'i><c'2e><s'=>
+S: Frase 16e: <s'gotoZ><p'(><c'17e><p',><s'<><p'(><l'i><p',><s'sqrt><p'(><a'max><p')><s'+><c'1e><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'17e>	|<c'17e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'17e>	|<s'gotoZ><p'(>
+S: <s'<>	|<c'17e>	|<s'gotoZ><p'(><s'<>
+S: <p'(>	|<c'17e>	|<s'gotoZ><p'(><s'<><p'(>
+S: <l'i>	|<c'17e><l'i>	|<s'gotoZ><p'(><s'<><p'(>
+S: <p',>	|<c'17e><l'i>	|<s'gotoZ><p'(><s'<><p'(>
+S: <s'sqrt>	|<c'17e><l'i>	|<s'gotoZ><p'(><s'<><p'(><s'sqrt>
+S: <p'(>	|<c'17e><l'i>	|<s'gotoZ><p'(><s'<><p'(><s'sqrt><p'(>
+S: <a'max>	|<c'17e><l'i><a'max>	|<s'gotoZ><p'(><s'<><p'(><s'sqrt><p'(>
+S: <p')>	|<c'17e><l'i><a'max><s'sqrt>	|<s'gotoZ><p'(><s'<><p'(>
+S: <s'+>	|<c'17e><l'i><a'max><s'sqrt>	|<s'gotoZ><p'(><s'<><p'(><s'+>
+S: <c'1e>	|<c'17e><l'i><a'max><s'sqrt><c'1e>	|<s'gotoZ><p'(><s'<><p'(><s'+>
+S: <p')>	|<c'17e><l'i><a'max><s'sqrt><c'1e><s'+><s'<>	|<s'gotoZ><p'(>
+S: <p')>	|<c'17e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoZ>	|
+S: Frase2 8e: <c'17e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoZ>
+S: Frase 14e: <s'gotoZ><p'(><c'15e><p',><s'char2int><p'(><s'*p=><p'(><l'primes><s'pc+e><l'i><p')><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'15e>	|<c'15e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'15e>	|<s'gotoZ><p'(>
+S: <s'char2int>	|<c'15e>	|<s'gotoZ><p'(><s'char2int>
+S: <p'(>	|<c'15e>	|<s'gotoZ><p'(><s'char2int><p'(>
+S: <s'*p=>	|<c'15e>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=>
+S: <p'(>	|<c'15e>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(>
+S: <l'primes>	|<c'15e><l'primes>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(>
+S: <s'pc+e>	|<c'15e><l'primes>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(><s'pc+e>
+S: <l'i>	|<c'15e><l'primes><l'i>	|<s'gotoZ><p'(><s'char2int><p'(><s'*p=><p'(><s'pc+e>
+S: <p')>	|<c'15e><l'primes><l'i><s'pc+e><s'*p=>	|<s'gotoZ><p'(><s'char2int><p'(>
+S: <p')>	|<c'15e><l'primes><l'i><s'pc+e><s'*p=><s'char2int>	|<s'gotoZ><p'(>
+S: <p')>	|<c'15e><l'primes><l'i><s'pc+e><s'*p=><s'char2int><s'gotoZ>	|
+S: Frase2 7e: <c'15e><l'primes><l'i><s'pc+e><s'*p=><s'char2int><s'gotoZ>
+S: Frase 5e: <l'j><s'=><l'i><s'*><l'i>
+S: <l'j>	|<l'j>	|
+S: <s'=>	|<l'j>	|<s'=>
+S: <l'i>	|<l'j><l'i>	|<s'=>
+S: <s'*>	|<l'j><l'i>	|<s'=><s'*>
+S: <l'i>	|<l'j><l'i><l'i>	|<s'=><s'*>
+S: Frase2 5e: <l'j><l'i><l'i><s'*><s'=>
+S: Frase 11e: <s'gotoZ><p'(><c'15e><p',><s'≤><p'(><l'j><p',><a'max><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'15e>	|<c'15e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'15e>	|<s'gotoZ><p'(>
+S: <s'≤>	|<c'15e>	|<s'gotoZ><p'(><s'≤>
+S: <p'(>	|<c'15e>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <l'j>	|<c'15e><l'j>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p',>	|<c'15e><l'j>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <a'max>	|<c'15e><l'j><a'max>	|<s'gotoZ><p'(><s'≤><p'(>
+S: <p')>	|<c'15e><l'j><a'max><s'≤>	|<s'gotoZ><p'(>
+S: <p')>	|<c'15e><l'j><a'max><s'≤><s'gotoZ>	|
+S: Frase2 5e: <c'15e><l'j><a'max><s'≤><s'gotoZ>
+S: Frase 11e: <s'*p=><p'(><l'primes><s'pc+e><l'j><p')><s'=char><s'int2char><p'(><c'0e><p')>
+S: <s'*p=>	|	|<s'*p=>
+S: <p'(>	|	|<s'*p=><p'(>
+S: <l'primes>	|<l'primes>	|<s'*p=><p'(>
+S: <s'pc+e>	|<l'primes>	|<s'*p=><p'(><s'pc+e>
+S: <l'j>	|<l'primes><l'j>	|<s'*p=><p'(><s'pc+e>
+S: <p')>	|<l'primes><l'j><s'pc+e><s'*p=>	|
+S: <s'=char>	|<l'primes><l'j><s'pc+e><s'*p=>	|<s'=char>
+S: <s'int2char>	|<l'primes><l'j><s'pc+e><s'*p=>	|<s'=char><s'int2char>
+S: <p'(>	|<l'primes><l'j><s'pc+e><s'*p=>	|<s'=char><s'int2char><p'(>
+S: <c'0e>	|<l'primes><l'j><s'pc+e><s'*p=><c'0e>	|<s'=char><s'int2char><p'(>
+S: <p')>	|<l'primes><l'j><s'pc+e><s'*p=><c'0e><s'int2char>	|<s'=char>
+S: Frase2 7e: <l'primes><l'j><s'pc+e><s'*p=><c'0e><s'int2char><s'=char>
+S: Frase 5e: <l'j><s'=><l'j><s'+><l'i>
+S: <l'j>	|<l'j>	|
+S: <s'=>	|<l'j>	|<s'=>
+S: <l'j>	|<l'j><l'j>	|<s'=>
+S: <s'+>	|<l'j><l'j>	|<s'=><s'+>
+S: <l'i>	|<l'j><l'j><l'i>	|<s'=><s'+>
+S: Frase2 5e: <l'j><l'j><l'i><s'+><s'=>
+S: Frase 11e: <s'gotoNZ><p'(><c'12e><p',><s'≤><p'(><l'j><p',><a'max><p')><p')>
+S: <s'gotoNZ>	|	|<s'gotoNZ>
+S: <p'(>	|	|<s'gotoNZ><p'(>
+S: <c'12e>	|<c'12e>	|<s'gotoNZ><p'(>
+S: <p',>	|<c'12e>	|<s'gotoNZ><p'(>
+S: <s'≤>	|<c'12e>	|<s'gotoNZ><p'(><s'≤>
+S: <p'(>	|<c'12e>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <l'j>	|<c'12e><l'j>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p',>	|<c'12e><l'j>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <a'max>	|<c'12e><l'j><a'max>	|<s'gotoNZ><p'(><s'≤><p'(>
+S: <p')>	|<c'12e><l'j><a'max><s'≤>	|<s'gotoNZ><p'(>
+S: <p')>	|<c'12e><l'j><a'max><s'≤><s'gotoNZ>	|
+S: Frase2 5e: <c'12e><l'j><a'max><s'≤><s'gotoNZ>
+S: Frase 5e: <l'i><s'=><l'i><s'+><c'1e>
+S: <l'i>	|<l'i>	|
+S: <s'=>	|<l'i>	|<s'=>
+S: <l'i>	|<l'i><l'i>	|<s'=>
+S: <s'+>	|<l'i><l'i>	|<s'=><s'+>
+S: <c'1e>	|<l'i><l'i><c'1e>	|<s'=><s'+>
+S: Frase2 5e: <l'i><l'i><c'1e><s'+><s'=>
+S: Frase 16e: <s'gotoNZ><p'(><c'9e><p',><s'<><p'(><l'i><p',><s'sqrt><p'(><a'max><p')><s'+><c'1e><p')><p')>
+S: <s'gotoNZ>	|	|<s'gotoNZ>
+S: <p'(>	|	|<s'gotoNZ><p'(>
+S: <c'9e>	|<c'9e>	|<s'gotoNZ><p'(>
+S: <p',>	|<c'9e>	|<s'gotoNZ><p'(>
+S: <s'<>	|<c'9e>	|<s'gotoNZ><p'(><s'<>
+S: <p'(>	|<c'9e>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <l'i>	|<c'9e><l'i>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <p',>	|<c'9e><l'i>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <s'sqrt>	|<c'9e><l'i>	|<s'gotoNZ><p'(><s'<><p'(><s'sqrt>
+S: <p'(>	|<c'9e><l'i>	|<s'gotoNZ><p'(><s'<><p'(><s'sqrt><p'(>
+S: <a'max>	|<c'9e><l'i><a'max>	|<s'gotoNZ><p'(><s'<><p'(><s'sqrt><p'(>
+S: <p')>	|<c'9e><l'i><a'max><s'sqrt>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <s'+>	|<c'9e><l'i><a'max><s'sqrt>	|<s'gotoNZ><p'(><s'<><p'(><s'+>
+S: <c'1e>	|<c'9e><l'i><a'max><s'sqrt><c'1e>	|<s'gotoNZ><p'(><s'<><p'(><s'+>
+S: <p')>	|<c'9e><l'i><a'max><s'sqrt><c'1e><s'+><s'<>	|<s'gotoNZ><p'(>
+S: <p')>	|<c'9e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoNZ>	|
+S: Frase2 8e: <c'9e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoNZ>
+S: Frase 4e: <s'return><p'(><l'primes><p')>
+S: <s'return>	|	|<s'return>
+S: <p'(>	|	|<s'return><p'(>
+S: <l'primes>	|<l'primes>	|<s'return><p'(>
+S: <p')>	|<l'primes><s'return>	|
+S: Frase2 2e: <l'primes><s'return>
+S: Funció: power.
+S: Frase 5e: <l'exponent><s'=><a'n><s'/><a'p>
+S: <l'exponent>	|<l'exponent>	|
+S: <s'=>	|<l'exponent>	|<s'=>
+S: <a'n>	|<l'exponent><a'n>	|<s'=>
+S: <s'/>	|<l'exponent><a'n>	|<s'=><s'/>
+S: <a'p>	|<l'exponent><a'n><a'p>	|<s'=><s'/>
+S: Frase2 5e: <l'exponent><a'n><a'p><s'/><s'=>
+S: Frase 5e: <l'last><s'=><l'exponent><s'/><a'p>
+S: <l'last>	|<l'last>	|
+S: <s'=>	|<l'last>	|<s'=>
+S: <l'exponent>	|<l'last><l'exponent>	|<s'=>
+S: <s'/>	|<l'last><l'exponent>	|<s'=><s'/>
+S: <a'p>	|<l'last><l'exponent><a'p>	|<s'=><s'/>
+S: Frase2 5e: <l'last><l'exponent><a'p><s'/><s'=>
+S: Frase 11e: <s'gotoZ><p'(><c'6e><p',><s'<><p'(><c'0e><p',><l'last><p')><p')>
+S: <s'gotoZ>	|	|<s'gotoZ>
+S: <p'(>	|	|<s'gotoZ><p'(>
+S: <c'6e>	|<c'6e>	|<s'gotoZ><p'(>
+S: <p',>	|<c'6e>	|<s'gotoZ><p'(>
+S: <s'<>	|<c'6e>	|<s'gotoZ><p'(><s'<>
+S: <p'(>	|<c'6e>	|<s'gotoZ><p'(><s'<><p'(>
+S: <c'0e>	|<c'6e><c'0e>	|<s'gotoZ><p'(><s'<><p'(>
+S: <p',>	|<c'6e><c'0e>	|<s'gotoZ><p'(><s'<><p'(>
+S: <l'last>	|<c'6e><c'0e><l'last>	|<s'gotoZ><p'(><s'<><p'(>
+S: <p')>	|<c'6e><c'0e><l'last><s'<>	|<s'gotoZ><p'(>
+S: <p')>	|<c'6e><c'0e><l'last><s'<><s'gotoZ>	|
+S: Frase2 5e: <c'6e><c'0e><l'last><s'<><s'gotoZ>
+S: Frase 5e: <l'exponent><s'=><l'exponent><s'+><l'last>
+S: <l'exponent>	|<l'exponent>	|
+S: <s'=>	|<l'exponent>	|<s'=>
+S: <l'exponent>	|<l'exponent><l'exponent>	|<s'=>
+S: <s'+>	|<l'exponent><l'exponent>	|<s'=><s'+>
+S: <l'last>	|<l'exponent><l'exponent><l'last>	|<s'=><s'+>
+S: Frase2 5e: <l'exponent><l'exponent><l'last><s'+><s'=>
+S: Frase 5e: <l'last><s'=><l'last><s'/><a'p>
+S: <l'last>	|<l'last>	|
+S: <s'=>	|<l'last>	|<s'=>
+S: <l'last>	|<l'last><l'last>	|<s'=>
+S: <s'/>	|<l'last><l'last>	|<s'=><s'/>
+S: <a'p>	|<l'last><l'last><a'p>	|<s'=><s'/>
+S: Frase2 5e: <l'last><l'last><a'p><s'/><s'=>
+S: Frase 11e: <s'gotoNZ><p'(><c'3e><p',><s'<><p'(><c'0e><p',><l'last><p')><p')>
+S: <s'gotoNZ>	|	|<s'gotoNZ>
+S: <p'(>	|	|<s'gotoNZ><p'(>
+S: <c'3e>	|<c'3e>	|<s'gotoNZ><p'(>
+S: <p',>	|<c'3e>	|<s'gotoNZ><p'(>
+S: <s'<>	|<c'3e>	|<s'gotoNZ><p'(><s'<>
+S: <p'(>	|<c'3e>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <c'0e>	|<c'3e><c'0e>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <p',>	|<c'3e><c'0e>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <l'last>	|<c'3e><c'0e><l'last>	|<s'gotoNZ><p'(><s'<><p'(>
+S: <p')>	|<c'3e><c'0e><l'last><s'<>	|<s'gotoNZ><p'(>
+S: <p')>	|<c'3e><c'0e><l'last><s'<><s'gotoNZ>	|
+S: Frase2 5e: <c'3e><c'0e><l'last><s'<><s'gotoNZ>
+S: Frase 4e: <s'return><p'(><l'exponent><p')>
+S: <s'return>	|	|<s'return>
+S: <p'(>	|	|<s'return><p'(>
+S: <l'exponent>	|<l'exponent>	|<s'return><p'(>
+S: <p')>	|<l'exponent><s'return>	|
+S: Frase2 2e: <l'exponent><s'return>
+A: Inicialitza la semàntica.
+A: Funció: main.
+A:  Paraula: "Codi" 3e.
+A:  Paraula: <c'3e>"Arguments" "argc" "Int"(0)No inicialitzat.
+A:  Paraula: <c'3e><a'argc>"Codi" 1e.
+A:  Paraula: <c'3e><a'argc><c'1e>"Sistema" Int(0)	       ≠	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'3e><s'≠>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'3e><a'argc><c'1e><s'≠><s'gotoZ>
+A:  Paraula: "Codi" "???".
+A:  Paraula: <c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 1e: <c'"???"><s'printChar1>
+A:  Paraula: "Codi" 1e.
+A:  Paraula: <c'1e>"Sistema" Int(0)	      exit	("sortir" Int(0)0e)
+A: Frase màxim: 1e: <c'1e><s'exit>
+A:  Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'n>"Arguments" "argv" "Char"(2)No inicialitzat.
+A:  Paraula: <l'n><a'argv>"Sistema" Void(1)	       *pp	("punter(2)" Void(2))
+A:  Paraula: <l'n><s'*pp>"Sistema" Int(0)	      atoi	("convertir" Char(1))
+A:  Paraula: <l'n><s'atoi>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'n><a'argv><s'*pp><s'atoi><s'=>
+A:  Paraula: "Codi" 7e.
+A:  Paraula: <c'7e>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <c'7e><l'n>"Codi" 0e.
+A:  Paraula: <c'7e><l'n><c'0e>"Sistema" Int(0)	        ==	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'7e><s'==>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <c'7e><s'==><l'n>"Codi" 1e.
+A:  Paraula: <c'7e><s'==><l'n><c'1e>"Sistema" Int(0)	        ==	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'7e><s'==><s'==>"Sistema" Int(0)	        or	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'7e><s'or>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 4e: <c'7e><l'n><c'0e><s'==><l'n><c'1e><s'==><s'or><s'gotoZ>
+A:  Paraula: "Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'n>"Sistema" Void(0)	 printInt0	("i" Int(0))
+A:  Paraula: <s'printInt0>"Codi" "???".
+A:  Paraula: <s'printInt0><c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 2e: <l'n><s'printInt0><c'"???"><s'printChar1>
+A:  Paraula: "Codi" 0e.
+A:  Paraula: <c'0e>"Sistema" Int(0)	      exit	("sortir" Int(0)0e)
+A: Frase màxim: 1e: <c'0e><s'exit>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'primes><l'n>"Funcions" Char(1)	make primes	("max" Int(0))
+A:  Paraula: <l'primes><f'make primes>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'primes><l'n><f'make primes><s'=>
+A:  Paraula: "Codi" "???".
+A:  Paraula: <c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A:  Paraula: <s'printChar1>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <s'printChar1><l'n>"Sistema" Void(0)	 printInt0	("i" Int(0))
+A:  Paraula: <s'printChar1><s'printInt0>"Codi" "???".
+A:  Paraula: <s'printChar1><s'printInt0><c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 3e: <c'"???"><s'printChar1><l'n><s'printInt0><c'"???"><s'printChar1>
+A:  Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+A:  Paraula: <l'powerof>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'powerof><l'n>"Codi" 2e.
+A:  Paraula: <l'powerof><l'n><c'2e>"Funcions" Int(0)	     power	("n" Int(0), "p" Int(0))
+A:  Paraula: <l'powerof><f'power>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'powerof><l'n><c'2e><f'power><s'=>
+A:  Paraula: "Codi" "???".
+A:  Paraula: <c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A:  Paraula: <s'printChar1>"Locals" "powerof" "Int"(0)No inicialitzat.
+A:  Paraula: <s'printChar1><l'powerof>"Sistema" Void(0)	 printInt0	("i" Int(0))
+A:  Paraula: <s'printChar1><s'printInt0>"Codi" "???".
+A:  Paraula: <s'printChar1><s'printInt0><c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 3e: <c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>
+A:  Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'p>"Codi" 3e.
+A:  Paraula: <l'p><c'3e>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'p><c'3e><s'=>
+A:  Paraula: "Codi" 18e.
+A:  Paraula: <c'18e>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <c'18e><l'p>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <c'18e><l'p><l'n>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'18e><s'≤>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'18e><l'p><l'n><s'≤><s'gotoZ>
+A:  Paraula: "Codi" 16e.
+A:  Paraula: <c'16e>"Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <c'16e><l'primes>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <c'16e><l'primes><l'p>"Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+A:  Paraula: <c'16e><s'pc+e>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <c'16e><s'*p=>"Sistema" Int(0)	  char2int	("convertir" Char(0))
+A:  Paraula: <c'16e><s'char2int>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'16e><l'primes><l'p><s'pc+e><s'*p=><s'char2int><s'gotoZ>
+A:  Paraula: "Locals" "powerof" "Int"(0)No inicialitzat.
+A:  Paraula: <l'powerof>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'powerof><l'n>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'powerof><l'n><l'p>"Funcions" Int(0)	     power	("n" Int(0), "p" Int(0))
+A:  Paraula: <l'powerof><f'power>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'powerof><l'n><l'p><f'power><s'=>
+A:  Paraula: "Codi" "???".
+A:  Paraula: <c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A:  Paraula: <s'printChar1>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <s'printChar1><l'p>"Sistema" Void(0)	 printInt0	("i" Int(0))
+A:  Paraula: <s'printChar1><s'printInt0>"Codi" "???".
+A:  Paraula: <s'printChar1><s'printInt0><c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A:  Paraula: <s'printChar1><s'printInt0><s'printChar1>"Locals" "powerof" "Int"(0)No inicialitzat.
+A:  Paraula: <s'printChar1><s'printInt0><s'printChar1><l'powerof>"Sistema" Void(0)	 printInt0	("i" Int(0))
+A:  Paraula: <s'printChar1><s'printInt0><s'printChar1><s'printInt0>"Codi" "???".
+A:  Paraula: <s'printChar1><s'printInt0><s'printChar1><s'printInt0><c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 5e: <c'"???"><s'printChar1><l'p><s'printInt0><c'"???"><s'printChar1><l'powerof><s'printInt0><c'"???"><s'printChar1>
+A:  Paraula: "Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'p>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'p><l'p>"Codi" 1e.
+A:  Paraula: <l'p><l'p><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'p><s'+>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'p><l'p><c'1e><s'+><s'=>
+A:  Paraula: "Codi" 13e.
+A:  Paraula: <c'13e>"Locals" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <c'13e><l'p>"Locals" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <c'13e><l'p><l'n>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'13e><s'≤>"Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'13e><l'p><l'n><s'≤><s'gotoNZ>
+A:  Paraula: "Codi" "???".
+A:  Paraula: <c'"???">"Sistema" Void(0)	printChar1	("i" Char(1))
+A: Frase màxim: 1e: <c'"???"><s'printChar1>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Sistema" Void(0)	      free	("alliberar" Void(1))
+A: Frase màxim: 1e: <l'primes><s'free>
+A:  Paraula: "Codi" 0e.
+A:  Paraula: <c'0e>"Sistema" Int(0)	    return	("retorn" Void(0)"???")
+A: Frase màxim: 1e: <c'0e><s'return>
+A:main: màxim: 5.
+A: Funció: make primes.
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Codi" 'l'.
+A:  Paraula: <l'primes><c''l'>"Sistema" Int(0)	    sizeof	("mida" Void(0))
+A:  Paraula: <l'primes><s'sizeof>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <l'primes><s'sizeof><a'max>"Codi" 1e.
+A:  Paraula: <l'primes><s'sizeof><a'max><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'primes><s'sizeof><s'+>"Sistema" Int(0) * Int(0)	| Associativa per la dreta amb precedència: 3
+A:  Paraula: <l'primes><s'*>"Sistema" Void(1)	    malloc	("reservar" Int(0))
+A:  Paraula: <l'primes><s'malloc>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 4e: <l'primes><c''l'><s'sizeof><a'max><c'1e><s'+><s'*><s'malloc><s'=>
+A:  Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i>"Codi" 2e.
+A:  Paraula: <l'i><c'2e>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'i><c'2e><s'=>
+A:  Paraula: "Codi" 6e.
+A:  Paraula: <c'6e>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <c'6e><l'i>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'6e><l'i><a'max>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'6e><s'≤>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'6e><l'i><a'max><s'≤><s'gotoZ>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'primes><l'i>"Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+A:  Paraula: <s'pc+e>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <s'*p=>"Codi" 1e.
+A:  Paraula: <s'*p=><c'1e>"Sistema" Char(0)	  int2char	("convertir" Int(0))
+A:  Paraula: <s'*p=><s'int2char>"Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'primes><l'i><s'pc+e><s'*p=><c'1e><s'int2char><s'=char>
+A:  Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i><l'i>"Codi" 1e.
+A:  Paraula: <l'i><l'i><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'i><s'+>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'i><l'i><c'1e><s'+><s'=>
+A:  Paraula: "Codi" 3e.
+A:  Paraula: <c'3e>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <c'3e><l'i>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'3e><l'i><a'max>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'3e><s'≤>"Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'3e><l'i><a'max><s'≤><s'gotoNZ>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <s'*p=>"Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <s'*p=><l'primes>"Codi" 1e.
+A:  Paraula: <s'*p=><l'primes><c'1e>"Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+A:  Paraula: <s'*p=><s'pc+e>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <s'*p=><s'*p=>"Codi" 0e.
+A:  Paraula: <s'*p=><s'*p=><c'0e>"Sistema" Char(0)	  int2char	("convertir" Int(0))
+A:  Paraula: <s'*p=><s'*p=><s'int2char>"Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+A:  Paraula: <s'*p=><s'=char>"Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'primes><s'*p=><l'primes><c'1e><s'pc+e><s'*p=><c'0e><s'int2char><s'=char><s'=char>
+A:  Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i>"Codi" 2e.
+A:  Paraula: <l'i><c'2e>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'i><c'2e><s'=>
+A:  Paraula: "Codi" 17e.
+A:  Paraula: <c'17e>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <c'17e><l'i>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'17e><l'i><a'max>"Sistema" Int(0)	      sqrt	("v" Int(0))
+A:  Paraula: <c'17e><l'i><s'sqrt>"Codi" 1e.
+A:  Paraula: <c'17e><l'i><s'sqrt><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <c'17e><l'i><s'+>"Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'17e><s'<>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 4e: <c'17e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoZ>
+A:  Paraula: "Codi" 15e.
+A:  Paraula: <c'15e>"Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <c'15e><l'primes>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <c'15e><l'primes><l'i>"Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+A:  Paraula: <c'15e><s'pc+e>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <c'15e><s'*p=>"Sistema" Int(0)	  char2int	("convertir" Char(0))
+A:  Paraula: <c'15e><s'char2int>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'15e><l'primes><l'i><s'pc+e><s'*p=><s'char2int><s'gotoZ>
+A:  Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j><l'i>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j><l'i><l'i>"Sistema" Int(0) * Int(0)	| Associativa per la dreta amb precedència: 3
+A:  Paraula: <l'j><s'*>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'j><l'i><l'i><s'*><s'=>
+A:  Paraula: "Codi" 15e.
+A:  Paraula: <c'15e>"Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <c'15e><l'j>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'15e><l'j><a'max>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'15e><s'≤>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'15e><l'j><a'max><s'≤><s'gotoZ>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <l'primes><l'j>"Sistema" Char(1) pc+e Int(0)	| Associativa per l'esquerra amb precedència: 2
+A:  Paraula: <s'pc+e>"Sistema" Void(0)	       *p=	("punter(2)" Void(1))
+A:  Paraula: <s'*p=>"Codi" 0e.
+A:  Paraula: <s'*p=><c'0e>"Sistema" Char(0)	  int2char	("convertir" Int(0))
+A:  Paraula: <s'*p=><s'int2char>"Sistema" Void(1) =char Char(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 2e: <l'primes><l'j><s'pc+e><s'*p=><c'0e><s'int2char><s'=char>
+A:  Paraula: "Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j>"Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j><l'j>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'j><l'j><l'i>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'j><s'+>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'j><l'j><l'i><s'+><s'=>
+A:  Paraula: "Codi" 12e.
+A:  Paraula: <c'12e>"Locals" "j" "Int"(0)No inicialitzat.
+A:  Paraula: <c'12e><l'j>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'12e><l'j><a'max>"Sistema" Int(0)	       ≤	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'12e><s'≤>"Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'12e><l'j><a'max><s'≤><s'gotoNZ>
+A:  Paraula: "Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <l'i><l'i>"Codi" 1e.
+A:  Paraula: <l'i><l'i><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'i><s'+>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'i><l'i><c'1e><s'+><s'=>
+A:  Paraula: "Codi" 9e.
+A:  Paraula: <c'9e>"Locals" "i" "Int"(0)No inicialitzat.
+A:  Paraula: <c'9e><l'i>"Arguments" "max" "Int"(0)No inicialitzat.
+A:  Paraula: <c'9e><l'i><a'max>"Sistema" Int(0)	      sqrt	("v" Int(0))
+A:  Paraula: <c'9e><l'i><s'sqrt>"Codi" 1e.
+A:  Paraula: <c'9e><l'i><s'sqrt><c'1e>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <c'9e><l'i><s'+>"Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'9e><s'<>"Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 4e: <c'9e><l'i><a'max><s'sqrt><c'1e><s'+><s'<><s'gotoNZ>
+A:  Paraula: "Locals" "primes" "Char"(1)No inicialitzat.
+A:  Paraula: <l'primes>"Sistema" Int(0)	    return	("retorn" Void(0)"???")
+A: Frase màxim: 1e: <l'primes><s'return>
+A:make primes: màxim: 4.
+A: Funció: power.
+A:  Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent>"Arguments" "n" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent><a'n>"Arguments" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent><a'n><a'p>"Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+A:  Paraula: <l'exponent><s'/>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'exponent><a'n><a'p><s'/><s'=>
+A:  Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last>"Locals" "exponent" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last><l'exponent>"Arguments" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last><l'exponent><a'p>"Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+A:  Paraula: <l'last><s'/>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'last><l'exponent><a'p><s'/><s'=>
+A:  Paraula: "Codi" 6e.
+A:  Paraula: <c'6e>"Codi" 0e.
+A:  Paraula: <c'6e><c'0e>"Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <c'6e><c'0e><l'last>"Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'6e><s'<>"Sistema" Void(0)	     gotoZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'6e><c'0e><l'last><s'<><s'gotoZ>
+A:  Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent>"Locals" "exponent" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent><l'exponent>"Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent><l'exponent><l'last>"Sistema" Int(0) + Int(0)	| Associativa per la dreta amb precedència: 2
+A:  Paraula: <l'exponent><s'+>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'exponent><l'exponent><l'last><s'+><s'=>
+A:  Paraula: "Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last>"Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last><l'last>"Arguments" "p" "Int"(0)No inicialitzat.
+A:  Paraula: <l'last><l'last><a'p>"Sistema" Int(0) / Int(0)	| Associativa per la dreta amb precedència: 3
+A:  Paraula: <l'last><s'/>"Sistema" Void(0) = Void(0)	| Associativa per l'esquerra amb precedència: 0
+A: Frase màxim: 3e: <l'last><l'last><a'p><s'/><s'=>
+A:  Paraula: "Codi" 3e.
+A:  Paraula: <c'3e>"Codi" 0e.
+A:  Paraula: <c'3e><c'0e>"Locals" "last" "Int"(0)No inicialitzat.
+A:  Paraula: <c'3e><c'0e><l'last>"Sistema" Int(0)	         <	("a" Int(0), "b" Int(0))
+A:  Paraula: <c'3e><s'<>"Sistema" Void(0)	    gotoNZ	("línia salt" Int(0), "condició" Int(0))
+A: Frase màxim: 3e: <c'3e><c'0e><l'last><s'<><s'gotoNZ>
+A:  Paraula: "Locals" "exponent" "Int"(0)No inicialitzat.
+A:  Paraula: <l'exponent>"Sistema" Int(0)	    return	("retorn" Void(0)"???")
+A: Frase màxim: 1e: <l'exponent><s'return>
+A:power: màxim: 3.
+E: Comença l'execució.
+E: lloc:main:0:0:<0> <c'3e>
+E: lloc:main:0:1:<1> <a'argc>
+E: lloc:main:0:2:<2> <c'1e>
+E: lloc:main:0:3:<3> <s'≠>
+E: lloc:main:0:4:<2> <s'gotoZ>
+E: lloc:main:1:0:<1> <c'"???">
+E: lloc:main:1:1:<1> <s'printChar1>
+Usage: 'this function' number
+E: lloc:main:2:0:<1> <c'1e>
+E: lloc:main:2:1:<1> <s'exit>
+Interpretat:
+-Verbós lèxic:		Cert
+-Verbós m. d'estats:	Cert
+-Verbós sintàctic:	Cert
+-Verbós semàntic:	Cert
+-Verbós execució:	Cert
+-Nom fitxer:		"codi/factorial.my_obj"
+-Sortida:		1
+-Nombre d'arguments:	0
